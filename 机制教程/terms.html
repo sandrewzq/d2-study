@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2 · 看不懂词 · 命运 2 机制教程</title>
+<meta name="description" content="游戏里那些看不懂的词，怎么在三十秒内判断它是什么、去哪查。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="terms">
+
+<button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
+
+<aside id="side">
+  <a class="brand" href="index.html">命运 2 机制教程</a>
+  <p class="brand-sub">《命运 2 学习手册》· 战斗机制</p>
+
+  <nav class="g-nav">
+    <a href="index.html" data-key="index"><span class="k">·</span>从这里开始</a>
+    <a href="mechanics.html" data-key="mechanics"><span class="k">1</span>通用机制</a>
+    <a href="terms.html" data-key="terms"><span class="k">2</span>看不懂词</a>
+    <a href="build.html" data-key="build"><span class="k">3</span>不会配</a>
+    <a href="damage.html" data-key="damage"><span class="k">4</span>打不出伤害</a>
+    <a href="survive.html" data-key="survive"><span class="k">5</span>活不下来</a>
+    <a href="quiz.html" data-key="quiz"><span class="k">测</span>总测</a>
+  </nav>
+
+  <nav class="l-nav">
+    <p class="l-title">本页</p>
+    <a href="#s1">1 屏幕上的词分六类</a>
+    <a href="#s2">2 怎么判断它属于哪类</a>
+    <a href="#s3">3 完整走一遍「焕光」</a>
+    <a href="#s4">4 名字相近的陷阱</a>
+    <a href="#s5">5 同一个词，不同的数</a>
+    <a href="#quiz">自测</a>
+  </nav>
+
+  <button class="theme-btn" id="theme">配色</button>
+
+  <div class="side-foot">
+    <p>这一页不建词表。词表会过期，判断方法不会。</p>
+  </div>
+</aside>
+
+<main>
+<article>
+
+<h1>2 · 看不懂词</h1>
+<p class="subtitle">先搞清它是什么，再决定去哪查。</p>
+<p class="page-ask">这一页回答：<b>看到一个没见过的词，我怎么知道该往哪找？</b></p>
+
+<p class="lead">这一页没有词表。词表会有几千条，而且每次更新都会过期——你不可能背完，也不需要背。需要的是<strong>拿到一个陌生词时，三十秒内判断出它属于哪一类</strong>，然后你就知道该去哪查、能不能查到、查不到时该信谁。</p>
+
+<h2 id="s1"><span class="n">1</span>屏幕上的词分六类</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>按「它出现在屏幕的什么位置」分六类。位置决定了它有没有官方数值，以及该去哪查。</p>
+</div>
+
+<p>游戏里的词不是随机撒的，每一种都固定出现在某个位置。看它在哪，就能判断它是什么：</p>
+
+<table>
+  <thead>
+    <tr><th>出现在哪</th><th>是什么</th><th>例子</th><th>去哪查</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>武器 / 护甲面板上的数字行</td><td>属性</td><td>操控性、填装速度、六项护甲属性</td><td>装备详情，游戏里有确切数值</td></tr>
+    <tr><td>装备详情里的 Perk 名</td><td>可选效果</td><td>武器 Perk、护甲模组名</td><td>同一页，点开每一条都有说明</td></tr>
+    <tr><td>状态栏的小图标</td><td>增益 / 减益</td><td>焕光、各种易伤</td><td><strong>游戏里只有名字，数值要外查</strong></td></tr>
+    <tr><td>活动开始前的黑色卡片</td><td>活动修改器</td><td>元素威胁、元素匹配</td><td>活动界面，悬停有说明</td></tr>
+    <tr><td>敌人血条的颜色和形态</td><td>战斗人员档位</td><td>红血、橙血、带护盾的</td><td>没有文字，靠颜色判断，见<a href="mechanics.html">第 1 页</a></td></tr>
+    <tr><td>社区文章和视频里的词</td><td>口径词</td><td>DPS、切枪 DPS、总伤</td><td><strong>游戏里查不到</strong>，是玩家造的口径</td></tr>
+  </tbody>
+</table>
+
+<p>这张表里最关键的是<strong>最后两行</strong>——它们标出了两类「游戏里查不到」的词。看不懂的词里，绝大多数卡在这两类上：</p>
+
+<ul>
+  <li><strong>状态词</strong>：游戏只告诉你它叫什么，不告诉你它加多少。你必须去第三方数据页查。</li>
+  <li><strong>口径词</strong>：游戏里根本不存在这个词，是社区为了比较装备造出来的。它们没有「官方定义」，只有约定俗成的算法。</li>
+</ul>
+
+<div class="note">
+  <span class="h">为什么这件事值得单独说</span>
+  <p>很多人的困惑不是「查不到」，而是「查了一圈对不上」。对不上的典型原因就是：拿一个社区口径词去游戏里找定义，或者拿一个状态词去另一个游戏的思路理解。<strong>先分清它在哪一类，就不会白找。</strong></p>
+</div>
+
+<span class="src"><span class="t">公开整理</span>分类方式与各类别的可查性来自对各数据页目录结构的归纳；<span class="t">英文原始</span> 口径词的定义见英文排行表列名</span>
+
+<h2 id="s2"><span class="n">2</span>怎么判断它属于哪类</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>问自己三个问题：出现在哪、带不带数字、能不能在装备上找到它。</p>
+</div>
+
+<p>三个问题按顺序问，问到哪个有了答案就停：</p>
+
+<ol class="steps">
+  <li>
+    <strong>它出现在屏幕的什么位置？</strong>
+    <p>对着上面那张表找。如果位置明确，类别基本就定了——装备面板上的是属性，状态栏上的是增益减益，这是最快的判断路径。</p>
+  </li>
+  <li>
+    <strong>它后面跟着一个数字吗？</strong>
+    <p>跟着数字的（「伤害抗性 30%」「+20 护盾值」）说明它能被量化，那它一定有确切来源，查得到。<strong>不跟数字的</strong>（「焕光」「抑制」）往往是状态或机制，数值藏在别处。</p>
+  </li>
+  <li>
+    <strong>你能在装备上找到它吗？</strong>
+    <p>能在某件装备的详情里点开的，就是 Perk 或模组，游戏内有完整说明。翻遍装备找不到的，要么是状态，要么是社区口径词——这时候去第三方数据页，而不是继续在游戏里翻。</p>
+  </li>
+</ol>
+
+<p>三个问题问完，通常会得到一个结论，或者明确知道「这个词游戏里查不到」。后者本身就是有用的信息——它告诉你该换一个信息源了。</p>
+
+<div class="note warn">
+  <span class="h">一个常见的误判</span>
+  <p>把<strong>社区口径词</strong>当成游戏里的正式机制，然后去找「官方数值」。比如「DPS」——游戏从来没有给过这个定义，它是玩家用「总伤害 ÷ 耗时」算出来的。<strong>不同的人可能用不同的算法</strong>，所以两个排行榜的 DPS 数字对不上是正常的，不是谁算错了。这正是第 4 页要讲的事。</p>
+</div>
+
+<span class="src"><span class="t">公开整理</span>判断顺序为自行组织，依据是六类词在游戏内外的实际可查性</span>
+
+<h2 id="s3"><span class="n">3</span>完整走一遍「焕光」</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>一个典型的「游戏里只有名字、数值全靠外查」的词。</p>
+</div>
+
+<p>按上面三个问题走一遍：</p>
+
+<table>
+  <thead>
+    <tr><th>问题</th><th>答案</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>出现在哪</td><td>状态栏的小图标</td></tr>
+    <tr><td>带数字吗</td><td>不带。游戏里只有一个图标和名字</td></tr>
+    <tr><td>装备上能找到吗</td><td>找不到。它不是任何一件装备的 Perk</td></tr>
+  </tbody>
+</table>
+
+<p>结论：<strong>它是状态类，数值必须外查。</strong>查到的内容是这样的——</p>
+
+<table>
+  <thead>
+    <tr><th>项目</th><th>数值</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>武器伤害</td><td>+20%</td></tr>
+    <tr><td>持续时间</td><td>10 秒，默认最长可延到 15 秒</td></tr>
+    <tr><td>额外效果</td><td>激活期间对勇士的武器伤害再 +10%</td></tr>
+    <tr><td>特殊说明</td><td><strong>黄金枪的伤害同样受它影响</strong></td></tr>
+  </tbody>
+</table>
+
+<p>最后一行是这个词真正的价值所在。焕光常被当成「烈日系武器的增伤」，但它的说明里明确写了也作用于黄金枪——<strong>这意味着它能给一个超能加伤害</strong>，而不只是武器。只看名字是看不出来的。</p>
+
+<details class="deep">
+  <summary>为什么这个词特别值得当例子？展开</summary>
+  <p>因为在查它的过程中会发现一件反直觉的事：<strong>「焕光」的定义不在官方词条里</strong>。</p>
+  <p>它不是游戏 manifest 的一条正式条目，而是被写在烈日（Solar）元素页的一张卡片正文里。也就是说，如果你按「官方词条」的思路去找，会找不到；换个思路，在对应的元素页里反而能看到完整说明。</p>
+  <p>这件事本身就是这页要教的东西：<strong>「去哪查」比「记住数值」重要得多。</strong>数值会随版本改，但一个词通常固定在某一类页面里——状态词去元素页和机制页找，属性词去装备页找，口径词去排行表找。</p>
+  <p><strong>边界：</strong>这份说明里的数字带方括号写法（<code>+20%［10%］</code>），方括号里是 PvP 数值。我们只讲 PvE，取前面那个。</p>
+  <p><strong>核对：</strong>该说明同时出现在烈日元素页的卡片正文中，页面标题为「烈日」，可以按这个标题定位。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>烈日元素页「焕光」卡片正文</span>
+
+<h2 id="s4"><span class="n">4</span>名字相近的陷阱</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>中文译名里有大量「前缀相同、后缀差一个字」的词。凭前半截读，一定会认错。</p>
+</div>
+
+<p>这是中文环境特有的问题。英文原名差别可能很明显，翻译成中文后变成两个只差一个字的词，扫一眼就过去了。</p>
+
+<p>典型的例子是武器 Perk 里的<strong>「重建」和「重组」</strong>。两个词都是两个字，都带一个「重」，出现在同一个位置（Perk 名列表里），效果却完全是两回事。</p>
+
+<p>遇到这种词，可以用一个很笨但有效的办法：</p>
+
+<ol class="steps">
+  <li><strong>把两个名字并排抄下来。</strong>不要在脑子里比，写出来。</li>
+  <li><strong>逐字比对，找到第一个不同的字。</strong>「重建」和「重组」的差别在第二个字上。</li>
+  <li><strong>用那个不同的字记住它们。</strong>重建的重点在「建」，重组在「组」——记住这一个字的差别，比记住两个完整名字可靠。</li>
+</ol>
+
+<p>同样的问题也出现在<strong>「金中藏弹」和「光中藏弹」</strong>这类词上。它们的共同点是：<strong>前缀一样、长度一样、都出现在同一个列表里</strong>。这三条同时满足时，你就要主动减速。</p>
+
+<div class="note warn">
+  <span class="h">为什么这里不写它们的效果</span>
+  <p>因为这页教的是认词，不是背词。这两个 Perk 的具体效果写在它们各自的装备详情里，而且可能随版本调整。<strong>你需要的不是「记住这条 Perk 干什么」，而是「知道这两个词我很容易看混」。</strong>知道会看混，你就会去点开确认；不知道，你就会凭印象下结论。</p>
+</div>
+
+<span class="src"><span class="t">中文原始</span>译名对照与相似度来自游戏内 Perk 名列表；<span class="t">公开整理</span> 效果说明见各装备详情页</span>
+
+<h2 id="s5"><span class="n">5</span>同一个词，不同的数</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>有些词只有一个名字，但背后的数字有好几档。看到一个词就默认它只有一个值，是最容易翻车的地方。</p>
+</div>
+
+<p>这一类词比「名字相近」更隐蔽——名字确实一样，但数值取决于它出现在哪一档。两个例子：</p>
+
+<h3>例子一：元素威胁</h3>
+
+<p>活动开始前那张黑卡片上，同一个「元素威胁」有名副其实的好几档，而档位只用一个符号数量表示：</p>
+
+<table class="lookup">
+  <caption><b>查表</b>档位靠符号数量区分，进活动前确认 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th>档位</th><th class="num">受到该元素伤害</th><th>怎么认</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>元素威胁</td><td class="num">+25%</td><td>两个符号</td></tr>
+    <tr><td>困难元素威胁</td><td class="num">+50%</td><td>四个符号</td></tr>
+    <tr><td>致命元素威胁</td><td class="num">+66.6%</td><td>五个符号</td></tr>
+  </tbody>
+</table>
+
+<p>三个档位相差 2.7 倍。如果只看到卡片上有「元素威胁」四个字就下结论，很容易低估这一周的难度。这周能过、下周暴毙，通常就是档位换了。</p>
+
+<h3>例子二：势不可挡勇士</h3>
+
+<p>「势不可挡勇士」在所有难度下指的都是同一类敌人，<strong>它的伤害抗性也恒定不变</strong>——未被眩晕时，它把所有受到的伤害降低 70%，五个难度档位都是这个数。</p>
+
+<p>但它的<strong>生命值</strong>差别很大：</p>
+
+<table class="lookup">
+  <caption><b>查表</b>难度越高血越厚，算输出窗口时用 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th>难度</th><th class="num">勇士生命值</th><th class="num">眩晕时长</th><th class="num">两次眩晕冷却</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>标准</td><td class="num">2200</td><td class="num">7 秒</td><td class="num">无</td></tr>
+    <tr><td>突袭（专家 / 大师）</td><td class="num">3300</td><td class="num">7 秒</td><td class="num">无</td></tr>
+    <tr><td>高级</td><td class="num">4400</td><td class="num">7 秒</td><td class="num">无</td></tr>
+    <tr><td>专家</td><td class="num">5000</td><td class="num">6 秒</td><td class="num">2.5 秒</td></tr>
+    <tr class="hi"><td>宗师</td><td class="num">5475</td><td class="num">5.5 秒</td><td class="num">4.5 秒</td></tr>
+  </tbody>
+</table>
+
+<p>这张表里有两个独立的变量在动，方向还不一样：<strong>血量越来越高，眩晕越来越短、冷却越来越长。</strong>到了宗师，你每次眩晕只能控住 5.5 秒，还要等 4.5 秒才能再晕——输出窗口比你想象的短得多。</p>
+
+<div class="note ok">
+  <span class="h">这一节的通用做法</span>
+  <p>遇到一个「我知道它是什么」的词，再问一句：<strong>这个词的背后有几个档位？</strong>看到活动卡片上的符号、看到难度名、看到括号里的另一个数，都要警觉。</p>
+  <p>反过来也要当心：同一张卡片上的<strong>「元素匹配」</strong>名字听着像有档位，实际只有一条规则，方向还和「元素威胁」相反——一个管你挨打，一个管你打人。<strong>名字像不代表规则像。</strong></p>
+</div>
+
+<details class="deep">
+  <summary>「元素匹配」和「元素威胁」是两回事，展开看区别</summary>
+  <p>这两个词经常被混为一谈，因为名字里都有「元素」，都出现在同一张活动卡片上。实际上它们管的是完全不同的东西：</p>
+  <ul>
+    <li><strong>元素威胁</strong>：管你<strong>挨打</strong>。匹配元素时你受到的伤害提高。</li>
+    <li><strong>元素匹配</strong>：管你<strong>打人</strong>。战斗人员的护盾受到非匹配伤害时，伤害降低 80%。</li>
+  </ul>
+  <p>一个是防守方的修正，一个是攻击方的修正。<strong>看名字里的第二个词就能区分：威胁是冲着你来的，匹配是要求你去对的。</strong></p>
+  <p><strong>核对：</strong>两者同属游戏机制页的「活动修改器」一节，同一张表里可以同时看到。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>游戏机制页「活动修改器」元素威胁三档与元素匹配规则、勇士各难度生命值与眩晕表</span>
+
+<h2 id="quiz">自测</h2>
+
+<p class="quiz-head">四道题。考的是判断方法，不是记忆。</p>
+
+<details class="quiz">
+  <summary>队友说「这把枪 DPS 很高」，你在游戏里翻遍了装备详情，能找到「DPS」这个词吗？为什么？</summary>
+  <div class="ans">
+    <p>找不到。DPS 是社区为了比较装备造出来的<strong>口径词</strong>，游戏里不存在这个定义，所以也不会有官方数值。</p>
+    <p>它由「总伤害 ÷ 耗时」算出来，但不同的人可以选不同的耗时口径，所以两个排行榜的 DPS 对不上是正常的。看到这类词，去排行表看它的列名定义，而不是在游戏里翻。</p>
+    <p class="back">回看第 1、2 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>状态栏上出现了一个没见过的增益图标。它属于哪一类？能不能在游戏里查到它加多少？</summary>
+  <div class="ans">
+    <p>属于<strong>状态词</strong>。游戏通常只给你一个图标和名字，<strong>数值要外查</strong>。</p>
+    <p>判断路径是：出现在状态栏 → 不带数字 → 装备上找不到，三条都指向「状态类」。去对应的元素页或机制页找，而不是继续在游戏里翻。</p>
+    <p class="back">回看第 2、3 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>你在 Perk 列表里看到「重建」，和别人说的「重组」是同一个东西吗？你怎么确认？</summary>
+  <div class="ans">
+    <p>不是。这是一对典型的中文译名陷阱：前缀相同、长度相同、出现在同一个列表里。</p>
+    <p>确认办法是并排抄下来逐字比对，找到第一个不同的字（这里是第二个字，「建」和「组」），用那个字的差别来记，而不是凭印象。</p>
+    <p class="back">回看第 4 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>同样是「势不可挡勇士」，标准难度和宗师难度下有什么是不变的，什么在变？</summary>
+  <div class="ans">
+    <p><strong>不变的是伤害抗性</strong>——未被眩晕时恒定降低 70% 受到的伤害，五个难度档位都是这个数。</p>
+    <p><strong>变的是生命值和眩晕规则</strong>：生命值从 2200 涨到 5475，眩晕时长从 7 秒降到 5.5 秒，两次眩晕之间还多了 4.5 秒冷却。</p>
+    <p>这就是「同一个词、不同的数」的典型：不能因为认识这个词，就假设它的数值只有一套。</p>
+    <p class="back">回看第 5 节。</p>
+  </div>
+</details>
+
+<div class="pager">
+  <a href="mechanics.html">
+    <span class="dir">上一页</span>
+    1 · 通用机制
+  </a>
+  <a class="next" href="build.html">
+    <span class="dir">下一页</span>
+    3 · 不会配
+  </a>
+</div>
+
+</article>
+
+<div class="foot">
+  <p><strong>本页数据来源。</strong>六类词的分类方式与判断顺序为自行组织，依据是各数据页的实际目录结构。焕光说明来自烈日元素页卡片正文；元素威胁三档、元素匹配规则、勇士各难度数值来自游戏机制页整理。数值用于说明机制，具体数值与最新版本以来源页面为准。</p>
+</div>
+</main>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>

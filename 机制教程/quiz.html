@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>总测 · 命运 2 机制教程</title>
+<meta name="description" content="四个真实场景，考的是跨页的判断顺序。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="quiz">
+
+<button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
+
+<aside id="side">
+  <a class="brand" href="index.html">命运 2 机制教程</a>
+  <p class="brand-sub">《命运 2 学习手册》· 战斗机制</p>
+
+  <nav class="g-nav">
+    <a href="index.html" data-key="index"><span class="k">·</span>从这里开始</a>
+    <a href="mechanics.html" data-key="mechanics"><span class="k">1</span>通用机制</a>
+    <a href="terms.html" data-key="terms"><span class="k">2</span>看不懂词</a>
+    <a href="build.html" data-key="build"><span class="k">3</span>不会配</a>
+    <a href="damage.html" data-key="damage"><span class="k">4</span>打不出伤害</a>
+    <a href="survive.html" data-key="survive"><span class="k">5</span>活不下来</a>
+    <a href="quiz.html" data-key="quiz"><span class="k">测</span>总测</a>
+  </nav>
+
+  <nav class="l-nav">
+    <p class="l-title">本页</p>
+    <a href="#s0">怎么用这一页</a>
+    <a href="#s1">场景一 · 宗师打不动 BOSS</a>
+    <a href="#s2">场景二 · 传说战役一直死</a>
+    <a href="#s3">场景三 · 没打过的活动</a>
+    <a href="#s4">场景四 · 一样配装，别人打得比我高</a>
+  </nav>
+
+  <button class="theme-btn" id="theme">配色</button>
+
+  <div class="side-foot">
+    <p>这一页考的是跨页的判断顺序，不是单点记忆。答错了回到对应页看那一节。</p>
+  </div>
+</aside>
+
+<main>
+<article>
+
+<h1>总测</h1>
+<p class="subtitle">四个真实场景，考的是顺序。</p>
+<p class="page-ask">这一页回答：<b>遇到一个没见过的麻烦，我知道先查什么吗？</b></p>
+
+<h2 id="s0"><span class="n">0</span>怎么用这一页</h2>
+
+<p>这一页和每页末尾的自测不一样。那里考的是「这一节的结论你记住了吗」，这里考的是「几个结论摆在一起，你知道先用哪个吗」。</p>
+
+<ul>
+  <li>每个场景分成若干步。每步先自己想「下一步查什么」，再展开对照。</li>
+  <li>答案给的是<strong>路径</strong>，不是唯一正确解——顺序合理就算对。</li>
+  <li>答错了回对应页重看那一节，页内自测可以再做一遍。</li>
+</ul>
+
+<div class="note">
+  <span class="h">建议做法</span>
+  <p>不要一口气看完全部答案。先自己想完整个排查链，再逐条展开——每一步都先给自己一个答案，再对照。</p>
+</div>
+
+<h2 id="s1"><span class="n">1</span>场景一 · 宗师打不动 BOSS</h2>
+
+<p>宗师难度，光等差 −50。你用的是一套社区推荐的配装，杂兵清得很顺，但打 BOSS 血条几乎不动。</p>
+
+<details class="quiz">
+  <summary>第一步：先怀疑枪，还是先怀疑别的？</summary>
+  <div class="ans">
+    <p>先怀疑别的。关键线索是<strong>杂兵清得很顺</strong>——同一套武器打杂兵没问题，说明武器本身没有故障。</p>
+    <p>差别出在「打谁」上。所以第一步不该是换枪，而是找出 BOSS 和你刚才打的杂兵有什么不同。</p>
+    <p class="back">对应 <a href="damage.html#s1">第 4 页第 1 节</a>的排查思路。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第二步：BOSS 身上会带「祸因」吗？</summary>
+  <div class="ans">
+    <p><strong>不会。</strong>祸因是加在<strong>非首领</strong>战斗人员身上的词缀，BOSS 不带。所以祸因不是这次的原因，可以直接排除。</p>
+    <p>但如果 BOSS 是势不可挡勇士，就要看下一条了。</p>
+    <p class="back">对应 <a href="damage.html#s1">第 4 页第 1 节</a>祸因规则。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第三步：如果它是势不可挡勇士，你打之前必须先做什么？</summary>
+  <div class="ans">
+    <p>必须先<strong>眩晕</strong>它。势不可挡勇士在未被眩晕时对所有伤害有 <strong>70% 抗性</strong>——不晕就是白打，任何增伤都只能打出三成。</p>
+    <p>而且宗师下眩晕只有 5.5 秒，中间还有 4.5 秒不能重置。<strong>这 5.5 秒就是你的全部输出窗口</strong>，爆发要留给它。</p>
+    <p class="back">对应 <a href="damage.html#s1">第 4 页第 1 节</a>勇士表。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第四步：光等差 −50 在这一档意味着什么？</summary>
+  <div class="ans">
+    <p>意味着你的输出倍率<strong>只剩 0.143</strong>——不到平光时的七分之一。而你受到的伤害是 +150%。</p>
+    <p>这是「打不动」的一个独立成因，而且量级很大。<strong>在 −50 这一档，配装调整能补的空间本来就很小。</strong></p>
+    <p class="back">对应 <a href="mechanics.html#s1">第 1 页第 1 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第五步：外部原因排除完了，怎么检查自己的增伤？</summary>
+  <div class="ans">
+    <p>把所有增伤列出来，按<strong>七类</strong>归位，然后看哪几类是空的。</p>
+    <p>典型问题是三个增益挤在同一类里，实际只有一个生效——比如挂了三条「强化」，那另外两条完全是浪费的位置。该做的是往空着的那几类铺。</p>
+    <p class="back">对应 <a href="damage.html#s3">第 4 页第 3 节</a>与 <a href="mechanics.html#s3">第 1 页第 3 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第六步：到这一步才轮到武器。看哪一列判断它够不够？</summary>
+  <div class="ans">
+    <p>看这一列：<strong>「首领」</strong>。战斗人员倍率表里，武器的对首领系数和它对红血、橙血的系数是分开的。</p>
+    <p>注意一个反直觉的事实：<strong>武器类型之间的差别主要体现在打杂兵上</strong>，打首领时差距很小（自动步枪 1.070 对斥候步枪 1.210）。所以「换一把打首领更强的枪」通常不是这个场景的答案。</p>
+    <p class="back">对应 <a href="build.html#s4">第 3 页第 4 节</a>与 <a href="mechanics.html#s2">第 1 页第 2 节</a>。</p>
+  </div>
+</details>
+
+<div class="note ok">
+  <span class="h">这条链的顺序</span>
+  <p>杂兵能清（武器没坏）→ BOSS 不带祸因（排除）→ 是不是勇士、晕没晕 → 光等差 → 增伤铺开没有 → 最后才看武器。</p>
+  <p><strong>注意武器排在最后。</strong>前五步里只要中了一条，换枪就是白换。</p>
+</div>
+
+<h2 id="s2"><span class="n">2</span>场景二 · 传说战役一直死</h2>
+
+<p>传说战役，光等差 −30。输出感觉正常，但一进战斗就死，撑不过两个精英怪。</p>
+
+<details class="quiz">
+  <summary>第一步：这是生存问题还是输出问题？</summary>
+  <div class="ans">
+    <p>看<strong>死亡时间点</strong>。「一进战斗就死」是典型的生存问题——你还没进入输出环节就被打死了。</p>
+    <p>如果是「打到最后阶段才死」，那更可能是输出不够拖太久，方向完全不同。</p>
+    <p class="back">对应 <a href="survive.html#s5">第 5 页第 5 节</a>分流表。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第二步：这周的活动修改器改了什么？</summary>
+  <div class="ans">
+    <p>看活动界面那张黑色卡片上有没有<strong>元素威胁</strong>（三档：+25% / +50% / +66.6% 承受伤害）和<strong>扎根</strong>（空中受到伤害 +100%）。</p>
+    <p>这两项直接改你承受的伤害，而且不需要你做任何配装调整就生效。「扎根」尤其隐蔽——它只在你跳起来打的时候生效。</p>
+    <p class="back">对应 <a href="survive.html#s1">第 5 页第 1 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第三步：抗性来源有哪些？能不能再加一层？</summary>
+  <div class="ans">
+    <p>先问一个问题：<strong>你有没有在该死的时候开超能？</strong>多数超能自带 <strong>90% 伤害抗性</strong>，是单笔最大的减伤来源，而且不占任何模组位置。</p>
+    <p>然后是胸甲模组，三档 15% / 25% / 30%。以及职业属性 100 点以上给的覆盖护盾（对守护者伤害降低 50%）。</p>
+    <p class="back">对应 <a href="survive.html#s2">第 5 页第 2 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第四步：生命值属性堆的是哪一项？有没有记反？</summary>
+  <div class="ans">
+    <p>最容易记反的一点：<strong>生命值属性不提高血量上限。</strong>它给的是「拾取能量球恢复生命值 +0.7/点」，以及 100 点以上的护盾充能速度和护盾值。</p>
+    <p>如果他死于「掉血太快」，堆这项没用——该看的是第 2 节的抗性来源。</p>
+    <p class="back">对应 <a href="survive.html#s3">第 5 页第 3 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第五步：补光等差能同时改善两边，为什么不先补光等？</summary>
+  <div class="ans">
+    <p>是应该先补。光等差是唯一一个<strong>既提高你输出、又降低你承伤</strong>的调整。</p>
+    <p>从 −30 往 −50 走，输出掉到约三分之一，受到的伤害从 +85% 涨到 +150%。低光等下通常先出生存问题，正是因为这个承伤的增长先于输出的不足表现出来。</p>
+    <p class="back">对应 <a href="mechanics.html#s1">第 1 页第 1 节</a>与 <a href="survive.html#s5">第 5 页第 5 节</a>。</p>
+  </div>
+</details>
+
+<div class="note ok">
+  <span class="h">这条链的顺序</span>
+  <p>判断问题类型 → 看修改器 → 找最大的抗性来源（超能）→ 检查生命值属性有没有记反 → 补光等差。</p>
+  <p><strong>「堆肉」不是一个动作。</strong>先看修改器（免费的条件变化），再看抗性来源（能加一层是一层），最后才是属性。</p>
+</div>
+
+<h2 id="s3"><span class="n">3</span>场景三 · 没打过的活动</h2>
+
+<p>第一次打一个新活动，进去之前只有十分钟，该怎么准备。</p>
+
+<details class="quiz">
+  <summary>第一步：先确认哪四件事？</summary>
+  <div class="ans">
+    <p>这四个都能在活动界面上看到，不需要打一遍才知道：</p>
+    <ul>
+      <li><strong>活动难度与光等差</strong>——决定你的输出和承伤缩放</li>
+      <li><strong>活动修改器</strong>——哪些元素被加强、有没有额外规则</li>
+      <li><strong>主要敌人档位</strong>——你主要打杂兵还是首领，决定弹药类型</li>
+      <li><strong>有没有必须处理的机制目标</strong>——要不要留位置处理护盾</li>
+    </ul>
+    <p class="back">对应 <a href="build.html#s1">第 3 页第 1 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第二步：从这四件事怎么推出武器方向？</summary>
+  <div class="ans">
+    <p>把答案翻译成装备语言：</p>
+    <ul>
+      <li>主要打杂兵 → 一号位二号位放清怪效率高的，<strong>弹药生成属性尽量高</strong></li>
+      <li>主要打首领、只有一个输出窗口 → 把爆发集中在重弹上</li>
+      <li>有必须处理的护盾 → <strong>留一个位置对应该元素</strong>，这一条优先于伤害考虑</li>
+    </ul>
+    <p class="back">对应 <a href="build.html#s1">第 3 页第 1 节</a>与 <a href="build.html#s5">第 5 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第三步：属性堆哪一项？</summary>
+  <div class="ans">
+    <p>取决于你这一套主打什么：武器输出推武器和生命值；技能输出推手雷（200 点最多 +65% 手雷伤害，是六项里最高的一项收益）；保命为主推职业和生命值。</p>
+    <p>无论选哪个，<strong>先把要用的那一项推到 100，再考虑往 200 走</strong>——停在 60 点等于两段收益都没吃到。</p>
+    <p class="back">对应 <a href="build.html#s2">第 3 页第 2 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第四步：进图之后发现完全打不动，第一个该怀疑什么？</summary>
+  <div class="ans">
+    <p>先排除跟自己配装无关的三项：<strong>祸因、势不可挡勇士有没有晕、光等差够不够。</strong></p>
+    <p>如果敌人血条旁边有额外标记，那就是祸因（60% 抗性，受保护类型是 90%）；如果是势不可挡勇士而你没晕住，那是 70% 抗性；如果光等差不对，那是乘法级的差距。<strong>这三条都不是换枪能解决的。</strong></p>
+    <p class="back">对应 <a href="damage.html#s1">第 4 页第 1 节</a>。</p>
+  </div>
+</details>
+
+<div class="note ok">
+  <span class="h">十分钟的准备顺序</span>
+  <p>看难度和光等差 → 看修改器 → 定武器方向（弹药类型优先，元素其次）→ 定属性主推项 → 进图发现不对先查外部原因，别急着换枪。</p>
+</div>
+
+<h2 id="s4"><span class="n">4</span>场景四 · 一样配装，别人打得比我高</h2>
+
+<p>你和队友穿同一套推荐配装，打完看伤害统计，差了一截。</p>
+
+<details class="quiz">
+  <summary>第一步：先排除哪些外部变量？</summary>
+  <div class="ans">
+    <p>先确认你们<strong>打的是不是同一个敌人、同一个难度</strong>：光等差一样吗？活动修改器对两个人的影响一样吗（比如元素激涌只对匹配元素生效）？</p>
+    <p>如果这些不一样，那差距跟配装无关，先把这个前提对齐再比。</p>
+    <p class="back">对应 <a href="damage.html#s2">第 4 页第 2 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第二步：检查哪些「看不见的属性」？</summary>
+  <div class="ans">
+    <p>两处最容易漏的：<strong>武器属性和弹药生成属性。</strong></p>
+    <ul>
+      <li>武器属性 100 点以上给对首领伤害（主武器和特殊弹药 +15%，威能 +10%）——少这 100 点，双方的面板看起来一样，实际伤害不同。</li>
+      <li>弹药生成属性决定你的重弹补给。打同样的敌人，属性低的一方后半段可能就没弹了，伤害曲线直接掉下来。</li>
+    </ul>
+    <p class="back">对应 <a href="mechanics.html#s4">第 1 页第 4 节</a>与 <a href="damage.html#s5">第 4 页第 5 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第三步：排行榜里的排名，什么时候不成立？</summary>
+  <div class="ans">
+    <p>排行榜的每个数字都是在<strong>某个条件下</strong>算出来的——用了哪些 Perk、有没有武器激涌、有没有增益。条件不满足时，排名就不成立。</p>
+    <p>照着抄配装，但 Perk 没触发、武器激涌没叠上、增益没吃到，打出来的数字和榜上差一截是必然的。这不是「别人比你强」，是<strong>条件差了一项</strong>。</p>
+    <p class="back">对应 <a href="damage.html#s4">第 4 页第 4 节</a>。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>第四步：如果装备完全一样、条件也都满足了，差距还能来自哪里？</summary>
+  <div class="ans">
+    <p>剩下的都是排行榜算不进去的东西：</p>
+    <ul>
+      <li><strong>输出窗口的利用率</strong>——窗口只有 5.5 秒，你有没有把爆发全部塞进去，还是前两秒在找位置。</li>
+      <li><strong>弱点命中</strong>——许多敌人有弱点部位，打没打中差距很大。</li>
+      <li><strong>触发时机</strong>——Perk 和武器激涌有没有在输出那一刻真的生效。</li>
+      <li><strong>目标选择</strong>——把伤害打在了谁身上。</li>
+    </ul>
+    <p>这一题的结论是：<strong>排行榜给的是「条件满足时的上限」，不是「你实际能打出的数」。</strong>装备一样只是起点。</p>
+    <p class="back">对应 <a href="damage.html#s4">第 4 页第 4 节</a>与 <a href="damage.html#s6">第 6 节</a>。</p>
+  </div>
+</details>
+
+<div class="note ok">
+  <span class="h">四个场景做完</span>
+  <p>如果每条排查链都能自己走下来，这份教程的目的就达到了。剩下的具体数值随版本变，回对应的来源页面查当期的就行。</p>
+</div>
+
+<div class="pager">
+  <a href="survive.html">
+    <span class="dir">上一页</span>
+    5 · 活不下来
+  </a>
+  <a class="next" href="index.html">
+    <span class="dir">回到开头</span>
+    从这里开始
+  </a>
+</div>
+
+</article>
+
+<div class="foot">
+  <p><strong>关于总测。</strong>场景为自行设计，用于检验跨页判断顺序；答案里引用的数值均来自前五页，出处见各页标注。数值用于说明机制，具体数值与最新版本以来源页面为准。</p>
+</div>
+</main>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>

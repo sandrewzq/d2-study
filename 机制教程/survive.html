@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>5 · 活不下来 · 命运 2 机制教程</title>
+<meta name="description" content="一直死不是笼统的「不够肉」。按顺序查：修改器、抗性来源、生命值与回复。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="survive">
+
+<button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
+
+<aside id="side">
+  <a class="brand" href="index.html">命运 2 机制教程</a>
+  <p class="brand-sub">《命运 2 学习手册》· 战斗机制</p>
+
+  <nav class="g-nav">
+    <a href="index.html" data-key="index"><span class="k">·</span>从这里开始</a>
+    <a href="mechanics.html" data-key="mechanics"><span class="k">1</span>通用机制</a>
+    <a href="terms.html" data-key="terms"><span class="k">2</span>看不懂词</a>
+    <a href="build.html" data-key="build"><span class="k">3</span>不会配</a>
+    <a href="damage.html" data-key="damage"><span class="k">4</span>打不出伤害</a>
+    <a href="survive.html" data-key="survive"><span class="k">5</span>活不下来</a>
+    <a href="quiz.html" data-key="quiz"><span class="k">测</span>总测</a>
+  </nav>
+
+  <nav class="l-nav">
+    <p class="l-title">本页</p>
+    <a href="#s1">1 先看活动修改器</a>
+    <a href="#s2">2 伤害抗性怎么叠</a>
+    <a href="#s3">3 生命值与回复</a>
+    <a href="#s4">4 恢复手段分类</a>
+    <a href="#s5">5 活不下来，还是打不过</a>
+    <a href="#list" class="chk">生存手段清单</a>
+    <a href="#quiz">自测</a>
+  </nav>
+
+  <button class="theme-btn" id="theme">配色</button>
+
+  <div class="side-foot">
+    <p>本页与 <a href="damage.html">4 · 打不出伤害</a> 是同一件事的两面，卡住时互相翻。</p>
+  </div>
+</aside>
+
+<main>
+<article>
+
+<h1>5 · 活不下来</h1>
+<p class="subtitle">不是打不动，是站不住。</p>
+<p class="page-ask">这一页回答：<b>我输出没问题，为什么一直死？</b></p>
+
+<p class="lead">「堆肉一点」不是一句可执行的话——它至少包含三件不同的事：<strong>改变你受到的伤害、提高你掉血后的回复、以及减少你暴露在外的时间。</strong>这一页按排查顺序把它们拆开，最后给一条「到底是生存问题还是输出问题」的分流判断。</p>
+
+<div class="note">
+  <span class="h">为什么这一页要单独存在</span>
+  <p>因为这个游戏里没有一份「生存指南」。修改器的规则在一张表里，胸甲模组的抗性在另一张，超能期间的抗性写在各个职业分支的卡片正文里，套装减伤又在别的地方——<strong>它们从来没有被汇总过</strong>。这一页把它们放在一起，因为实际排查时你没法只看其中一个。</p>
+</div>
+
+<h2 id="s1"><span class="n">1</span>先看活动修改器</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>「上周能过的配置这周暴毙」，绝大多数时候是修改器换了，不是你的装备被削了。</p>
+</div>
+
+<p>活动开始前那张黑色卡片，有几项直接决定你这一周承受多少伤害。它们不需要你做任何配装调整就能生效，也正因为如此，最容易被忽略。</p>
+
+<table class="lookup">
+  <caption><b>查表</b>每周更新，进活动前看一眼 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th>修改器</th><th>对你做了什么</th></tr>
+  </thead>
+  <tbody>
+    <tr class="hi"><td>元素威胁</td><td>匹配元素时，你<strong>受到</strong>的伤害 +25%</td></tr>
+    <tr class="hi"><td>困难元素威胁</td><td>同上，+50%</td></tr>
+    <tr class="hi"><td>致命元素威胁</td><td>同上，+66.6%</td></tr>
+    <tr><td>扎根</td><td>空中时你<strong>受到</strong>的伤害 +100%</td></tr>
+    <tr><td>元素匹配</td><td>敌人的护盾受到非匹配伤害时，伤害降低 80%（这是对你输出的限制）</td></tr>
+  </tbody>
+</table>
+
+<p>三档元素威胁之间相差 2.7 倍。同一套装备，在这三个档位下的生存能力完全不是一回事——<strong>所以看到卡片上有「元素威胁」四个字，还要看清它是哪一档。</strong>档位通过符号数量区分，两个符号是最低档，五个是最高档。</p>
+
+<h3>为什么威胁和扎根最坑</h3>
+
+<p>因为它们改动的是<strong>你承受的伤害</strong>，而你通常不会把「这周死得多」和「卡片上那行字」联系起来。表现上就是：输出一切正常，但血量掉得莫名其妙快，像是敌人变强了。</p>
+
+<p>「扎根」尤其隐蔽——它的触发条件是「在空中」。如果你习惯跳着打、或者用跳跃规避，这一项会让你的实际生存能力比你预估的低得多，而你可能一直以为是敌人的问题。</p>
+
+<div class="note warn">
+  <span class="h">这一节的用武之地</span>
+  <p>如果同一套配装上周能用、这周频繁死，<strong>第一件事是回去看这周的修改器</strong>，而不是怀疑装备。<strong>修改器是唯一一个每周都会变、而且你无法通过配装完全抵消的变量。</strong></p>
+</div>
+
+<details class="deep">
+  <summary>完整档位表和第 4 页是同一张。展开看两项的区别</summary>
+  <p>这张表和<a href="damage.html#s2">第 4 页第 2 节</a>是同一份数据，只是关注点不同：</p>
+  <ul>
+    <li><strong>站在输出角度</strong>：只看「元素激涌」（+25% 你的伤害）、「元素匹配」（不匹配时敌人护盾减伤 80%）、「元素饥饿」（技能回复 +750%）。</li>
+    <li><strong>站在生存角度</strong>：只看「元素威胁」三档和「扎根」两行。</li>
+  </ul>
+  <p>区分诀窍还是那一句：<strong>「威胁」说的是你挨打，「激涌」说的是你打人。</strong></p>
+  <p><strong>边界：</strong>三档元素威胁的档位是靠卡片上的符号数量区分的，而符号在不同界面上的显示可能有差异。<strong>拿不准时以活动界面上的文字说明为准</strong>，不要只数符号。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>游戏机制页「活动修改器」全表</span>
+
+<h2 id="s2"><span class="n">2</span>伤害抗性怎么叠</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>抗性来源不止一种，最大的一笔往往不是模组——是超能自带的那个百分比。</p>
+</div>
+
+<p>「堆肉」的第一层是降低你受到的伤害。抗性来源有下面这些，量级差别很大：</p>
+
+<figure>
+  <svg viewBox="0 0 600 200" role="img" aria-label="各抗性来源的量级对比条形图">
+    <g>
+      <text x="0" y="26">超能期间</text>
+      <rect class="bar-bg" x="130" y="15" width="380" height="14"/>
+      <rect class="bar-fill" x="130" y="15" width="342" height="14"/>
+      <text class="on" x="482" y="26">90%</text>
+
+      <text x="0" y="62">覆盖护盾（挡守护者）</text>
+      <rect class="bar-bg" x="130" y="51" width="380" height="14"/>
+      <rect class="bar-fill mid" x="130" y="51" width="190" height="14"/>
+      <text x="330" y="62">50%</text>
+
+      <text x="0" y="98">抗性模组（最高档）</text>
+      <rect class="bar-bg" x="130" y="87" width="380" height="14"/>
+      <rect class="bar-fill mid" x="130" y="87" width="114" height="14"/>
+      <text x="254" y="98">30%</text>
+
+      <text x="0" y="134">抗性模组（次高档）</text>
+      <rect class="bar-bg" x="130" y="123" width="380" height="14"/>
+      <rect class="bar-fill low" x="130" y="123" width="95" height="14"/>
+      <text x="235" y="134">25%</text>
+
+      <text x="0" y="170">抗性模组（最低档）</text>
+      <rect class="bar-bg" x="130" y="159" width="380" height="14"/>
+      <rect class="bar-fill low" x="130" y="159" width="57" height="14"/>
+      <text x="197" y="170">15%</text>
+    </g>
+  </svg>
+  <figcaption>各来源的量级对比。横条长度按抗性百分比等比缩放（100% = 满格）。<strong>最大的那一笔通常不在模组里。</strong></figcaption>
+</figure>
+
+<p>这张图里最该记住的是第一行：<strong>多数超能自带 90% 伤害抗性。</strong>这是整个游戏里单笔最大的减伤来源，而且它不需要你占任何模组位置——超能本来就要放。</p>
+
+<p>这条经常被忽略的原因是：超能通常被当成「输出手段」来规划，而不是「生存手段」。但实际打起来，<strong>在该死的时候开超能，效果比任何模组都强。</strong></p>
+
+<h3>胸甲抗性模组的三档，以及它们之间怎么算</h3>
+
+<p>胸甲上的抗性模组有三个档位：<strong>15% / 25% / 30%</strong>。档位越高占用的模组能量越多，所以它不是无脑选最高的——要和别的模组抢位置。</p>
+
+<p>同一个槽位里还能装更专项的版本：<strong>元素抗性</strong>只减免与该元素匹配的伤害，<strong>狙击抗性</strong>减免 30 米以外的伤害，<strong>近战抗性</strong>减免 5 米以内的伤害，<strong>震荡阻尼器</strong>减免范围、冲击与爆炸伤害。如果你的活动里威胁来源单一，专项版比通用版划算；来源混杂时通用版更稳。</p>
+
+<div class="note ok">
+  <span class="h">减伤之间不冲突，这是它和增伤最大的区别</span>
+  <p>增伤那一边要记「同类取最高」，堆第二条是浪费。减伤不是——<strong>不同的抗性模组之间、抗性与其他减伤来源之间，一律乘算叠加。</strong></p>
+  <p>也就是说，超能、模组、套装、异域、神器各给一条减伤时，它们是<strong>全都生效</strong>的，不会互相顶掉。所以生存配装的思路和输出配装相反：<strong>能同时挂上几条就挂几条。</strong></p>
+  <p>这条规则来自护甲模组页的明确说明。唯一一条已知的例外写在英文表的注解里——护甲匠那一条被标注为「被通用抗性覆盖」，但那条注解没有说明适用范围，所以按上面的规则处理，遇到具体冲突时以你实测到的为准。</p>
+</div>
+
+<div class="note">
+  <span class="h">还有一层：职业属性给的覆盖护盾</span>
+  <p>职业属性推到 100 点以上后，使用职业技能会提供一层<strong>覆盖护盾</strong>：推进器和闪身持续 5 秒，裂痕和屏障持续 10 秒。<strong>守护者打在这层护盾上的伤害降低 50%</strong>，而且它本身还有独立的生命值（每点属性 0.4，200 点最多 40）。</p>
+  <p>这一层和第 3 节的属性分配直接相关——它是职业属性在 100 点以上的主要收益之一。</p>
+</div>
+
+<details class="deep">
+  <summary>冰霜护甲这类分层抗性怎么理解？展开</summary>
+  <p>除了上面这些「一次性给出一个百分比」的来源，游戏里还有一类<strong>分层叠加</strong>的抗性，冰霜护甲是最典型的：它不是一个固定数值，而是随着层数增加逐步提高，满层时达到最高。</p>
+  <p>这类来源的特点决定了它的用法：</p>
+  <ul>
+    <li><strong>需要时间叠起来</strong>，所以它适合持续战斗，不适合刚进场的那一瞬间。</li>
+    <li><strong>层数会掉</strong>，所以维持比开启更重要。</li>
+    <li>具体每层加多少、满层是多少，<strong>写在各元素页和职业分支的卡片正文里</strong>，数值随版本调整。</li>
+  </ul>
+  <p><strong>为什么这里不写具体数字：</strong>这类分层抗性的数值分散在多个元素页里，而且是最容易随版本变动的一类。写死在教程里反而会误导。<strong>需要的做法是：知道有这类来源、知道它需要叠层，具体数值去对应元素的页面查当期的。</strong></p>
+  <p><strong>其余来源在哪：</strong>超能、模组、异域、套装、神器各自给多少，以及它们共用的那套「抵抗 x1–x4」命名法，集中在页末的<a href="#list">生存手段清单</a>。</p>
+  <p><strong>边界：</strong>本页汇总的所有抗性数值都来自第三方整理，不是游戏内直接显示的。这是<a href="terms.html#s1">第 2 页</a>说的「状态类词游戏里查不到数值」的又一个例子。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>抗性模组三档、专项版本与「乘算叠加」规则来自护甲模组页；超能期间抗性来自各职业分支详解页；覆盖护盾数值来自游戏机制页「护甲属性」节；分层抗性说明来自各元素页卡片正文。<strong>本页把这些分散的来源汇总成一条排查线，汇总方式为自行组织。</strong></span>
+
+<h2 id="s3"><span class="n">3</span>生命值与回复</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>生命值属性提高的是「你捡球回多少血」，不是「你的血条有多长」。记反了会调错方向。</p>
+</div>
+
+<p>护甲属性里的「生命值」是最容易记反的一项。它给的三个效果是：</p>
+
+<table class="lookup">
+  <caption><b>查表</b>记不住具体档位时回来对 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th>档位</th><th>效果</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>每点</td><td>拾取能量球恢复生命值 <strong>+0.7</strong>，100 点时每颗最多 +70</td></tr>
+    <tr><td>每点</td><td>瞄准时受击抖动抗性 +0.1%，100 点 +10%</td></tr>
+    <tr><td>100 点以上</td><td>护盾充能最多提前 25% 开始，速度 +45%</td></tr>
+    <tr><td>100 点以上</td><td>对战斗人员护盾值 +20</td></tr>
+  </tbody>
+</table>
+
+<p><strong>没有任何一项是「提高血量上限」。</strong>所以指望靠堆生命值属性变肉，方向从一开始就是错的——它改善的是你掉血之后的恢复速度。</p>
+
+<h3>抗性和回复是两件事</h3>
+
+<p>两者解决的是不同环节，不能互相替代：</p>
+
+<table>
+  <thead>
+    <tr><th>类别</th><th>作用</th><th>管什么</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>抗性</strong></td><td>降低你掉血的速度</td><td>挨打的那一瞬间</td></tr>
+    <tr><td><strong>回复</strong></td><td>提高你回血的速度</td><td>脱离战斗之后</td></tr>
+  </tbody>
+</table>
+
+<p>所以「一直死」也分两种：<strong>一种是掉得太快，抗性不够；另一种是回得太慢，每次都带着半血进下一场战斗，被两下带走。</strong>这两种要调的东西不一样。</p>
+
+<div class="note warn">
+  <span class="h">100 点以上的那一档容易漏</span>
+  <p>「护盾充能最多提前 25% 开始，速度 +45%」——这一条改的是护盾（血条上那层蓝色部分）的恢复节奏，实际体感比数字明显。它和「护盾值 +20」一起构成了生命值属性在 100 点以上的主要收益。</p>
+  <p>如果你的问题不是「回血慢」而是「护盾老是不回」，那要看的正是这一档。</p>
+</div>
+
+<details class="deep">
+  <summary>完整的逐档位表。展开看 0–100 每十点的数值</summary>
+  <table class="lookup">
+    <caption><b>查表</b>逐十点的数值，需要精算时看 · 数据截至 2026-09</caption>
+    <thead>
+      <tr><th class="num">属性点</th><th class="num">每颗能量球回复</th><th class="num">受击抖动抗性</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="num">0</td><td class="num">0</td><td class="num">0%</td></tr>
+      <tr><td class="num">20</td><td class="num">14</td><td class="num">2%</td></tr>
+      <tr><td class="num">40</td><td class="num">28</td><td class="num">4%</td></tr>
+      <tr><td class="num">60</td><td class="num">42</td><td class="num">6%</td></tr>
+      <tr><td class="num">80</td><td class="num">56</td><td class="num">8%</td></tr>
+      <tr class="hi"><td class="num">100</td><td class="num">70</td><td class="num">10%</td></tr>
+    </tbody>
+  </table>
+  <p>两项都是线性的：每 20 点回复量 +14、抖动抗性 +2%。<strong>所以 0 到 100 这一段没有拐点</strong>，从哪一点开始堆，边际收益都一样。</p>
+  <p>「受击抖动抗性」这一项影响的是你被连续打中时准星的晃动幅度。在需要持续瞄准的场合（比如打弱点），它的实际价值比 10% 这个数字看起来高。</p>
+  <p><strong>边界：</strong>多项数值带方括号写法（如 <code>0.4［0.1］</code>），方括号里是 PvP 数值。本教程只讲 PvE，取前面那个。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>游戏机制页「护甲属性」节生命值各项</span>
+
+<h2 id="s4"><span class="n">4</span>恢复手段分类</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>按「代价」给回血手段分类：不要代价的、要一个动作的、要一次击杀的。战斗中的选择就是在这三类之间切。</p>
+</div>
+
+<p>回血的手段很多，逐个记没有意义。按<strong>触发代价</strong>分成三类，判断会简单很多：</p>
+
+<table>
+  <thead>
+    <tr><th>类别</th><th>触发条件</th><th>适合的时机</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>被动类</td><td>没有额外动作，属性或装备自带</td><td>一直在生效。它决定你「默认能撑多久」</td></tr>
+    <tr><td>动作类</td><td>需要你主动做一件事：放职业技能、捡拾取物、开超能</td><td>可以随时用，但每次都要占用一个动作</td></tr>
+    <tr><td>击杀类</td><td>需要你打死一个敌人，触发某个 Perk 或增益</td><td>有怪可打时最强，没怪可打时完全失效</td></tr>
+  </tbody>
+</table>
+
+<p>分类的价值在于<strong>知道哪一类在当前场合会失效</strong>：</p>
+
+<ul>
+  <li><strong>击杀类在首领战里最容易失效。</strong>没有杂兵可打的时候，靠击杀触发的回血手段一个都开不出来——这是「打 BOSS 时莫名变脆」的常见原因。</li>
+  <li><strong>动作类在高压下最难用。</strong>要回血就得停手做动作，而高压环境下停下就是被打。这也是为什么被动类最稳。</li>
+  <li><strong>被动类最稳但也最弱。</strong>它不需要你做任何事，所以也不能在你需要的时候突然给你一大口。</li>
+</ul>
+
+<div class="note">
+  <span class="h">按这个分类看自己的配装</span>
+  <p>把你这套配装的回血手段归一下类。如果<strong>三类全是击杀类</strong>，那你在首领战里就是完全没有回复的——这不是运气问题，是配置结构问题。</p>
+</div>
+
+<details class="deep">
+  <summary>什么时候该放弃回血直接撤？展开</summary>
+  <p>回血的前提是<strong>你还活着，而且有办法脱离当前火力</strong>。这两个条件不满足时，任何回血手段都是白给。</p>
+  <p>判断标准很直接：<strong>如果你回血的速度追不上掉血的速度，那就不是回复问题，是位置问题。</strong>这时候正确的动作是脱离、找掩体、等护盾自然恢复，而不是继续站着对枪等回血。</p>
+  <p>这也解释了为什么「堆回复」的效果经常不如预期——回复是在脱离战斗之后生效的，而很多人死于根本没有脱离战斗。</p>
+  <p><strong>边界：</strong>脱离战斗的时机判断属于实战经验，不是数值能解决的。这一节能给的只有一条：<strong>当你发现所有回血手段都开不出来的时候，该考虑的是撤，不是再加一个回血来源。</strong></p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>按代价分类为自行组织；各具体来源散见于游戏机制页、护甲模组页与各元素页</span>
+
+<h2 id="s5"><span class="n">5</span>活不下来，还是打不过</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>看死亡的时间点：开局就死是生存问题，打到后期才死往往是输出不够拖太久了。这两个方向的解法几乎相反。</p>
+</div>
+
+<p>这两个问题经常被混在一起，因为体感都是「打不过」。但它们的解法方向相反，判断错了会越调越糟——把资源投进抗性，结果输出更不够；把资源投进输出，结果死得更快。</p>
+
+<h3>分流判断</h3>
+
+<table>
+  <thead>
+    <tr><th>现象</th><th>更可能是</th><th>该调什么</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>开局接触就死，或者刚复活又死</td><td><strong>生存问题</strong></td><td>抗性来源、修改器、站位。见本页第 1、2 节</td></tr>
+    <tr><td>能打很久，但血条掉下去就回不来</td><td><strong>回复问题</strong></td><td>生命值属性、恢复手段的结构。见本页第 3、4 节</td></tr>
+    <tr class="hi"><td>打到最后阶段才死，或者时间快到了才死</td><td><strong>输出问题</strong></td><td>乘区、武器、弹药。见<a href="damage.html">第 4 页</a></td></tr>
+    <tr><td>一直不死，但活动超时</td><td><strong>输出问题</strong></td><td>同上，和生存完全无关</td></tr>
+  </tbody>
+</table>
+
+<p>最后一行值得单独说：<strong>不死但超时，是最容易被误判成生存问题的情况</strong>——因为你没死，所以注意力全在「怎么打得更稳」上，而实际上需要的是打得更快。</p>
+
+<h3>低光等差下，通常先出生存问题</h3>
+
+<p>这是<a href="mechanics.html#s1">第 1 页第 1 节</a>那条结论的实际体现：光等差是负的时候，<strong>你的输出变少，同时你受到的伤害变多</strong>，两个方向一起恶化。</p>
+
+<p>从 −30 到 −50 这一段，输出掉到约三分之一，而受到的伤害从 +85% 涨到 +150%。<strong>承伤的增长会先于输出的不足表现出来</strong>——所以低光等下的第一感受往往是「活不下来」，而不是「打不动」。</p>
+
+<div class="note ok">
+  <span class="h">两个都要调的时候，先补光等差</span>
+  <p>因为它同时改善两边。补光等是唯一一个既能提高你的输出、又能降低你承伤的调整。<strong>在光等差补上去之前，其他所有调整的收益都打了折扣。</strong></p>
+</div>
+
+<h3>排查顺序</h3>
+
+<ol class="steps">
+  <li><strong>看死亡时间点</strong>，用上面那张表分流。这一步决定了后面所有步骤的方向。</li>
+  <li><strong>如果判为生存问题</strong>：先看这周的修改器（第 1 节），再看有没有能用超能抗性的机会（第 2 节），最后才动模组和属性。</li>
+  <li><strong>如果判为输出问题</strong>：翻到<a href="damage.html#s1">第 4 页第 1 节</a>，先排除祸因、势不可挡勇士抗性和光等差。</li>
+  <li><strong>如果是回复问题</strong>：按第 3、4 节检查，重点是回血手段是不是全压在击杀类上。</li>
+  <li><strong>两个都像</strong>：先补光等差，它同时改善两边，而且不会占用任何配装资源。</li>
+</ol>
+
+<details class="deep">
+  <summary>为什么这两类问题的资源会互相抢？展开</summary>
+  <p>因为配装的资源是有限的：模组槽位、属性点数、异域位置、武器位置——每一项都要在「打得更狠」和「活得更久」之间分配。</p>
+  <ul>
+    <li>把胸甲模组全给了抗性，就少了弹药或充能相关的模组。</li>
+    <li>把属性点全推给生命值，手雷或武器的伤害加成就是空的。</li>
+    <li>把一个武器位置让给保命手段，输出就少一截。</li>
+  </ul>
+  <p>所以「先判断是哪一类问题」不是流程上的讲究，而是<strong>决定这些有限资源往哪投</strong>。判断错了，投进去的资源不但没解决问题，还会让另一边恶化。</p>
+  <p><strong>边界：</strong>这个取舍没有通用解。同一场活动里，不同队伍（有没有治疗位、有没有人专门处理机制）需要的最优分配完全不同。这一页能给的是判断顺序，不是分配比例。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>分流判断与排查顺序为自行组织；光等差承伤数值来自压光伤害表与游戏机制页「重点提示」，与<a href="mechanics.html#s1">第 1 页</a>同源</span>
+
+<h2 id="list">生存手段清单</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>减伤这一边没有「同类取最高」——所有来源乘算叠加，所以这张表的读法是「我还能再挂上哪几条」，不是「哪一条最高」。</p>
+</div>
+
+<p>第 2 节给了规则，这一节给清单：<strong>每一条减伤、回复、护盾分别从哪来、值多少。</strong>按获取途径分组，因为配装时你就是在超能、模组、异域、套装、神器这几个位置里取舍——按这个分法，一眼能看出同一个位置能挂几条。</p>
+
+<p>看表前先知道三件事：</p>
+
+<ul>
+  <li><strong>数值列取最高档。</strong>多数条目有两三个档位，表里写最高的那一档。</li>
+  <li><strong>「抵抗 xN」是跨来源通用的写法</strong>：x1 = 10%、x2 = 25%、x3 = 40%、x4 = 50%。同一张表里两种写法混用时，以括号里的百分比为准。</li>
+  <li><strong>标了「数值未确认」的条目，说明两个来源对不上</strong>，按较低的那个估算，具体以游戏内实测为准。对不上的地方在表后单独列出。</li>
+</ul>
+
+<table class="lookup">
+  <caption><b>查表</b>不必背，配装时回来对一遍能同时挂上几条 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th>名称</th><th>怎么触发</th><th class="num">数值</th></tr>
+  </thead>
+  <tbody>
+    <tr class="grp"><td colspan="3">超能与职业技能 · 放出来就有，不占模组位</td></tr>
+    <tr class="hi"><td>超能期间<span class="b dr">减伤</span></td><td>释放超能期间</td><td class="num">90%</td></tr>
+    <tr><td colspan="3"><span class="sub">单笔最大的减伤。多数超能自带，不需要占任何模组位或装备位——超能本来就要放。</span></td></tr>
+    <tr><td>覆盖护盾<span class="b sh">护盾</span></td><td>职业属性 100 点以上，使用职业技能</td><td class="num">50% + 独立护盾</td></tr>
+    <tr><td colspan="3"><span class="sub">推进器与闪身持续 5 秒，裂痕与屏障持续 10 秒。只减免守护者造成的伤害。护盾本身有独立生命值，每点属性 0.4，200 点最多 40。</span></td></tr>
+    <tr><td>生命值属性<span class="b hp">回复</span><span class="b at">属性</span></td><td>分配属性点</td><td class="num">每颗球 +0.7</td></tr>
+    <tr><td colspan="3"><span class="sub">100 点时每颗能量球最多回 70。100 点以上还给护盾充能提前 25% 开始、速度 +45%，护盾值 +20。不提高血量上限，见第 3 节。</span></td></tr>
+    <tr><td>虚空之魂<span class="b dr">减伤</span></td><td>术士虚空分支放出虚空之魂</td><td class="num">12.5–50%</td></tr>
+    <tr><td colspan="3"><span class="sub">阶梯为 12.5%｜25%｜37.5%｜50%。异域臂铠蔷薇束缚延长持续时间，重新放置时保留已累积的层数。</span></td></tr>
+
+    <tr class="grp"><td colspan="3">护甲模组 · 占胸甲、腿部、头部的模组位</td></tr>
+    <tr class="hi"><td>抗性模组（含专项版本）<span class="b dr">减伤</span></td><td>常驻，装在胸甲上</td><td class="num">15% / 25% / 30%</td></tr>
+    <tr><td colspan="3"><span class="sub">三档对应费用 1–3 档，档位越高占的模组能量越多。专项版本：元素抗性只减免匹配元素，狙击抗性减免 30 米以外，近战抗性减免 5 米以内，震荡阻尼器减免范围、冲击与爆炸。威胁来源单一时专项版更划算。</span></td></tr>
+    <tr><td>紧急增强<span class="b dr">减伤</span></td><td>持有 3 层以上护甲充能时进入重伤</td><td class="num">10%</td></tr>
+    <tr><td colspan="3"><span class="sub">胸甲模组，费用 3。持续 6 / 9 / 12 / 15 秒，对应消耗掉 3 / 4 / 5 / 6 层护甲充能。</span></td></tr>
+    <tr><td>复原<span class="b hp">回复</span></td><td>拾取能量球</td><td class="num">16 / 21 / 21</td></tr>
+    <tr><td colspan="3"><span class="sub">腿部模组，费用 1，三档。回复的是生命值本身。</span></td></tr>
+    <tr><td>药到病除<span class="b hp">回复</span></td><td>拾取能量球</td><td class="num">开始回复</td></tr>
+    <tr><td colspan="3"><span class="sub">腿部模组，费用 1。游戏内说明写着可以叠加，来源页注明实际不叠加。</span></td></tr>
+    <tr><td>稳定瞄准<span class="b at">属性</span></td><td>开镜期间，且武器元素与模组匹配</td><td class="num">25% / 30% / 35%</td></tr>
+    <tr><td colspan="3"><span class="sub">胸甲模组，费用 2–3，给的是受击抖动抗性。它和抗性模组抢同一个槽位，所以列在这里——各种抖动抗性之间也是乘算叠加。</span></td></tr>
+
+    <tr class="grp"><td colspan="3">异域装备 · 占一个异域位置</td></tr>
+    <tr><td>全知之眼（术士胸甲）<span class="b dr">减伤</span></td><td>虚空隐身期间</td><td class="num">50%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x4。由持有者使其隐身的盟友共享这条减伤。超能期间不享有。</span></td></tr>
+    <tr><td>雄鹿（术士头盔）<span class="b dr">减伤</span></td><td>站在自己创造的裂痕里</td><td class="num">25%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x2。裂痕与光焰之井重叠时仍然生效。</span></td></tr>
+    <tr><td>阿罕卡拉之颅（术士头盔）<span class="b dr">减伤</span></td><td>新星炸弹期间</td><td class="num">99.5% → 75%</td></tr>
+    <tr><td colspan="3"><span class="sub">从 99.5% 起步，接近超能结束时掉到 75%。数值随超能剩余时间变化，不是固定值。</span></td></tr>
+    <tr><td>据点（泰坦臂铠）<span class="b dr">减伤</span><span class="b unk">数值未确认</span></td><td>格挡期间</td><td class="num">50%</td></tr>
+    <tr><td colspan="3"><span class="sub">被动 +100 防御抗性、+100 防御持久。据点式格挡把刀剑格挡换成另一条减伤，来源页只给了 PvP 数值 68%，PvE 数值没写。</span></td></tr>
+    <tr><td>ACD/0 反馈栅（泰坦臂铠）<span class="b dr">减伤</span></td><td>护甲充能生效期间</td><td class="num">23.3–80%</td></tr>
+    <tr><td colspan="3"><span class="sub">六档 23.3%｜46.7%｜70%｜73.3%｜76.7%｜80%，只减免来自战斗人员的近战伤害。</span></td></tr>
+    <tr><td>陨星胸甲（泰坦胸甲）<span class="b dr">减伤</span></td><td>雷霆冲击结束时</td><td class="num">50%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x4，持续 5 秒。同一件还让雷霆冲击伤害 +55%。</span></td></tr>
+    <tr><td>神圣黎明之翼（术士胸甲）<span class="b dr">减伤</span><span class="b at">属性</span></td><td>生效期间</td><td class="num">15% + 25%</td></tr>
+    <tr><td colspan="3"><span class="sub">15% 伤害抗性，外加 25% 受击抖动抗性。</span></td></tr>
+    <tr><td>反制之握（术士臂铠）<span class="b dr">减伤</span></td><td>混沌加速为虚空手雷超量充能期间</td><td class="num">20%</td></tr>
+    <tr><td>天赋信念（猎人胸甲）<span class="b dr">减伤</span></td><td>对 15 米内战斗人员施加震颤</td><td class="num">25% → 50%</td></tr>
+    <tr><td colspan="3"><span class="sub">施加 1 次 = 25%（抵抗 x2）、2 次 = 40%（x3）、3 次 = 50%（x4），持续 10 秒，最多 4 层。再次施加刷新时长。</span></td></tr>
+    <tr><td>踢踏5（猎人腿部）<span class="b dr">减伤</span></td><td>处于空中时</td><td class="num">30%</td></tr>
+    <tr><td colspan="3"><span class="sub">只对战斗人员。注意它和「扎根」修改器方向相反——那个是空中承伤翻倍，两件事同时成立，谁也不顶掉谁。</span></td></tr>
+    <tr><td>阿尔法·鲁皮之脊（泰坦胸甲）<span class="b hp">回复</span><span class="b sh">护盾</span></td><td>使用职业技能</td><td class="num">160 + 110</td></tr>
+    <tr><td colspan="3"><span class="sub">屏障回复 160 生命值与 110 护盾，推进器回复 60 生命值。以自己为中心，为 12 米内视线可及的自己与盟友回复。</span></td></tr>
+
+    <tr class="grp"><td colspan="3">护甲套装效果 · 穿够件数才有（需要叠层的在下一组）</td></tr>
+    <tr class="hi"><td>移民号陨落（涅索斯）4 件<span class="b dr">减伤</span><span class="b unk">数值未确认</span></td><td>获得、失去或消耗护甲充能</td><td class="num">13% → 29.5%</td></tr>
+    <tr><td colspan="3"><span class="sub">层数越高减伤越高，持续最长可延到 30 秒。两个来源给的阶梯对不上，见下面「对不上的地方」。</span></td></tr>
+    <tr><td>应许之物（救赎的边缘）2 件<span class="b dr">减伤</span></td><td>消灭橙血或更高档战斗人员</td><td class="num">25%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x2，持续 12 秒，可刷新。同一效果还给 +7% 增伤——这条是套装里少有的两头都占。</span></td></tr>
+    <tr><td>纤薄至极（预言）4 件<span class="b dr">减伤</span></td><td>10 秒内用光能、暗影武器交替造成最后一击</td><td class="num">40%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x3，持续 5 秒。破坏可破坏物体也能触发。</span></td></tr>
+    <tr><td>剑圣（巅峰行动）4 件<span class="b dr">减伤</span></td><td>用偃月或刀剑格挡后停止格挡</td><td class="num">50%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x4，持续 3 秒。效果过期前可以再次格挡刷新，所以格挡节奏比格挡时长更重要。</span></td></tr>
+    <tr><td>凯旋圣歌 4 件<span class="b dr">减伤</span></td><td>滑行时</td><td class="num">50%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x4。只在你滑行的那几秒生效，所以它换的是移动方式，不是配装资源。</span></td></tr>
+    <tr><td>铁能 2 件<span class="b dr">减伤</span></td><td>护盾生命值受治疗时</td><td class="num">10%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x1，持续 7 秒，另带抖动抗性。生命值完全恢复后才能再次触发。</span></td></tr>
+    <tr><td>武士道 2 件<span class="b hp">回复</span><span class="b unk">数值未确认</span></td><td>填装或拔出武器后 4 秒内造成武器最后一击</td><td class="num">35 生命值</td></tr>
+    <tr><td colspan="3"><span class="sub">约 3 秒内置冷却。4 件是另一条效果：弓箭、霰弹枪或刀剑最后一击给抵抗 x1（10%）7 秒。</span></td></tr>
+    <tr><td>伟大狩猎（最后一愿）2 件<span class="b dr">减伤</span></td><td>手雷最后一击</td><td class="num">10%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x1，持续 7 秒。触发条件是手雷击杀，首领战里没有杂兵可打时会失效。</span></td></tr>
+    <tr><td>铁甲套装（铁旗）4 件<span class="b dr">减伤</span></td><td>濒死时</td><td class="num">15%</td></tr>
+    <tr><td colspan="3"><span class="sub">持续 7 秒，只对 10 米内战斗人员生效，期间的最后一击可刷新。护盾生命值恢复后就无法再次触发。2 件是另一条：濒死时武器最后一击回复 30 生命值。</span></td></tr>
+    <tr><td>空降灭火套装 2 件<span class="b dr">减伤</span></td><td>拾取能量球</td><td class="num">40% → 0%</td></tr>
+    <tr><td colspan="3"><span class="sub">持续 3 秒，剩余 1.5 秒降到约 30%，1 秒降到 24%，然后归零。触发门槛最低，窗口也最短。</span></td></tr>
+    <tr><td>奈扎雷克的梦魇 4 件<span class="b dr">减伤</span></td><td>对橙血或更高档战斗人员使用终结技，获得吞食</td><td class="num">20%</td></tr>
+    <tr><td colspan="3"><span class="sub">吞食生效期间常驻，持续 6+3 秒。只对战斗人员。</span></td></tr>
+    <tr><td>光泽 4 件<span class="b hp">回复</span></td><td>3 秒内造成 3 次烈日最后一击</td><td class="num">30 生命值</td></tr>
+    <tr><td colspan="3"><span class="sub">两次治疗之间有 1 秒内置冷却。2 件是另一条：生命值不满时获得任意治疗，给操控性、填装速度和抖动抗性，持续 4 秒。</span></td></tr>
+    <tr><td>黑暗纪元 4 件<span class="b hp">回复</span></td><td>主动出击层数激活时释放职业技能</td><td class="num">每秒 10</td></tr>
+    <tr><td colspan="3"><span class="sub">生成 7 米半径的治疗光环，每 2 秒恢复一次，每层主动出击让每秒恢复 10 点，最多 5 次脉冲。光环不参与碰撞，但可以阻挡弹道。</span></td></tr>
+    <tr><td>双重王冠 2 件<span class="b hp">回复</span></td><td>拾取弹药盒</td><td class="num">70 生命值</td></tr>
+    <tr><td>共振狂怒（门徒誓约）4 件<span class="b hp">回复</span></td><td>造成武器伤害叠层，收起武器时消耗</td><td class="num">30 → 120</td></tr>
+    <tr><td colspan="3"><span class="sub">按消耗的层数回复 30｜60｜90｜105｜120 生命值。</span></td></tr>
+    <tr><td>灾难军团套装 2 件<span class="b hp">回复</span></td><td>造成最后一击的 3 秒内用自动步枪、斥候步枪或手枪填装</td><td class="num">每秒 2 点</td></tr>
+    <tr><td colspan="3"><span class="sub">持续到任意武器开火、使用技能或受到战斗人员伤害为止。环境伤害不会中断。窗口内再次填装可以由同一次最后一击多次触发。</span></td></tr>
+    <tr><td>变节者利刃（异端深渊）2 件<span class="b hp">回复</span></td><td>终结技获得一层，濒死时消耗</td><td class="num">20 生命值</td></tr>
+    <tr><td colspan="3"><span class="sub">回复的同时开始被动生命恢复。</span></td></tr>
+
+    <tr class="grp"><td colspan="3">神器模组 · 跟着赛季换，进活动前确认本赛季有没有</td></tr>
+    <tr><td>护甲匠<span class="b dr">减伤</span><span class="b unk">数值未确认</span></td><td>击破战斗人员护盾</td><td class="num">10%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x1，持续 6 秒，同时近战伤害 +100%。另一个来源注明它「被通用抗性覆盖」，但没写适用范围。</span></td></tr>
+    <tr><td>并肩作战<span class="b dr">减伤</span></td><td>2 名盟友在 15 米内持续造成精准伤害</td><td class="num">25%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x2。要队友配合，单刷时开不出来。</span></td></tr>
+    <tr><td>持续火力<span class="b dr">减伤</span></td><td>1.5 秒内对同一敌人造成 10 次自动步枪命中</td><td class="num">25%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x2，持续 6 秒，收起武器后保留。</span></td></tr>
+    <tr><td>重型军械回复<span class="b dr">减伤</span></td><td>7 秒内 8 次机枪或 2 次火箭命中</td><td class="num">25%</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x2，持续 15.5 秒。</span></td></tr>
+    <tr><td>钢铁领主的活力<span class="b dr">减伤</span></td><td>举起刀剑，或 3 次刀剑击杀</td><td class="num">25%</td></tr>
+    <tr><td>消极进攻防守<span class="b dr">减伤</span></td><td>手持偃月</td><td class="num">50%</td></tr>
+    <tr><td colspan="3"><span class="sub">来源页注明它与剑圣套装在偃月格挡期间应当叠加。</span></td></tr>
+    <tr><td>能量扩散基底<span class="b dr">减伤</span></td><td>被动，不需要触发</td><td class="num">5%</td></tr>
+    <tr><td>全面屠杀<span class="b dr">减伤</span><span class="b hp">回复</span></td><td>对精英或更高档战斗人员使用终结技</td><td class="num">25% + 100</td></tr>
+    <tr><td colspan="3"><span class="sub">抵抗 x2 持续 11 秒，并回复 100 生命值、开始生命值回复。</span></td></tr>
+
+    <tr class="grp"><td colspan="3">需要时间叠的 · 数值随层数涨，维持比开启重要</td></tr>
+    <tr><td>冰霜护甲（冰霜-EE5 等）<span class="b dr">减伤</span></td><td>冲刺、职业技能等触发，每 3–6 秒 1 层</td><td class="num">随层数递增</td></tr>
+    <tr><td colspan="3"><span class="sub">不是一个固定百分比，满层时最高。逐层数值写在各元素页和职业分支的卡片正文里，是最容易随版本变动的一类。</span></td></tr>
+    <tr><td>无尽贪婪（贪婪之握）2 件<span class="b dr">减伤</span></td><td>拾取弹药盒、能量球、元素拾取物或破坏缠结</td><td class="num">6% → 15%</td></tr>
+    <tr><td colspan="3"><span class="sub">x5 = 6%｜x10 = 9%｜x15 = 11%｜x20 = 13%｜x25 以上 = 15%。最多叠到 100 层，濒死时移除 10 层。</span></td></tr>
+    <tr><td>苦乐参半（深渊探索者）4 件<span class="b hp">回复</span></td><td>受到伤害叠层，收起武器时按层数回复</td><td class="num">35 → 完全治疗</td></tr>
+    <tr><td colspan="3"><span class="sub">x1 ≈ 35｜x2 ≈ 65｜x3 87.5｜x4 ≈ 105｜x5 130｜x6 170｜x7 195｜x8 完全治疗。叠层需要挨打，所以它是「打完之后回血」而不是「救急」。</span></td></tr>
+    <tr><td>克洛塔记忆 4 件<span class="b dr">减伤</span></td><td>持续造成或受到伤害</td><td class="num">15% → 25%</td></tr>
+    <tr><td colspan="3"><span class="sub">12 秒后 1 层（15%），24 秒最多 2 层（25%）。中断输出会掉层，所以它奖励站桩，不奖励来回拉扯。</span></td></tr>
+    <tr><td>积雨云（海王星）2 件<span class="b dr">减伤</span></td><td>使用手雷，或触发微型导弹</td><td class="num">12% → 30%</td></tr>
+    <tr><td colspan="3"><span class="sub">5 米内 12%，每层再往上加，最高 30%，持续 15 秒，最多 10 层。距离越近越吃得到。</span></td></tr>
+    <tr><td>灵巫华服（破碎王座）4 件<span class="b dr">减伤</span></td><td>造成伤害积累「真相」层数</td><td class="num">最高 15%</td></tr>
+    <tr><td colspan="3"><span class="sub">250 = 3.75%｜500 = 7.5%｜750 = 10%｜999 = 15%。阵亡时丢光所有层数——这是它和其他叠层来源最大的区别。</span></td></tr>
+  </tbody>
+</table>
+
+<h3>这张表里有三件事，单看任何一份来源都得不出来</h3>
+
+<ol class="steps">
+  <li><strong>减伤和增伤是两套相反的规则。</strong>增伤要记「同类取最高」，所以堆第二条同类的是浪费；减伤一律乘算，所以每多挂一条都实打实生效。配装方向因此是反的：<strong>输出配装做减法，生存配装做加法。</strong></li>
+  <li><strong>但乘算也意味着到不了 100%。</strong>每多一条都在生效，可永远不会出现「叠满了就无敌」。这就是为什么生存问题不能只靠堆减伤解决——超能、模组、异域、套装、神器全挂上，剩下的部分仍然要靠站位和脱离。</li>
+  <li><strong>「抵抗 x1–x4」是跨来源的通用写法，但同一批数据里还混着裸百分比和套装自己的阶梯。</strong>看到「抵抗 x2」要换算成 25%；看到「40%」要知道它可能只对战斗人员、只在 5 米内、或者只在 30 米外生效——限定条件写在来源页里，不在数值里。</li>
+</ol>
+
+<div class="note warn">
+  <span class="h">最容易被漏掉的一条：有几条减伤挂在护甲充能上</span>
+  <p>紧急增强（10%）和移民号陨落的套装效果，触发条件是<strong>护甲充能</strong>，不是某个技能或某把武器。护甲充能默认上限 3 层，拾取任意能量球补 1 层；靠它维持的被动效果每 10 秒衰减 1 层。</p>
+  <p>这意味着这些减伤和你的拾取节奏绑在一起——<strong>不捡球，它们全是空的</strong>，而界面上不会提示你「本来有一条减伤现在没了」。</p>
+</div>
+
+<div class="note">
+  <span class="h">两个来源对不上的地方</span>
+  <p>这张表合并了多个来源的整理。大多数条目互相一致，四处标了「数值未确认」，原因不一样：</p>
+  <ul>
+    <li><strong>移民号陨落</strong>的减伤阶梯：一份给 13% / 21% / 30% / 35%，另一份把 x2 记为 13%、x4 记为 29.5%。</li>
+    <li><strong>武士道 2 件</strong>的回复量：一份给 40，另一份给 35。</li>
+    <li><strong>据点</strong>的据点式格挡：只给了 PvP 数值，PvE 那一侧是空的。</li>
+    <li><strong>护甲匠</strong>：另一份整理注明它「被通用抗性覆盖」，但没写适用范围，所以这一条的实际减伤可能不独立生效。</li>
+  </ul>
+  <p>前两处按较低的那个估算；据点那一条只能先记住「格挡期间 50%」这一个数。<strong>数值会随版本调整，这也是这张表标了数据日期的原因</strong>——拿它做判断前，先确认你玩的是不是同一个版本。</p>
+</div>
+
+<div class="note">
+  <span class="h">这张表没包含什么</span>
+  <ul>
+    <li><strong>PvP 数值。</strong>来源页用方括号标注（如 <code>50% [10%]</code>），表里只取 PvE 那一侧。</li>
+    <li><strong>武器 Perk 和起源特性带来的生存效果。</strong>那部分跟着枪走，和增伤那边同理。</li>
+    <li><strong>逐层的分层抗性数值。</strong>冰霜护甲这类只写了「随层数递增」，具体数字在各元素页和职业分支卡片里。</li>
+    <li><strong>站位、掩体、脱离时机。</strong>这些不是数值能解决的，第 4 节末尾已经说过。</li>
+  </ul>
+</div>
+
+<span class="src"><span class="t">公开整理</span>抗性模组各档、专项版本与「乘算叠加」规则来自护甲模组页；异域装备来自异域护甲页；神器模组来自神器模组页；套装效果合并了两份来源——一份中文套装页与一份英文数据表，冲突已在上方列出。<strong>按获取途径重新分组、抵抗 x1–x4 的换算、以及三条结论为自行组织；来源页本身按套装和模组分类，本表不改变其中任何数值。</strong></span>
+
+<h2 id="quiz">自测</h2>
+
+<p class="quiz-head">四道题。重点考「该动哪一项」。</p>
+
+<details class="quiz">
+  <summary>同一套配装，上周打得很稳，这周同一个活动频繁暴毙。第一件事该做什么？</summary>
+  <div class="ans">
+    <p>回去看这周的<strong>活动修改器</strong>，而不是怀疑装备。</p>
+    <p>三档元素威胁相差 2.7 倍，扎根还能让空中受到的伤害翻倍。修改器是每周变化、且无法通过配装完全抵消的变量，所以「上周能过这周暴毙」基本都是它换了。</p>
+    <p class="back">回看第 1 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>一个玩家血量掉得很快。他想「堆点肉」，于是把生命值属性推到了 200。他做对了吗？</summary>
+  <div class="ans">
+    <p>搞错了方向。<strong>生命值属性不提高血量上限</strong>，它提高的是拾取能量球时的回血量（每点 +0.7），以及 100 点以上的护盾充能速度和护盾值。</p>
+    <p>如果他死于「掉血太快」，该看的是抗性来源——尤其是多数超能自带的 90% 伤害抗性，那是单笔最大的减伤。</p>
+    <p class="back">回看第 2、3 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>你打一场首领战，发现杂兵清完后自己突然变得很脆。为什么？</summary>
+  <div class="ans">
+    <p>很可能是你的回血手段集中在<strong>击杀类</strong>——需要打死敌人才触发。杂兵清完后没有可击杀的目标，这些手段全部失效，所以体感上突然变脆。</p>
+    <p>检查一下配装里有没有被动类或动作类的回血手段做兜底。三类全是击杀类的话，在首领战里等于完全没有回复。</p>
+    <p class="back">回看第 4 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>你从头到尾一次没死，但活动超时了。这是生存问题吗？</summary>
+  <div class="ans">
+    <p>不是，是输出问题。「不死但超时」是最容易被误判成生存问题的情况——因为没死，注意力会全放在「怎么打得更稳」上，但实际上需要的是打得更快。</p>
+    <p>这时候该翻到第 4 页，检查乘区有没有铺开、武器选择对不对、弹药够不够打。把资源投进抗性只会让超时更严重。</p>
+    <p class="back">回看第 5 节。</p>
+  </div>
+</details>
+
+<div class="pager">
+  <a href="damage.html">
+    <span class="dir">上一页</span>
+    4 · 打不出伤害
+  </a>
+  <a class="next" href="quiz.html">
+    <span class="dir">下一页</span>
+    总测
+  </a>
+</div>
+
+</article>
+
+<div class="foot">
+  <p><strong>本页数据来源。</strong>活动修改器、生命值属性与覆盖护盾来自游戏机制页整理；胸甲模组抗性来自护甲模组页整理；超能期间抗性与冰霜护甲分层来自各职业分支详解页与元素页；页末生存手段清单合并了护甲模组页、异域护甲页、神器模组页与两份护甲套装整理，其中冲突处已在清单内标注。<strong>本页把这些分散的来源汇总成一条排查线，清单按获取途径重新分组，汇总方式为自行组织。</strong>数值用于说明机制，具体数值与最新版本以来源页面为准。</p>
+</div>
+</main>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>

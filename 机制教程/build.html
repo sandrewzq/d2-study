@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3 · 不会配 · 命运 2 机制教程</title>
+<meta name="description" content="从目标反推配装：先确定打什么，再决定武器、属性和模组。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="build">
+
+<button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
+
+<aside id="side">
+  <a class="brand" href="index.html">命运 2 机制教程</a>
+  <p class="brand-sub">《命运 2 学习手册》· 战斗机制</p>
+
+  <nav class="g-nav">
+    <a href="index.html" data-key="index"><span class="k">·</span>从这里开始</a>
+    <a href="mechanics.html" data-key="mechanics"><span class="k">1</span>通用机制</a>
+    <a href="terms.html" data-key="terms"><span class="k">2</span>看不懂词</a>
+    <a href="build.html" data-key="build"><span class="k">3</span>不会配</a>
+    <a href="damage.html" data-key="damage"><span class="k">4</span>打不出伤害</a>
+    <a href="survive.html" data-key="survive"><span class="k">5</span>活不下来</a>
+    <a href="quiz.html" data-key="quiz"><span class="k">测</span>总测</a>
+  </nav>
+
+  <nav class="l-nav">
+    <p class="l-title">本页</p>
+    <a href="#s1">1 从目标反推</a>
+    <a href="#s2">2 六项属性怎么分配</a>
+    <a href="#s3">3 模组、神器、套装、异域</a>
+    <a href="#s4">4 武器框架那张表怎么看</a>
+    <a href="#s5">5 弹药类型配比</a>
+    <a href="#quiz">自测</a>
+  </nav>
+
+  <button class="theme-btn" id="theme">配色</button>
+
+  <div class="side-foot">
+    <p>这一页给的是取舍顺序，不是推荐配装清单。清单会过期，顺序不会。</p>
+  </div>
+</aside>
+
+<main>
+<article>
+
+<h1>3 · 不会配</h1>
+<p class="subtitle">先想清楚打什么，再决定穿什么。</p>
+<p class="page-ask">这一页回答：<b>面对一堆可选项，我从哪一项开始定？</b></p>
+
+<p class="lead">装备选择之所以让人卡住，通常是因为顺序错了——先看有什么好装备，再想它能打什么。正确的方向是反过来的：<strong>先确定这场战斗要求你做什么，再倒推出需要哪些能力。</strong>这一页按这个顺序，把配装拆成五步。</p>
+
+<h2 id="s1"><span class="n">1</span>从目标反推</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>配装的第一步不是打开仓库，是回答四个问题。这四个问题的答案会直接把可选范围砍掉大半。</p>
+</div>
+
+<p>进任何一场活动之前，先弄清这四件事。它们都能在活动界面上看到，不需要打一遍才知道：</p>
+
+<table>
+  <thead>
+    <tr><th>要确认的</th><th>在哪看</th><th>它决定了什么</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>活动难度与光等差</td><td>活动界面的难度标注</td><td>你的输出和承伤同时被缩放，见<a href="mechanics.html">第 1 页</a></td></tr>
+    <tr><td>活动修改器</td><td>活动开始前的黑色卡片</td><td>哪些元素被加强、哪些被削、有没有额外规则</td></tr>
+    <tr><td>主要敌人档位</td><td>活动类型和已知的敌人构成</td><td>你主要打的是杂兵还是首领，这决定弹药类型</td></tr>
+    <tr><td>有没有必须处理的机制目标</td><td>活动类型</td><td>需不需要留一个位置专门处理护盾或特定敌人</td></tr>
+  </tbody>
+</table>
+
+<p>四个问题答完，你会得到一个很具体的需求描述，比如：「宗师、光等差 −50、修改器是致命元素威胁（烈日）、主要打的是带护盾的橙血和一场首领战」。有了这句话，后面每一步都是在回答它。</p>
+
+<div class="note">
+  <span class="h">为什么先看修改器而不是先看武器</span>
+  <p>因为修改器是<strong>这一周才生效</strong>的，可能直接否定你的常用配置。比如元素匹配要求你用对元素，如果你的主力武器元素不对，护盾受到的伤害直接降低 80%——这时候换武器是唯一解，调属性怎么调都没用。<strong>先排除硬性限制，再优化剩下的部分。</strong></p>
+</div>
+
+<h3>从需求推出方向</h3>
+
+<p>把上面那句话翻译成装备语言，通常是这样对应的：</p>
+
+<table>
+  <thead>
+    <tr><th>需求</th><th>推出的方向</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>光等差很低（−30 及以下）</td><td>先补光等，配装优先级排在后面</td></tr>
+    <tr><td>主要打杂兵</td><td>一号位二号位放清怪效率高的，弹药生成属性尽量高</td></tr>
+    <tr><td>主要打首领，且只有一个输出窗口</td><td>把爆发集中在重弹上，属性往首领伤害倾斜</td></tr>
+    <tr><td>有必须处理的护盾</td><td>留一个位置对应该元素的武器，优先于伤害考虑</td></tr>
+    <tr><td>修改器加重了承伤</td><td>配装里必须留出抗性和回复的位置，见<a href="survive.html">第 5 页</a></td></tr>
+  </tbody>
+</table>
+
+<span class="src"><span class="t">公开整理</span>活动修改器各项来自游戏机制页；<span class="t">英文原始</span> 光等差缩放来自压光伤害表</span>
+
+<h2 id="s2"><span class="n">2</span>六项属性怎么分配</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>属性是两段式的：前 100 点给保底，100 点以上给强化。所以「平均分」等于哪一段都没吃满。</p>
+</div>
+
+<p>六项属性的完整档位表在<a href="mechanics.html#s4">第 1 页第 4 节</a>，这里只讲怎么分配。前提是记住那条结构：</p>
+
+<ul>
+  <li><strong>0 到 100 点</strong>：回复速度、能量获取、保底效果。</li>
+  <li><strong>100 到 200 点</strong>：伤害、护盾这类强化效果。</li>
+</ul>
+
+<p>这条结构直接决定了两件事：</p>
+
+<ol class="steps">
+  <li><strong>先把要用的属性推到 100，再考虑往 200 走。</strong>在 60 点停下的那一项，两段都没吃到——它只拿到了六成的保底效果，也完全没有强化。</li>
+  <li><strong>不同属性推到 200 的收益差很多。</strong>手雷在 200 点给最多 +65% 的手雷伤害，近战只有 +30%。同样是往 200 推，收益不一样。</li>
+</ol>
+
+<h3>先决定这一套主打什么</h3>
+
+<p>属性分配取决于你的输出方式。三种典型情况：</p>
+
+<table>
+  <thead>
+    <tr><th>主打方式</th><th>优先推满的</th><th>理由</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>武器输出</td><td>武器、生命值</td><td>武器属性 100 点给对红血橙血 +15%，100 点以上给首领伤害；生命值保证站得住</td></tr>
+    <tr><td>技能输出</td><td>手雷（或近战）、职业</td><td>手雷 200 点收益最高（最多 +65% 手雷伤害）</td></tr>
+    <tr><td>辅助 / 保命</td><td>职业、生命值</td><td>100 点以上给覆盖护盾和护盾值</td></tr>
+  </tbody>
+</table>
+
+<div class="note warn">
+  <span class="h">最容易记反的一项</span>
+  <p><strong>生命值属性不提高血量上限。</strong>它提高的是拾取能量球时的回血量，以及 100 点以上的护盾充能速度。想「堆肉」只加生命值属性是不够的，还要看抗性——那是<a href="survive.html">第 5 页</a>的内容。</p>
+</div>
+
+<details class="deep">
+  <summary>武器属性为什么值得优先推？展开算一遍</summary>
+  <p>武器属性是六项里唯一<strong>同时作用于所有武器</strong>的一项，而且两项收益叠在一起：</p>
+  <ul>
+    <li>100 点：对红血与橙血的武器伤害最多 +15%</li>
+    <li>100 点以上：主武器与特殊弹药对首领每点 +0.15%（最多 +15%），威能武器每点 +0.1%（最多 +10%）</li>
+  </ul>
+  <p>也就是说推到 200 点时，你对首领的武器伤害多了最多 15%（威能 10%），对杂兵多了 15%。<strong>这个数字看起来不大，但它作用在你所有的枪上</strong>，而不只是某一类技能。</p>
+  <p>另外 100 点以上还有一个附带效果：弹药块有概率掉落更多弹药，200 点时是 100% 触发。这条经常被忽略，但它直接关系到你打得久不久，和第 5 节的弹药经济是同一件事的两面。</p>
+  <p><strong>边界：</strong>对首领的加成里，威能武器比主武器和特殊弹药低 5 个百分点。如果你的主要输出手段是威能重弹，把武器属性推到 200 的收益会比主武器流低一些——这时候该权衡的是把这 100 点放进别的属性。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>游戏机制页「护甲属性」节全部档位表</span>
+
+<h2 id="s3"><span class="n">3</span>模组、神器、套装、异域</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>这四样东西的作用层次不同：模组和神器负责补短板，套装和异域负责定方向。</p>
+</div>
+
+<p>装备上的可选项很多，但它们不是同一层的东西。按「作用范围」排一下，判断顺序就清楚了：</p>
+
+<table>
+  <thead>
+    <tr><th>层次</th><th>作用范围</th><th>什么时候动它</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>护甲模组</td><td>单件护甲，补具体数值或机制</td><td>最后调，用来把差一点的属性补齐，或者补一个特定功能</td></tr>
+    <tr><td>神器模组</td><td>赛季范围，全角色生效</td><td>进活动前确认本赛季有哪些可用，挑和这场活动相关的</td></tr>
+    <tr><td>套装效果</td><td>穿够件数才生效</td><td>想好这一套要走哪个方向时定，定了之后不轻易拆</td></tr>
+    <tr><td>异域装备</td><td>一件改变一个玩法</td><td>最先定。异域决定这套配装的思路，其余都围绕它服务</td></tr>
+  </tbody>
+</table>
+
+<p>判断顺序因此是<strong>从上往下定，从下往上调</strong>：先定异域和套装（定方向），再挑神器模组（跟活动相关），最后用护甲模组补差。</p>
+
+<h3>护甲充能是模组系统的地基</h3>
+
+<p>很多护甲模组要消耗或依赖<strong>护甲充能</strong>。第 1 页讲过它的运作规则，这里只说和配装相关的部分：</p>
+
+<ul>
+  <li>默认上限 3 层，拾取任意能量球提供 1 层。</li>
+  <li>胸甲装「完全充能」可以把上限提到 4 / 5 / 6 层。</li>
+  <li><strong>被动模组每 10 秒衰减 1 层</strong>——所以靠它维持的增益，在有怪可打的场合才稳定。</li>
+  <li>职业物品装「时间膨胀」可以把衰减计时延长到 15 / 18 / 20 秒。</li>
+</ul>
+
+<p>「时间膨胀」这条值得单独留意：它不增加层数，但让每一层停留更久。<strong>在输出窗口间隔较长的活动里，这个差别比多一层更明显。</strong></p>
+
+<details class="deep">
+  <summary>模组、神器、套装、异域各自还有哪些要注意的？展开</summary>
+  <p><strong>护甲模组</strong>分两类用法：一类在持有护甲充能期间开启被动效果，一类消耗护甲充能换一次即时效果。前者适合持续输出，后者适合处理关键节点（比如爆发窗口前主动换一次增伤）。</p>
+  <p><strong>神器模组</strong>是赛季性的，会随赛季更替。所以它应该作为「这一周的调整项」来对待，而不是配装的一部分固化下来。每进一个新活动，先确认本赛季有哪些可用，比背下来更实际。</p>
+  <p><strong>套装效果</strong>需要穿够件数才生效，所以它和异域装备会互相抢位置——一件异域占掉一个位置后，套装能凑齐的件数就变了。这是配装时最典型的取舍点，具体数值看护甲套装效果页。</p>
+  <p><strong>边界：</strong>这一节讲的是层次和顺序，没有列具体的套装名和模组名。原因和<a href="terms.html">第 2 页</a>一样——名字和数值会随版本变，但「哪一层决定方向、哪一层用来补差」这个结构是稳定的。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>游戏机制页「护甲充能」节；模组分类、神器与套装机制来自护甲模组页与护甲套装效果页整理</span>
+
+<h2 id="s4"><span class="n">4</span>武器框架那张表怎么看</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>框架决定的是「同一类武器内部，射速和单发伤害怎么分」。它不负责跨类比较。</p>
+</div>
+
+<p>同一类武器会有好几个框架（速射、精准、高冲击等等）。这张表容易读错的地方在于<strong>它比较的范围</strong>：</p>
+
+<ul>
+  <li><strong>框架之间比的是取舍，不是强弱。</strong>射速快的单发伤害低，单发伤害高的射速慢。选择取决于你打的是杂兵还是首领。</li>
+  <li><strong>框架不改变武器的弹药类型。</strong>自动步枪还是白弹，火箭发射器还是重弹——弹药类型是更上一层的决定，先定型，再选框架。</li>
+  <li><strong>框架之间的差距通常小于 Perk 和增伤带来的差距。</strong>所以在框架上纠结很久，收益不如把乘区铺开。</li>
+</ul>
+
+<h3>怎么验证这一点</h3>
+
+<p>真正决定数值的是「战斗人员倍率」——同一把武器打不同档位的敌人，系数不同：</p>
+
+<table class="lookup">
+  <caption><b>查表</b>换武器类型时回来对 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th>武器</th><th class="num">红血</th><th class="num">橙血</th><th class="num">初级首领</th><th class="num">首领</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>自动步枪</td><td class="num">2.100</td><td class="num">1.780</td><td class="num">1.116</td><td class="num">1.070</td></tr>
+    <tr><td>斥候步枪</td><td class="num">2.670</td><td class="num">1.850</td><td class="num">1.210</td><td class="num">1.210</td></tr>
+  </tbody>
+</table>
+
+<p>注意最后两列的差距：打首领时，自动步枪 1.070、斥候步枪 1.210，差别不大；但打红血时是 2.100 对 2.670，差了约 27%。<strong>武器类型之间的差别，主要体现在清杂兵上。</strong></p>
+
+<p>所以选武器时的顺序是：<strong>先看弹药类型对不对，再看这个活动主要打什么档位，最后才在框架里挑。</strong></p>
+
+<div class="note">
+  <span class="h">想要具体数值时去哪查</span>
+  <p>这个游戏的武器数值有两套口径：游戏内的面板数字和第三方排行表算出来的 DPS。两者不是一回事，排行表的读法在<a href="damage.html#s4">第 4 页第 4 节</a>。这一节只讲「怎么读」，不列具体武器——那把枪强不强，每个版本都在变。</p>
+</div>
+
+<span class="src"><span class="t">公开整理</span>战斗人员倍率表；框架取舍说明为自行组织</span>
+
+<h2 id="s5"><span class="n">5</span>弹药类型配比</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>三个位置怎么排，取决于「你主要靠哪一种弹药输出」。排错了，输出窗口再对也打不完。</p>
+</div>
+
+<p>你身上有三个武器位置，对应白弹（主武器）、绿弹（特殊弹药）、重弹（威能）。怎么排，取决于第 1 节里那个需求描述。</p>
+
+<table>
+  <thead>
+    <tr><th>你的情况</th><th>推荐排法</th><th>理由</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>常规活动，杂兵多、有 BOSS</td><td>白弹 + 绿弹 + 重弹</td><td>三个弹药类型都覆盖，弹药经济最稳</td></tr>
+    <tr><td>需要长时间清杂兵</td><td>两个白弹 + 重弹</td><td>白弹打白弹生成量最高，不容易断弹</td></tr>
+    <tr><td>双特殊弹药（白弹位也放特殊）</td><td>绿弹 + 绿弹 + 重弹</td><td>输出高，但<strong>必须靠武器补弹</strong>，技能补弹走不通</td></tr>
+    <tr><td>不用重弹的场合</td><td>白弹 + 绿弹 + 任意</td><td>重弹打重弹是全表最差的一格，不值得为它占位</td></tr>
+  </tbody>
+</table>
+
+<p>最后一行是第 1 页那条结论的直接应用：<strong>重弹打重弹只有 3%–4%，是全表最低的。</strong>你的重弹补给实质上靠白弹和绿弹的输出在养。</p>
+
+<div class="note warn">
+  <span class="h">双特殊弹药武器的陷阱</span>
+  <p>这类配置输出很高，但绿弹消耗快、补得慢。常见的补救思路是「用技能打残再终结技收掉」——<strong>这条路是断的</strong>。终结技要产生弹药进度，前提是终结之前有<strong>武器</strong>对这名敌人造成过伤害；纯技能打到残血再终结，不会产生任何弹药。</p>
+  <p>唯一的例外是超能：它对初级首领能生成 48% 的特殊弹药，是技能类里最高的。但那是超能，不是常规循环。</p>
+</div>
+
+<details class="deep">
+  <summary>三个位置应该各堆多少「弹药生成属性」？展开</summary>
+  <p>先把结论放前面：<strong>一号位和二号位尽量选弹药生成属性高的武器</strong>，因为这两个位置是你补重弹的主要来源。</p>
+  <p>弹药生成属性决定的是生成区间的落点——100 属性即区间上限，低于 100 按比例往下走。区间本身看敌人的档位：</p>
+  <ul>
+    <li>白弹打红血生成绿弹：6%–16%</li>
+    <li>白弹打橙血生成绿弹：12%–24%</li>
+    <li>白弹打初级首领生成绿弹：24%–50%</li>
+  </ul>
+  <p>也就是说，同样是白弹打白弹，打初级首领的生成量是打杂兵的四倍左右。这解释了为什么在宗师这类以橙血和初级首领为主的活动里，弹药反而不容易断——<strong>敌人越硬，补弹越快。</strong></p>
+  <p><strong>边界：</strong>这条规律只在你有稳定输出的时候成立。如果一场活动里你大部分时间在躲，敌人没死几个，再高的属性也补不出弹药。</p>
+  <p><strong>核对：</strong>三档之间的倍数关系与第 1 页弹药表一致，红血那一列记住即可推算其余两列。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>弹药生成机制页生成系数表与技能生成节；<span class="t">公开整理</span> 排法建议为自行组织，依据是各行的相对数值</span>
+
+<h2 id="quiz">自测</h2>
+
+<p class="quiz-head">四道题。考的是取舍顺序。</p>
+
+<details class="quiz">
+  <summary>你只有 200 点属性可分配，但六项都想要。第一件事应该做什么？</summary>
+  <div class="ans">
+    <p>先决定这一套主打什么，而不是平均分。平均分意味着每一项都停在 100 以下——两段收益都没吃到。</p>
+    <p>先把要用的那一两项推到 100 拿到保底，再考虑往 200 走。而且不同属性往 200 推的收益不一样：手雷最多 +65%，近战只有 +30%。</p>
+    <p class="back">回看第 2 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>为什么配装要「先定异域，最后用护甲模组补差」？</summary>
+  <div class="ans">
+    <p>因为两者的作用层次不同。异域装备决定这套配装的思路和方向，套装效果和它抢位置；护甲模组只补具体数值或特定功能。</p>
+    <p>先定异域和套装，方向就锁定了；神器模组跟着活动走；护甲模组最后调，把差一点的属性补齐。反过来做的话，异域一换，前面调的模组可能全白费。</p>
+    <p class="back">回看第 3 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>有人跟你说「A 框架的自动步枪比 B 框架强」，这个说法缺了什么前提？</summary>
+  <div class="ans">
+    <p>缺了「打什么档位的敌人」这个前提。框架之间比的是射速与单发伤害的取舍，不是绝对强弱。</p>
+    <p>从战斗人员倍率表能看出来：武器类型之间的差别在打红血时才明显（2.100 对 2.670，差约 27%），打首领时差别很小（1.070 对 1.210）。所以脱离目标谈框架强弱没有意义。</p>
+    <p class="back">回看第 4 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>你想用双特殊弹药武器，靠手雷把敌人打残再终结技补弹。可行吗？</summary>
+  <div class="ans">
+    <p>不可行。终结技要产生弹药进度，前提是<strong>终结之前有武器</strong>对这名敌人造成过伤害。纯技能打到残血再终结，不会产生任何弹药。</p>
+    <p>技能补弹这条路整体都走不通——技能对三档敌人都只能生成 4% / 8% / 16%，远低于合格武器。真要补弹，只能靠一号位二号位的武器生成属性。</p>
+    <p class="back">回看第 5 节。</p>
+  </div>
+</details>
+
+<div class="pager">
+  <a href="terms.html">
+    <span class="dir">上一页</span>
+    2 · 看不懂词
+  </a>
+  <a class="next" href="damage.html">
+    <span class="dir">下一页</span>
+    4 · 打不出伤害
+  </a>
+</div>
+
+</article>
+
+<div class="foot">
+  <p><strong>本页数据来源。</strong>属性档位、护甲充能与活动修改器来自游戏机制页整理；武器战斗人员倍率与弹药生成来自对应数据页；框架取舍、四问顺序、排法建议为自行组织，依据是各来源页的相对数值。数值用于说明机制，具体数值与最新版本以来源页面为准。</p>
+</div>
+</main>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>
