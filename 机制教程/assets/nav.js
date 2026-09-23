@@ -28,16 +28,19 @@
   }
 
   /* ---------- 侧栏：当前页高亮 ---------- */
-  var pageKey = document.body.getAttribute("data-page");
-  var globalLinks = [].slice.call(document.querySelectorAll(".g-nav a"));
-  if (pageKey) {
-    globalLinks.forEach(function (a) {
-      if (a.getAttribute("data-key") === pageKey) {
+  /* 两套导航各按自己的键高亮：.g-nav 认「属于学习手册的哪一块」（data-block），
+     .c-nav 认「属于这一块的哪一页」（data-page）。 */
+  function markCurrent(selector, key) {
+    if (!key) return;
+    [].slice.call(document.querySelectorAll(selector)).forEach(function (a) {
+      if (a.getAttribute("data-key") === key) {
         a.classList.add("on");
         a.setAttribute("aria-current", "page");
       }
     });
   }
+  markCurrent(".g-nav a", document.body.getAttribute("data-block"));
+  markCurrent(".c-nav a", document.body.getAttribute("data-page"));
 
   /* ---------- 侧栏：当前页锚点跟随滚动 ---------- */
   var localLinks = [].slice.call(document.querySelectorAll(".l-nav a"));

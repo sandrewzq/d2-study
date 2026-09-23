@@ -7,7 +7,7 @@
 <meta name="description" content="光等差、战斗人员分档、伤害乘区、属性、护甲充能、弹药经济——这个游戏的数值是怎么组装的。">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="mechanics">
+<body data-block="mechanics" data-page="mechanics">
 
 <button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
 
@@ -16,6 +16,14 @@
   <p class="brand-sub">《命运 2 学习手册》· 战斗机制</p>
 
   <nav class="g-nav">
+    <p class="nav-title">学习手册</p>
+    <a href="../index.html" data-key="home"><span class="k">·</span>总目录</a>
+    <a href="index.html" data-key="mechanics"><span class="k">·</span>战斗机制</a>
+    <a href="../系统入门/index.html" data-key="systems"><span class="k">·</span>游戏系统入门</a>
+  </nav>
+
+  <nav class="c-nav">
+    <p class="nav-title">本教程</p>
     <a href="index.html" data-key="index"><span class="k">·</span>从这里开始</a>
     <a href="mechanics.html" data-key="mechanics"><span class="k">1</span>通用机制</a>
     <a href="terms.html" data-key="terms"><span class="k">2</span>看不懂词</a>
@@ -26,7 +34,7 @@
   </nav>
 
   <nav class="l-nav">
-    <p class="l-title">本页</p>
+    <p class="nav-title">本页</p>
     <a href="#s1">1 光等差</a>
     <a href="#s2">2 战斗人员分档</a>
     <a href="#s3">3 伤害的七个乘区</a>
@@ -50,7 +58,7 @@
 <p class="subtitle">这个游戏的数值是怎么组装起来的。</p>
 <p class="page-ask">这一页回答：<b>我看到的所有数字，背后是同一套规则吗？</b></p>
 
-<p class="lead">是。你在游戏里看到的每一个伤害数字，都经过同一条流水线：先定基础伤害，然后乘上光等差，再乘上几类增伤，最后落到对方战斗人员的档位上。这一页把这几个环节拆开讲。后面四页全部建立在这六节之上。</p>
+<p class="lead">是。你看到的每个伤害数字都走同一条流水线：先定基础伤害，乘上光等差，乘几类增伤，最后落到对方战斗人员的档位上。</p>
 
 <h2 id="s1"><span class="n">1</span>光等差</h2>
 
@@ -63,14 +71,14 @@
 <table class="lookup">
   <caption><b>查表</b>完整逐点表在来源页，这里只留会用到的那几档；「—」是来源页未单独给数的档位 · 数据截至 2026-09</caption>
   <thead>
-    <tr><th class="num">光等差</th><th class="num">你造成的伤害</th><th class="num">你受到的伤害</th><th>常见场景</th></tr>
+    <tr><th class="num">光等差</th><th class="num">你造成的伤害</th><th class="num">你受到的伤害</th><th>说明</th></tr>
   </thead>
   <tbody>
     <tr><td class="num">0</td><td class="num">1.000</td><td class="num">基准</td><td>平光</td></tr>
-    <tr><td class="num">−10</td><td class="num">0.802</td><td class="num">—</td><td>—</td></tr>
-    <tr><td class="num">−20</td><td class="num">0.617</td><td class="num">—</td><td>—</td></tr>
-    <tr class="hi"><td class="num">−30</td><td class="num">0.446</td><td class="num">+85%</td><td>传说战役</td></tr>
-    <tr class="hi"><td class="num">−50</td><td class="num">0.143</td><td class="num">+150%</td><td>宗师</td></tr>
+    <tr><td class="num">−10</td><td class="num">0.802</td><td class="num">—</td><td>打八折</td></tr>
+    <tr><td class="num">−20</td><td class="num">0.617</td><td class="num">—</td><td>打六折</td></tr>
+    <tr class="hi"><td class="num">−30</td><td class="num">0.446</td><td class="num">+85%</td><td>不到一半</td></tr>
+    <tr class="hi"><td class="num">−50</td><td class="num">0.143</td><td class="num">+150%</td><td>拐点</td></tr>
     <tr><td class="num">−100</td><td class="num">0.000</td><td class="num">—</td><td>完全打不动</td></tr>
   </tbody>
 </table>
@@ -95,29 +103,28 @@
   <figcaption>横轴是光等差，纵轴是你造成的伤害倍率。平光时为 1.000。<strong>注意 −50 处的折角</strong>——从那里往左，曲线明显变平。</figcaption>
 </figure>
 
-<p>这张图有三个地方值得记住：</p>
-
 <ul>
-  <li><strong>负向掉得远，正向涨得少。</strong>−30 只剩 0.446，而 +30 只涨到 1.071。同样是 30 点差距，往负方向走的代价远远大于往正方向走的收益。</li>
-  <li><strong>−50 是个拐点。</strong>从 −50 再往下，每一点光等差的影响会明显变小；而从 −50 到 0 这一段，每一点都值钱得多。<strong>−50 以上的每一档都值得补。</strong></li>
-  <li><strong>两个方向是同一件事的两面。</strong>−30 到 −50 这一段，你的输出掉到约三分之一，同时受到的伤害涨了约 1.35 倍。所以低光等下的问题往往先出在「活不下来」，而不是「打不死」。</li>
+  <li><strong>负向掉得远，正向涨得少。</strong>−30 只剩 0.446，+30 才涨到 1.071。</li>
+  <li><strong>−50 是个拐点。</strong>再往下每一点的影响明显变小；−50 到 0 这一段每一点都值钱得多，−50 以上的每一档都值得补。</li>
+  <li><strong>两个方向是同一件事的两面。</strong>−30 到 −50 这一段，输出掉到约三分之一，受到的伤害同时涨约 1.35 倍。所以低光等下的问题往往先出在「活不下来」，而不是「打不死」。</li>
 </ul>
 
-<p><strong>实战含义：</strong>觉得打不动的时候，先确认光等差。补 20 点光等差带来的收益，比换任何一件武器都大。</p>
+<p><strong>实战含义：</strong>打不动的时候先确认光等差。补 20 点光等差，比换任何一件武器都大。</p>
 
 <details class="deep">
   <summary>−50 这个拐点是怎么看出来的？展开看斜率</summary>
   <p>把逐点表按段算平均斜率（每点光等差带来的伤害倍率变化）：</p>
   <ul>
     <li>−100 到 −50：约 0.003 / 点</li>
-    <li>−50 到 0：约 0.0145 / 点</li>
+    <li>−50 到 0：约 0.017 / 点</li>
   </ul>
-  <p>差了将近五倍。所以 −50 不是一个「感觉上的」分界，是曲线上真实存在的斜率突变点。从 −50 再往下走，每一点光等差买到的东西少得多，而在 −50 以上，每一点都很贵。</p>
-  <p><strong>边界：</strong>这张表是 PvE 的，只挑了实战里最常遇到的几档。「常见场景」那一列写的是这两档最常出现的出处（−30 对应传说战役、−50 对应宗师），不是固定对应——同一个活动里不同遭遇的光等差也会变。<strong>读数以屏幕上显示的光等差为准，不要按活动名去推档位。</strong></p>
-  <p><strong>核对：</strong>−30 和 −50 两档同时出现在两张表里（逐点表给出倍率、游戏机制页给出双向数值），两处对得上。</p>
+  <p>差了将近六倍。所以 −50 不是感觉上的分界，是曲线上真实的斜率突变点。</p>
+  <p><strong>边界：</strong>这张表是 PvE 的，只挑了实战里最常遇到的几档。「说明」列是从本行数值直接读出来的，不是活动对应表——同一个活动里不同遭遇的光等差也会变。<strong>读数以屏幕上显示的光等差为准，不要按活动名去推档位。</strong></p>
+  <p><strong>核对：</strong>−30 和 −50 这两档同时出现在逐点表和游戏机制页「重点提示」里（一个给倍率、一个给双向数值），两处对得上。来源页拿这两档当难度参照，标成「终极」和「宗师警戒」——「宗师警戒」是来源页自己的写法，游戏文本里最高的两档是「宗师」和「终极」，「终极」在「宗师」之上。</p>
+  <p><strong>别和旁边那条曲线混：</strong>逐点表还并着一列「传说战役」，那是<strong>另一条曲线</strong>——同一档位倍率略高（−30 是 0.463，不是 0.446），而且只有负向有值。传说难度下敌人固定比玩家高，所以那个方向用得上、正向用不上。</p>
 </details>
 
-<span class="src"><span class="t">公开整理</span>压光伤害逐点表（−100 到 +100 逐档）；<span class="t">公开整理</span> 游戏机制页「重点提示」双向数值</span>
+<span class="src"><span class="t">公开整理</span>压光伤害逐点表（−100 到 +100 逐档）、游戏机制页「重点提示」双向数值；<span class="t m">官方</span> 「宗师」「终极」「传说」等难度名取自游戏本体数据文件的本地化文本</span>
 
 <h2 id="s2"><span class="n">2</span>战斗人员分档</h2>
 
@@ -125,7 +132,7 @@
   <p><span class="tag">一句话</span>敌人不按种族算数值，按强度分档。同一个技能打不同档位，数字差好几倍。</p>
 </div>
 
-<p>游戏里所有战斗人员被归进几个强度档位。你血条上看到的名字和颜色，就是这套档位的外在表现：</p>
+<p>所有战斗人员按强度分档。血条上的名字和颜色就是这套档位：</p>
 
 <table>
   <thead>
@@ -141,7 +148,7 @@
   </tbody>
 </table>
 
-<p>为什么要分档：<strong>武器的基础伤害是按红血标定的，打更高的档位要乘一个小于 1 的系数。</strong>同一把自动步枪对不同档位的倍率是这样的：</p>
+<p>武器的基础伤害按红血标定，打更高的档位要乘一个小于 1 的系数。同一把自动步枪对不同档位：</p>
 
 <table class="lookup">
   <caption><b>查表</b>换武器类型时回来对 · 数据截至 2026-09</caption>
@@ -154,24 +161,24 @@
   </tbody>
 </table>
 
-<p>这就是「打首领的数字为什么比打杂兵小」的答案——不是首领的防御高，是同一发子弹在打到首领身上时被乘了一个更低的系数。</p>
+<p>所以打首领的数字比打杂兵小，不是首领防御高，是同一发子弹被乘了一个更低的系数。</p>
 
 <div class="note">
   <span class="h">这一列不能按倍数硬算</span>
   <p>武器倍率这几列之间<strong>不是整数倍</strong>：自动步枪打红血 2.100、打首领 1.070，差多少得查表，推不出来。</p>
-  <p>真正成倍数的是<strong>耐久</strong>和<a href="#s6">第 6 节</a>的<strong>弹药生成量</strong>——橙血约为红血的两倍，初级首领约为红血的四倍。这两处记住红血那一档就能推另外两档。</p>
+  <p>真正成倍数的是<strong>耐久</strong>和<a href="#s6">第 6 节</a>的<strong>弹药生成量</strong>——橙血约红血两倍，初级首领约四倍，记住红血那档就能推另外两档。</p>
 </div>
 
 <details class="deep">
   <summary>还有另一套 1–4 档的分类，用在别的地方。展开看它和这套的关系</summary>
-  <p>游戏里还存在一套把战斗人员分成 <strong>1 到 4 档</strong> 的体系，按种族列表划分，用在超能能量和弹药生成的另一部分计算里。例如：</p>
+  <p>还有一套把战斗人员分成 <strong>1 到 4 档</strong> 的体系，按种族列表划分，用在超能能量和弹药生成的另一部分计算里：</p>
   <ul>
     <li><strong>1 档</strong>：辅助士兵、战兽、海盗军、诅咒怨魂、狂热者、侍从</li>
     <li><strong>2 档</strong>：火枪兵、军团士兵、仆从、哥布林、潜伏者、躯壳</li>
     <li><strong>3 档</strong>：百夫长、队长、骑士、巫师、米诺陶、族长</li>
     <li><strong>4 档</strong>：装甲兵、机甲、死灵、独眼巨人、憎恶、征服者、折磨者、先知</li>
   </ul>
-  <p>这套档位<strong>不用于</strong>伤害倍率计算——伤害看的是上面那套红血/橙血/首领。它出现在超能能量获取（第 5 节）这类计算里。两套体系不能混用，看表时先确认表头写的是哪一套。</p>
+  <p>这套档位<strong>不用于</strong>伤害倍率——伤害看上面那套红血/橙血/首领。它用在超能能量获取（第 5 节）这类计算里。两套不能混用，看表先确认表头写的是哪一套。</p>
   <p><strong>核对：</strong>弹药生成机制页用的是红血/橙血/初级首领那套，超能能量页用的是 1–4 档那套，两张表各自的表头对得上。</p>
 </details>
 
@@ -183,7 +190,7 @@
   <p><span class="tag">一句话</span>同类取最高，跨类相乘。收益来自「每一类各拿一条最高的」，不是在同类里堆两三条。</p>
 </div>
 
-<p>游戏里所有增伤分成七类，区别在于叠加规则不同——所以这七个名字只是标签，不用从字面猜它们是什么，要记的是每一类能不能互相叠加。</p>
+<p>所有增伤分成七类，区别只在叠加规则。七个名字只是标签，不用从字面猜，要记的是一类里能不能叠。</p>
 
 <table>
   <thead>
@@ -195,12 +202,10 @@
     <tr><td><span class="b one">武器激涌</span></td><td>走「护甲充能」那套系统的增益</td><td>取最高</td></tr>
     <tr><td><span class="b mul">放大类</span></td><td>直接加在武器或技能上的增益——武器属性、星相碎片、神器模组的增伤都在这</td><td>可叠加</td></tr>
     <tr><td><span class="b mul">异域固有</span></td><td>异域装备自带、直接加在武器或技能上的效果</td><td>可叠加</td></tr>
-    <tr><td><span class="b mul">武器 Perk</span></td><td>触发后为该武器开启的修正</td><td>可叠加</td></tr>
+    <tr><td><span class="b mul">武器特性</span></td><td>触发后为该武器开启的修正</td><td>可叠加</td></tr>
     <tr><td><span class="b mul">世界与活动</span></td><td>活动本身的修正（比如元素激涌）</td><td>可叠加</td></tr>
   </tbody>
 </table>
-
-<p>规则只有两条，都短：</p>
 
 <ol>
   <li><strong>同一类里不叠加，取最高的那条生效。</strong></li>
@@ -209,9 +214,9 @@
 
 <h3>「放大类」是什么，以及为什么不用记它</h3>
 
-<p>它的名字是英文 Amplifier 的直译，从字面看不出指什么。它<strong>不是按效果分的，是按排除法分的</strong>：前面三类各有明确归属——挂在敌人身上的是<strong>全局易伤</strong>，加在你身上的是<strong>强化</strong>，走护甲充能那套的是<strong>武器激涌</strong>；剩下凡是直接加在武器或技能上的增益，全部归到<strong>放大类</strong>。</p>
+<p>名字是英文 Amplifier 的直译，字面看不出指什么。它<strong>不是按效果分的，是按排除法分的</strong>：前三类各有归属——挂敌人身上的是<strong>全局易伤</strong>，加你身上的是<strong>强化</strong>，走护甲充能那套的是<strong>武器激涌</strong>；剩下凡直接加在武器或技能上的增益全归<strong>放大类</strong>。</p>
 
-<p>所以它不是一个效果类型，是一个筐，里面装的东西互不相关：</p>
+<p>所以它是个筐，里面的东西互不相关：</p>
 
 <ul>
   <li><strong>武器属性</strong>和<strong>动能固有加成</strong>这两条常驻修正</li>
@@ -219,21 +224,21 @@
   <li>活动<strong>副本模组</strong>——雕文守护者、本影磨锐；以及赛季模组里的<strong>力量学派</strong></li>
 </ul>
 
-<p><strong>异域装备不在这里。</strong>巴克里斯面具、领航员、维王者之剑、焚天者誓约、杀手之牙这些异域自带的增伤单列一类，叫<strong>异域固有</strong>。两类的叠加规则一样（都能叠），分开只是按来源归类——看清这一点，就不会因为它们名字陌生而漏掉一整类。</p>
+<p><strong>异域装备不在这里。</strong>巴克里斯面具、领航员、维王者之剑、焚天者誓约、杀手之牙这些异域自带的增伤单列一类，叫<strong>异域固有</strong>。两类叠加规则一样（都能叠），分开只是按来源归类。</p>
 
-<p>配装时不用问「这条是不是放大类」。真正要问的是<strong>「它会不会和我已经挂上的东西顶掉」</strong>——会顶掉的只有前三类。后面四类（放大类、异域固有、武器 Perk、世界与活动）的叠加规则完全一样，都跟所有增益相乘，所以就算判断不出它归哪一类，结果也一样。</p>
+<p>配装时不用问「这条是不是放大类」。要问的是<strong>「它会不会顶掉我已经挂上的」</strong>——会顶掉的只有前三类。后面四类（放大类、异域固有、武器特性、世界与活动）规则完全一样，都跟所有增益相乘，判断不出归哪类也不影响结果。</p>
 
-<p>唯一要留个心眼的是<strong>界面上的分类文字不一定对</strong>：元素超驰在界面里写的是「激涌加成」，实际走的是放大类的叠加规则，和全部增益叠加。这类情况来源页里有注明——判断以标注的叠加行为为准，不看界面文字。</p>
+<p>留个心眼：<strong>界面上的分类文字不一定对</strong>。元素超驰在界面里写「激涌加成」，实际走放大类的规则，和全部增益叠加。这类情况来源页有注明——判断以标注的叠加行为为准，不看界面文字。</p>
 
 <h3>这条规则怎么用</h3>
 
-<p>假设你身上已经挂了「强化 +30%」，队友再给你一个「强化 +25%」。你的伤害<strong>一点都不会变</strong>——同类取最高，+25% 那条直接被忽略。这时候正确的做法是去找<strong>别的类</strong>：给敌人挂一条全局易伤，或者换个放大类的东西。</p>
+<p>身上挂着「强化 +30%」，队友再给一个「强化 +25%」，伤害<strong>一点都不会变</strong>——同类取最高，+25% 被忽略。正确做法是去<strong>别的类</strong>找：给敌人挂全局易伤，或换个放大类的东西。</p>
 
-<p>反过来，如果你在某一类里已经拿到最高档，收益就封顶了，该往下一类找。<strong>配装的核心逻辑就是横向铺开，不要纵向堆叠。</strong></p>
+<p>某一类里拿到最高档，收益就封顶，该往下一类找。<strong>配装的核心是横向铺开，不要纵向堆叠。</strong></p>
 
 <h3>一个完整的算例</h3>
 
-<p>上面是简化例子。来源页给了一个完整实例——同一把<strong>冰影火箭发射器</strong>同时吃到七个类别的增益，七项占满七类：</p>
+<p>来源页有个完整实例——同一把<strong>冰影火箭发射器</strong>吃到七个类别的增益，七项占满七类：</p>
 
 <table class="lookup">
   <caption><b>算例</b>与<a href="damage.html#list">第 4 页的增伤清单</a>逐项对应 · 数据截至 2026-09</caption>
@@ -241,7 +246,7 @@
     <tr><th>哪一项</th><th>类别</th><th class="num">数值</th><th>时长</th><th class="num">乘完累计</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>爆炸光能</strong><span class="sub">这把枪自带的武器 Perk</span></td><td><span class="b mul">武器 Perk</span></td><td class="num">+25%<span class="sub">×1.25</span></td><td class="dur">时长未测</td><td class="num">1.25</td></tr>
+    <tr><td><strong>爆炸光能</strong><span class="sub">这把枪自带的武器特性</span></td><td><span class="b mul">武器特性</span></td><td class="num">+25%<span class="sub">×1.25</span></td><td class="dur">保留到开火</td><td class="num">1.25</td></tr>
     <tr><td><strong>武器激涌模组 ×3</strong><span class="sub">冰影 · 需要 3 层护甲充能</span></td><td><span class="b one">武器激涌</span></td><td class="num">+22%<span class="sub">×1.22</span></td><td class="dur">随护甲充能</td><td class="num">1.53</td></tr>
     <tr><td><strong>元素激涌</strong><span class="sub">活动卡片给的冰影修正</span></td><td><span class="b mul">世界与活动</span></td><td class="num">+25%<span class="sub">×1.25</span></td><td class="dur">随活动持续</td><td class="num">1.91</td></tr>
     <tr><td><strong>巴克里斯面具</strong><span class="sub">猎人异域头盔 · 3 层</span></td><td><span class="b mul">异域固有</span></td><td class="num">+33%<span class="sub">×1.33</span></td><td class="dur">11 秒</td><td class="num">2.54</td></tr>
@@ -253,7 +258,7 @@
 
 <p>七项分属七个不同类别，所以全部生效，一路相乘：<code>1.25 × 1.22 × 1.25 × 1.33 × 1.35 × 1.25 × 1.22 ≈ 5.22</code>。乘法也可以中途停：只填前六项（少一个放大类），累计停在 <code>≈ 4.28</code>，也就是比原来多出约 328%。</p>
 
-<p><strong>这七项里只要有任意两项落在同一类，收益就会少一截</strong>——这就是「横向铺开」的实际价值。表里做的不是「把最强的几条凑一起」，是「每一类各拿一条」。每一项从哪拿、挂多久，在<a href="damage.html#list">第 4 页的增伤清单</a>里逐条列着。</p>
+<p><strong>这七项只要有任意两项落在同一类，收益就会少一截</strong>——这就是横向铺开的价值。不是「把最强的几条凑一起」，而是「每一类各拿一条」。每条从哪拿、挂多久，<a href="damage.html#list">第 4 页的增伤清单</a>里逐条列着。</p>
 
 <div class="note warn">
   <span class="h">近战是唯一的例外</span>
@@ -263,9 +268,9 @@
 <details class="deep">
   <summary>为什么「乘的顺序不影响结果」值得单独说？展开</summary>
   <p>因为乘法满足交换律。你有 +25% 的全局易伤和 ×1.3 的强化，先乘哪个结果都一样：<code>1.25 × 1.3 = 1.3 × 1.25</code>。</p>
-  <p>这条看起来是废话，但它有一个实用推论：<strong>你不需要关心挂增益的先后顺序，只需要关心「一共铺开了几类」。</strong>排查伤害时按类清点就行，不用复盘实战里的操作顺序。</p>
+  <p>实用推论：<strong>不用关心挂增益的先后顺序，只要关心「一共铺开了几类」。</strong>排查伤害时按类清点就行，不用复盘操作顺序。</p>
   <p><strong>边界：</strong>这条对近战不成立，因为近战的那几项是相加的，相加同样满足交换律——但它们的<strong>结果</strong>和相乘不同，不是顺序不同。别把「相加」和「相乘」看成同一件事的两种顺序。</p>
-  <p><strong>核对：</strong>增伤页开头的两段正文与分类表一致；页面末尾的「叠加算例」一节用一个完整实例走了一遍乘法（七类全开约 5.22 倍），可以照着对。</p>
+  <p><strong>核对：</strong>增伤与易伤页开头的两段正文与分类表一致；页面末尾的「叠加算例」一节用一个完整实例走了一遍乘法（七类全开约 5.22 倍），可以照着对。</p>
 </details>
 
 <span class="src"><span class="t">公开整理</span>增伤与易伤页（buff-debuffs）「分类与叠加」「叠加算例」两节</span>
@@ -276,7 +281,7 @@
   <p><span class="tag">一句话</span>六项属性都是两段：前 100 点给保底，100 点以上换强化。所以平均分是错的。</p>
 </div>
 
-<p>护甲上有六项属性。每一项都分成两段：<strong>0 到 100 点</strong>给的是回复速度、能量获取这类保底效果；<strong>100 到 200 点</strong>给的是伤害、护盾这类强化效果。</p>
+<p>护甲六项属性，每项分两段：<strong>0 到 100 点</strong>给回复速度、能量获取这类保底效果，<strong>100 到 200 点</strong>给伤害、护盾这类强化效果。</p>
 
 <table>
   <thead>
@@ -303,14 +308,14 @@
     <tr><td>每点</td><td>操控性与填装速度提高，100 点最多 0.9× 时长倍率</td></tr>
     <tr><td>每点</td><td>对红血与橙血战斗人员的武器伤害 +0.15%，100 点最多 +15%</td></tr>
     <tr><td>100 点以上</td><td>弹药块有 1% 概率掉落更多弹药，200 点 100%</td></tr>
-    <tr><td>100 点以上</td><td>主武器与特殊弹药武器对首领每点 +0.15%，200 点最多 +15%</td></tr>
+    <tr><td>100 点以上</td><td>主武器与特殊武器对首领每点 +0.15%，200 点最多 +15%</td></tr>
     <tr><td>100 点以上</td><td>威能武器对首领每点 +0.1%，200 点最多 +10%</td></tr>
   </tbody>
 </table>
 
-<p>注意两个设计：<strong>100 点那一档的 +15% 只对红血和橙血生效</strong>，对首领的加成全部写在 100 点以上；而且<strong>威能比主武器低</strong>——同样是 200 点，主武器和特殊弹药拿到 +15%，威能只有 +10%。</p>
+<p>注意两点：<strong>100 点那一档的 +15% 只对红血和橙血生效</strong>，首领的加成全在 100 点以上；<strong>威能比主武器低</strong>——同样 200 点，主武器和特殊武器 +15%，威能只有 +10%。</p>
 
-<p>这个设计的含义是：<strong>属性给的是普适输出，越往专项走收益越低。</strong>你只有 200 点可分配，先想想这套装配主要打谁。</p>
+<p>含义是：<strong>属性给的是普适输出，越往专项收益越低。</strong>只有 200 点可分配，先想清楚这套装配主要打谁。</p>
 
 <h3>生命值属性：给的是回复量，不是血量上限</h3>
 
@@ -327,7 +332,7 @@
   </tbody>
 </table>
 
-<p>最容易记反的就是这一项：<strong>生命值属性不提高你的血量上限，它提高的是你捡能量球时回多少血。</strong>堆它的意义在于「掉血之后能快速回满」，不是「血条更长」。</p>
+<p>最容易记反的一项：<strong>生命值属性不提高血量上限，提高的是捡能量球时回多少血。</strong>堆它是为了掉血后快速回满，不是血条更长。</p>
 
 <details class="deep">
   <summary>完整的逐档位表。展开看 0–100 每十点的具体数值</summary>
@@ -360,7 +365,7 @@
 
 <h3>护甲充能怎么运作</h3>
 
-<p>护甲充能是一种资源，供装了护甲充能模组的人使用。它的规则不长，但每一条都影响配装：</p>
+<p>护甲充能是一种资源，供装了护甲充能模组的人使用。规则不长，但每条都影响配装：</p>
 
 <ul>
   <li><strong>默认最多 3 层。</strong>身上装着任意护甲充能模组时，拾取任意能量球提供 1 层。</li>
@@ -370,7 +375,7 @@
   <li><strong>计时可以延长。</strong>职业物品装「时间膨胀」模组，把衰减计时延长到 15 / 18 / 20 秒。</li>
 </ul>
 
-<p>有些模组在持有护甲充能期间开启被动效果，有些则消耗它换一次即时效果。第 3 节里「同类取最高」的武器激涌，来源就是这套系统。</p>
+<p>有些模组持有护甲充能时开启被动效果，有些消耗它换一次即时效果。第 3 节里「取最高」的武器激涌就来自这套系统。</p>
 
 <h3>超能能量怎么来</h3>
 
@@ -390,7 +395,7 @@
   </tbody>
 </table>
 
-<p>打最强的敌人也才 1.80%——<strong>靠击杀攒超能，要杀五十多个 4 档敌人才能攒满一条。</strong>实战里超能的主要来源是能量球和各种模组，不是击杀本身。</p>
+<p>打最强的敌人也才 1.80%——<strong>靠击杀攒超能要杀五十多个 4 档敌人。</strong>实战里超能主要来自能量球和各种模组，不是击杀。</p>
 
 <details class="deep">
   <summary>能量球和其它来源给多少？展开看完整档位</summary>
@@ -410,7 +415,7 @@
       <tr><td>虹吸 ×3 / 能量节约 ×3</td><td class="num">4.40%</td></tr>
     </tbody>
   </table>
-  <p>对照上面那张击杀表就能看出差距：<strong>一颗带满配片的能量球（4.40%）顶得上两个半 4 档敌人。</strong>所以提高超能周转的方向是「多产生能量球」，不是「多杀杂兵」。</p>
+  <p><strong>一颗带满配片的能量球（4.40%）顶得上两个半 4 档敌人。</strong>所以提高超能周转靠「多产生能量球」，不是「多杀杂兵」。</p>
   <p><strong>核对：</strong>这两张表同属游戏机制页的「超能能量生成」节，表头都是「超能能量」，直接可比。</p>
 </details>
 
@@ -419,10 +424,10 @@
 <h2 id="s6"><span class="n">6</span>弹药经济</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>弹药不是捡来的，是打出来的。重弹打重弹是全表最差的一格，所以一号位二号位要放会生弹的武器。</p>
+  <p><span class="tag">一句话</span>弹药不是捡来的，是打出来的。用威能武器击杀、掉的还是威能弹药，是全表最差的一格，所以前两个武器位要放会生弹的武器。</p>
 </div>
 
-<p>击杀战斗人员会按一个百分比生成弹药。这个百分比由四项决定：<strong>击杀用的弹药类型、生成的弹药类型、敌人档位、以及武器的弹药生成属性。</strong></p>
+<p>击杀会按一个百分比生成弹药，由四项决定：<strong>击杀用的武器类型、生成的弹药类型、敌人档位、武器的弹药生成属性。</strong>下表三档按武器位写：<strong>主武器（白弹）、特殊武器（绿弹）、威能武器（重弹）</strong>。</p>
 
 <table class="lookup">
   <caption><b>查表</b>判断断不断弹时回来对 · 数据截至 2026-09</caption>
@@ -430,39 +435,39 @@
     <tr><th>击杀 → 生成</th><th class="num">红血</th><th class="num">橙血</th><th class="num">初级首领</th></tr>
   </thead>
   <tbody>
-    <tr><td>白弹 → 绿弹</td><td class="num">6%–16%</td><td class="num">12%–24%</td><td class="num">24%–50%</td></tr>
-    <tr><td>白弹 → 重弹</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
-    <tr><td>绿弹 → 绿弹</td><td class="num">3%–12%</td><td class="num">6%–18%</td><td class="num">12%–40%</td></tr>
-    <tr><td>绿弹 → 重弹</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
-    <tr><td>重弹 → 绿弹</td><td class="num">3%–16%</td><td class="num">6%–24%</td><td class="num">12%–50%</td></tr>
-    <tr class="hi"><td>重弹 → 重弹</td><td class="num">3%–4%</td><td class="num">6%–8%</td><td class="num">12%–16%</td></tr>
+    <tr><td>主武器 → 特殊弹药</td><td class="num">6%–16%</td><td class="num">12%–24%</td><td class="num">24%–50%</td></tr>
+    <tr><td>主武器 → 威能弹药</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
+    <tr><td>特殊武器 → 特殊弹药</td><td class="num">3%–12%</td><td class="num">6%–18%</td><td class="num">12%–40%</td></tr>
+    <tr><td>特殊武器 → 威能弹药</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
+    <tr><td>威能武器 → 特殊弹药</td><td class="num">3%–16%</td><td class="num">6%–24%</td><td class="num">12%–50%</td></tr>
+    <tr class="hi"><td>威能武器 → 威能弹药</td><td class="num">3%–4%</td><td class="num">6%–8%</td><td class="num">12%–16%</td></tr>
   </tbody>
 </table>
 
-<p>区间取决于武器的弹药生成属性：<strong>100 属性即区间上限</strong>。区间随属性线性变化。</p>
+<p>区间取决于武器的弹药生成属性：<strong>100 属性即区间上限</strong>，区间随属性线性变化。</p>
 
 <h3>先记住两个事实</h3>
 
 <ol>
   <li><strong>档位之间成倍数。</strong>橙血约是红血的两倍，初级首领约是四倍。记住红血那一列就能推另外两列。</li>
-  <li><strong>重弹打重弹最低。</strong>全表最差的一格，只有 3%–4%。这是整个弹药经济里最关键的一个反常值。</li>
+  <li><strong>用威能武器击杀只掉威能弹药。</strong>全表最差的一格，只有 3%–4%。</li>
 </ol>
 
-<h3>推论一：一号位二号位要放「会生弹」的武器</h3>
+<h3>推论一：前两个武器位要放「会生弹」的武器</h3>
 
-<p>因为重弹打重弹的转化效率最差，你的重弹补给其实靠的是白弹和绿弹的输出。<strong>一号位与二号位各放一把弹药生成属性高的武器，是弹药经济的基础。</strong></p>
+<p>用威能武器击杀只掉威能弹药，转化最差；威能弹药的补给其实靠主武器和特殊武器的输出。<strong>前两个武器位各放一把弹药生成属性高的武器，是弹药经济的基础。</strong></p>
 
 <h3>推论二：靠技能补弹走不通</h3>
 
-<p>几乎所有技能对三档敌人都只能生成 4% / 8% / 16% 的弹药，远低于合格武器。手雷高出 50%，超能整整高一档——但即使按超能那一档算，也补不过武器。</p>
+<p>几乎所有技能对三档敌人都只生成 4% / 8% / 16% 的弹药，远低于合格武器。手雷高 50%、超能高一整档，但按超能那档算也补不过武器。</p>
 
 <h3>推论三：终结技不一定回弹</h3>
 
-<p>终结技生成多少弹药，取决于<strong>终结当下所持的武器</strong>，不取决于造成终结的手段。但有个前提：<strong>终结之前必须有武器对这名敌人造成过伤害。</strong></p>
+<p>终结技生成多少弹药，取决于<strong>终结当下所持的武器</strong>，与用什么手段终结无关。前提是：<strong>终结之前必须有武器对这名敌人造成过伤害。</strong></p>
 
 <div class="note warn">
   <span class="h">所以这条路是断的</span>
-  <p>如果你只用技能把敌人打到残血、再用终结技收掉，不会产生任何弹药进度。双特殊弹药武器想靠技能补弹，走不通。</p>
+  <p>只用技能把敌人打到残血、再用终结技收掉，不产生任何弹药进度。双特殊武器配置靠技能补弹走不通。</p>
 </div>
 
 <details class="deep">
@@ -473,16 +478,16 @@
       <tr><th>来源</th><th class="num">红血</th><th class="num">橙血</th><th class="num">初级首领</th></tr>
     </thead>
     <tbody>
-      <tr><td>技能 → 绿弹 / 重弹</td><td class="num">4%</td><td class="num">8%</td><td class="num">16%</td></tr>
-      <tr><td>手雷 → 绿弹</td><td class="num">6%</td><td class="num">12%</td><td class="num">24%</td></tr>
-      <tr><td>手雷 → 重弹</td><td class="num">4%</td><td class="num">8%</td><td class="num">16%</td></tr>
-      <tr><td>超能 → 绿弹</td><td class="num">12%</td><td class="num">24%</td><td class="num">48%</td></tr>
-      <tr><td>超能 → 重弹</td><td class="num">8%</td><td class="num">16%</td><td class="num">32%</td></tr>
+      <tr><td>技能 → 特殊弹药 / 威能弹药</td><td class="num">4%</td><td class="num">8%</td><td class="num">16%</td></tr>
+      <tr><td>手雷 → 特殊弹药</td><td class="num">6%</td><td class="num">12%</td><td class="num">24%</td></tr>
+      <tr><td>手雷 → 威能弹药</td><td class="num">4%</td><td class="num">8%</td><td class="num">16%</td></tr>
+      <tr><td>超能 → 特殊弹药</td><td class="num">12%</td><td class="num">24%</td><td class="num">48%</td></tr>
+      <tr><td>超能 → 威能弹药</td><td class="num">8%</td><td class="num">16%</td><td class="num">32%</td></tr>
     </tbody>
   </table>
-  <p>两个例外值得单独记：<strong>手雷生成特殊弹药的速度比其他技能高 50%；超能整整高出一档。</strong>超能打初级首领时能生成 48% 的绿弹，是全表技能类里最高的。</p>
-  <p><strong>刀剑是特例：</strong>它没有弹药生成属性，也无法被弹药模组改变，击杀固定生成 3% 特殊弹药与 3% 重弹进度。</p>
-  <p><strong>核对：</strong>武器类各行来自弹药页的「弹药生成系数」表，技能类来自同页「技能与超能弹药生成」节，两处对同一个「重弹打重弹最低」的结论一致。</p>
+  <p>两个例外：<strong>手雷生成特殊弹药的速度比其他技能高 50%；超能整整高出一档。</strong>超能打初级首领时能生成 48% 的特殊弹药，是全表技能类里最高的。</p>
+  <p><strong>刀剑是特例：</strong>它没有弹药生成属性，也无法被弹药模组改变，击杀固定生成 3% 特殊弹药与 3% 威能弹药进度。</p>
+  <p><strong>核对：</strong>武器类各行来自弹药页的「弹药生成系数」表，技能类来自同页「技能与超能弹药生成」节，两处对同一个「威能武器生成威能弹药最低」的结论一致。</p>
 </details>
 
 <span class="src"><span class="t">公开整理</span>弹药生成机制页的生成系数表与技能生成节</span>
@@ -492,10 +497,10 @@
 <p class="quiz-head">四道题。答不上来就回看对应那一节。</p>
 
 <details class="quiz">
-  <summary>宗师难度（光等差 −50）和传说战役（−30）相比，你的输出大约变成几分之几？你受到的伤害是涨了还是跌了？</summary>
+  <summary>光等差从 −30 掉到 −50，你的输出大约变成几分之几？你受到的伤害是涨了还是跌了？</summary>
   <div class="ans">
     <p>输出从 0.446 掉到 0.143，只剩约三分之一。受到的伤害同时上涨，约 1.35 倍。</p>
-    <p>关键在这两个变化是同一件事的两面——这正是低光等下通常先出生存问题、而不是输出问题的原因。</p>
+    <p>两个变化是同一件事的两面——这是低光等下先出生存问题的原因。</p>
     <p class="back">回看第 1 节。</p>
   </div>
 </details>
@@ -503,7 +508,7 @@
 <details class="quiz">
   <summary>你身上已经有「强化 +30%」了，队友又给了你一个「强化 +25%」。你的伤害会变多少？</summary>
   <div class="ans">
-    <p>不变。同类之间取最高，两个强化互相覆盖，不是相加。这时候该去别的类别里找收益——比如给敌人挂一条全局易伤，或者换一个放大类的东西。</p>
+    <p>不变。同类取最高，两个强化互相覆盖，不是相加。该去别的类别找收益——给敌人挂全局易伤，或换个放大类的东西。</p>
     <p class="back">回看第 3 节。</p>
   </div>
 </details>
@@ -511,16 +516,16 @@
 <details class="quiz">
   <summary>六项护甲属性里，哪一项直接提高你对首领的武器伤害？它给多少？</summary>
   <div class="ans">
-    <p>武器属性。<strong>100 点以上</strong>，主武器与特殊弹药武器对首领每点 +0.15%（200 点最多 +15%），威能武器每点 +0.1%（200 点最多 +10%）。</p>
-    <p>注意 100 点那一档的 +15% 只对红血和橙血生效，对首领完全不给——这是最容易读错的地方。</p>
+    <p>武器属性。<strong>100 点以上</strong>，主武器与特殊武器对首领每点 +0.15%（200 点最多 +15%），威能武器每点 +0.1%（200 点最多 +10%）。</p>
+    <p>注意 100 点那一档的 +15% 只对红血和橙血生效，对首领完全不给。</p>
     <p class="back">回看第 4 节。</p>
   </div>
 </details>
 
 <details class="quiz">
-  <summary>为什么一号位和二号位要放弹药生成属性高的武器？</summary>
+  <summary>为什么前两个武器位要放弹药生成属性高的武器？</summary>
   <div class="ans">
-    <p>因为「重弹打重弹」的生成效率是全表最差的一格（3%–4%）。你的重弹补给实质上靠白弹和绿弹的输出在养，所以这两个位置的弹药生成属性直接决定了你打得久不久。</p>
+    <p>因为用威能武器击杀只掉威能弹药，是全表最差的一格（3%–4%），威能弹药的补给实质上靠主武器和特殊武器在养。这两个位置的弹药生成属性决定你打得久不久。</p>
     <p class="back">回看第 6 节。</p>
   </div>
 </details>

@@ -7,7 +7,7 @@
 <meta name="description" content="打不动的时候按顺序查：先排除外部原因，再动自己的配装，最后才换枪。">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="damage">
+<body data-block="mechanics" data-page="damage">
 
 <button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
 
@@ -16,6 +16,14 @@
   <p class="brand-sub">《命运 2 学习手册》· 战斗机制</p>
 
   <nav class="g-nav">
+    <p class="nav-title">学习手册</p>
+    <a href="../index.html" data-key="home"><span class="k">·</span>总目录</a>
+    <a href="index.html" data-key="mechanics"><span class="k">·</span>战斗机制</a>
+    <a href="../系统入门/index.html" data-key="systems"><span class="k">·</span>游戏系统入门</a>
+  </nav>
+
+  <nav class="c-nav">
+    <p class="nav-title">本教程</p>
     <a href="index.html" data-key="index"><span class="k">·</span>从这里开始</a>
     <a href="mechanics.html" data-key="mechanics"><span class="k">1</span>通用机制</a>
     <a href="terms.html" data-key="terms"><span class="k">2</span>看不懂词</a>
@@ -26,7 +34,7 @@
   </nav>
 
   <nav class="l-nav">
-    <p class="l-title">本页</p>
+    <p class="nav-title">本页</p>
     <a href="#s1">1 先排除不是伤害的原因</a>
     <a href="#s2">2 元素护盾与活动修改器</a>
     <a href="#s3">3 乘区：横向铺开</a>
@@ -52,19 +60,19 @@
 <p class="subtitle">按顺序查，别先换枪。</p>
 <p class="page-ask">这一页回答：<b>我明明配好了，为什么还是打得慢？</b></p>
 
-<p class="lead">这一页的顺序本身就是内容。最常见的错误是「打不动 → 换一把枪 → 还打不动 → 再换一把」，换到第五把才想起来可能是别的原因。下面六节里，<strong>前两节专门用来排除跟你的枪无关的原因</strong>——实际遇到的案例里，这两种占多数。</p>
+<p class="lead">最常见的错误是「打不动 → 换一把枪 → 还打不动 → 再换一把」，换到第五把才想起可能是别的原因。<strong>前两节专门排除跟枪无关的原因</strong>——实际案例里这两种占多数。</p>
 
 <h2 id="s1"><span class="n">1</span>先排除不是伤害的原因</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>遇到打不动，先问三个问题：这个敌人是不是带抗性、我是不是没破盾、我的光等够不够。三条都排除了，才轮到换装备。</p>
+  <p><span class="tag">一句话</span>遇到打不动先问三个问题：这个敌人是不是带抗性、我是不是没破盾、光等够不够。三条都排除才轮到换装备。</p>
 </div>
 
 <h3>第一条：这个敌人带「祸因」吗</h3>
 
-<p><strong>祸因</strong>是随机加在非首领敌人身上的词缀。带祸因的敌人<strong>对所有伤害有 60% 的伤害抗性</strong>——你打出去的数字直接被砍掉一大半。这不是你的枪不行。</p>
+<p><strong>祸因</strong>是随机加在非首领敌人身上的词缀。带祸因的敌人<strong>对所有伤害有 60% 的伤害抗性</strong>——数字直接被砍掉一大半，这不是你的枪不行。</p>
 
-<p>祸因不止一种，而且有些叠加了额外规则：</p>
+<p>祸因不止一种，有些还带额外规则：</p>
 
 <table class="lookup">
   <caption><b>查表</b>不必背，打到带词缀的敌人时回来对 · 数据截至 2026-09</caption>
@@ -83,15 +91,15 @@
   </tbody>
 </table>
 
-<p>「受保护」那一行值得记住：<strong>只要有一架护卫无人机在场，抗性就是 90%。</strong>先去打无人机，或者换个能穿透的手段——硬扛着打主体是最亏的做法。</p>
+<p><strong>受保护：只要有一架护卫无人机在场，抗性就是 90%。</strong>先去打无人机，或换个能穿透的手段——硬扛主体最亏。</p>
 
-<p><strong>怎么判断：</strong>看敌人的血条旁边有没有额外的词缀标记。带祸因的敌人会有明显的指示。另外，<strong>压制可以停用大部分祸因技能</strong>，这是处理它们的主要手段。</p>
+<p><strong>怎么判断：</strong>带祸因的敌人血条旁边会有词缀标记。另外，<strong>压制可以停用大部分祸因技能</strong>，这是处理它们的主要手段。</p>
 
 <h3>第二条：势不可挡勇士你晕了吗</h3>
 
-<p><strong>势不可挡勇士在未被眩晕时，对所有伤害有 70% 的伤害抗性。</strong>这条在其他所有计算之前生效——也就是说，你晕不住它的时候，任何增伤、任何武器都只能打出三成伤害。</p>
+<p><strong>势不可挡勇士未被眩晕时，对所有伤害有 70% 的伤害抗性。</strong>这条在其他所有计算之前生效——晕不住它，任何增伤、任何武器都只打出三成伤害。</p>
 
-<p>而且难度越高，你越晕不住它：</p>
+<p>难度越高越晕不住它：</p>
 
 <table class="lookup">
   <caption><b>查表</b>难度越高越控不住，数值随版本调整 · 数据截至 2026-09</caption>
@@ -105,17 +113,17 @@
   </tbody>
 </table>
 
-<p>宗师下每次眩晕只能控 5.5 秒，中间还有 4.5 秒不能重置。这 5.5 秒就是你一整轮的输出窗口——<strong>把爆发留给窗口，不要平摊。</strong></p>
+<p>宗师下每次眩晕只控 5.5 秒，中间 4.5 秒不能重置。这 5.5 秒就是一整轮的输出窗口——<strong>把爆发留给窗口，不要平摊。</strong></p>
 
 <h3>第三条：光等差够不够</h3>
 
-<p>这一条在<a href="mechanics.html#s1">第 1 页第 1 节</a>详细讲过。这里只留一句判断标准：<strong>如果你的光等差低于活动推荐的档位，先补光等，任何配装调整的收益都比不上它。</strong></p>
+<p>详细原理见<a href="mechanics.html#s1">第 1 页第 1 节</a>。判断标准：<strong>光等差低于活动推荐的档位，就先补光等，任何配装调整的收益都比不上它。</strong></p>
 
-<p>光等差 −30 时你的输出只剩 0.446，−50 时只剩 0.143。这不是调整能弥补的量级。</p>
+<p>光等差 −30 时输出只剩 0.446，−50 时只剩 0.143，不是调整能弥补的量级。</p>
 
 <div class="note">
   <span class="h">这一节的用法</span>
-  <p>三条都能在几秒内排除。<strong>排除完之前不要动装备</strong>——换了枪发现还是打不动，浪费的是你这场活动的时间和弹药。</p>
+  <p>三条都能在几秒内排除。<strong>排除完之前不要动装备</strong>——换了枪还是打不动，浪费的是时间和弹药。</p>
 </div>
 
 <span class="src"><span class="t">公开整理</span>游戏机制页「战斗人员祸因」各类型规则、势不可挡勇士生命值与眩晕表；<span class="t">公开整理</span> 光等差数值见压光伤害表</span>
@@ -123,32 +131,32 @@
 <h2 id="s2"><span class="n">2</span>元素护盾与活动修改器</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>活动本身会改伤害规则。元素不匹配时伤害直接降低 80%——这不是调属性、换 Perk 能绕过去的。</p>
+  <p><span class="tag">一句话</span>活动本身会改伤害规则：元素不匹配时伤害直接降低 80%，调属性、换特性都绕不过去。</p>
 </div>
 
-<p>活动开始前那张黑色卡片上有几项会直接影响你的输出，进去之前就该看一眼。</p>
+<p>活动开始前那张黑色卡片上有几项直接影响输出，进去前先看一眼。</p>
 
 <h3>元素匹配：最硬的限制</h3>
 
-<p><strong>战斗人员的护盾受到非匹配伤害时，伤害降低 80%。</strong>这一条没有商量空间——面对有护盾的敌人，你的武器元素要么对，要么这一枪基本白打。</p>
+<p><strong>战斗人员的护盾受到非匹配伤害时，伤害降低 80%。</strong>没有商量空间——武器元素要么对，要么这一枪基本白打。</p>
 
-<p>怎么判断敌人护盾是什么元素：护盾的颜色和图标就是答案。这也是为什么推荐配装里经常要求带两种不同元素的武器——一个位置应付不了所有情况。</p>
+<p>护盾的颜色和图标就是它的元素。所以推荐配装常要求带两种不同元素的武器——一个位置应付不了所有情况。</p>
 
 <h3>元素激涌：给你的增益</h3>
 
-<p>和上面那条相反，<strong>元素激涌</strong>是给匹配元素的伤害 <strong>+25%</strong>。它作用在你身上，属于<a href="mechanics.html#s3">第 1 页第 3 节</a>里「世界与活动」那一类。</p>
+<p>反过来，<strong>元素激涌</strong>给匹配元素的伤害 <strong>+25%</strong>，作用在你身上，属于<a href="mechanics.html#s3">第 1 页第 3 节</a>「世界与活动」那一类。</p>
 
-<p>把它和乘区放在一起看，就知道为什么它值得专门针对：<strong>它是白送的 25%，而且不占你任何装备位置。</strong>如果你的武器元素正好匹配，等于凭空多了一类增伤。</p>
+<p><strong>它是白送的 25%，不占任何装备位置。</strong>武器元素正好匹配，就等于凭空多一类增伤。</p>
 
 <h3>元素饥饿：改的是技能周转</h3>
 
-<p>这一项不直接加伤害，但会大幅改变技能流配装的表现：能量满到 100% 时，技能激涌持续 20 秒，期间<strong>技能的基础回复速度额外提高 750%</strong>。</p>
+<p>不直接加伤害：能量满到 100% 时技能激涌持续 20 秒，期间<strong>技能基础回复速度额外提高 750%</strong>。</p>
 
-<p>注意它的触发条件是「能量满」——<strong>这是一个要求你主动管理的条件</strong>，不是常驻效果。技能流遇到这一项时，怎么把能量维持在满值是配装要解决的问题。</p>
+<p>注意触发条件是「能量满」——<strong>要主动管理</strong>，不是常驻。技能流遇到它，怎么把能量维持在满值是配装要解决的问题。</p>
 
 <div class="note warn">
   <span class="h">「扎根」这一项容易被忽略</span>
-  <p>扎根的效果是：<strong>在空中时受到的伤害 +100%</strong>。它改的是你挨打，不是打人，所以经常被归到生存问题里。但实际影响是双重的——如果你习惯跳着打，这一项会让你死得比预想快得多，而你会误以为是输出不够、拖太久了。<strong>排查时它两边都要看。</strong></p>
+  <p><strong>扎根：在空中时受到的伤害 +100%</strong>。它改的是你挨打，不是打人，常被归到生存问题。但习惯跳着打会死得比预想快，你还以为是输出不够、拖太久。<strong>排查时两边都要看。</strong></p>
 </div>
 
 <details class="deep">
@@ -177,22 +185,22 @@
 <h2 id="s3"><span class="n">3</span>乘区：横向铺开</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>把身上所有增伤按七类归位，找出空的那几类。空的那几类才是收益最大的地方。</p>
+  <p><span class="tag">一句话</span>把身上所有增伤按七类归位，空的那几类收益最大。</p>
 </div>
 
-<p>前两节排除完外部原因，才轮到自己的增益搭配。规则在<a href="mechanics.html#s3">第 1 页第 3 节</a>：<strong>同类取最高，跨类相乘。</strong>这里讲怎么用它排查。</p>
+<p>外部原因排除完，才轮到增益搭配。规则见<a href="mechanics.html#s3">第 1 页第 3 节</a>：<strong>同类取最高，跨类相乘。</strong></p>
 
 <h3>清点一遍</h3>
 
 <ol class="steps">
-  <li><strong>把你身上所有的增伤列出来。</strong>武器 Perk、模组、星相碎片、异域、队友给的增益，一个都别漏。</li>
-  <li><strong>把每一条归到七类里。</strong>归不进去的，说明它可能不是增伤（比如是回复或减伤）。</li>
-  <li><strong>看哪几类是空的。</strong>空的那几类，每开一类都是一次乘法；已经在里的那一类，再堆一条基本是浪费。</li>
+  <li><strong>列出身上所有的增伤。</strong>武器特性、模组、星相碎片、异域、队友给的增益，一个都别漏。</li>
+  <li><strong>把每条归到七类里。</strong>归不进去的可能不是增伤（是回复或减伤）。</li>
+  <li><strong>看哪几类是空的。</strong>每开一类都是一次乘法；已经在里的那一类，再堆一条基本是浪费。</li>
 </ol>
 
 <h3>算一遍差别</h3>
 
-<p>假设你现在身上有三条增伤，都是同一类「强化」：</p>
+<p>假设身上有三条同类「强化」增伤：</p>
 
 <table>
   <thead>
@@ -205,15 +213,15 @@
   </tbody>
 </table>
 
-<p>你的实际增伤是 <strong>×1.30</strong>，不是 ×1.75，也不是 ×1.30×1.25×1.20。<strong>另外两条完全是浪费的装备位置。</strong></p>
+<p>实际增伤是 <strong>×1.30</strong>，不是 ×1.75，也不是 ×1.30×1.25×1.20。<strong>另外两条完全是浪费的装备位置。</strong></p>
 
 <div class="note">
   <span class="h">全局易伤有个例外：被顶掉的会替生效中的那条续期</span>
-  <p>同类只生效一条，但低的那条不一定白放。全局易伤里 30% 那一档就是这样——邪冬的头盔、法夫纳、牵引器火炮这三条，它们挂上的 30% <strong>可以被任意虚弱来源续期</strong>，续到新来源自己消失为止，可以一直重复。这三条里任意一条打上 30% 之后，队友再补一条 15% 的虚弱，那 15% 不生效，但能让 30% 一直挂着。</p>
-  <p>这条目前只在全局易伤里确认过。上面那句「浪费的装备位置」对强化成立，别类推到所有类。</p>
+  <p>同类只生效一条，但低的不一定白放。全局易伤的 30% 档就是——邪冬的头盔、法夫纳、牵引器火炮挂上的 30% <strong>可被任意虚弱来源续期</strong>，续到新来源消失为止，可一直重复：队友补一条 15% 的虚弱，那 15% 不生效，但能让 30% 一直挂着。</p>
+  <p>这条只在全局易伤里确认过。「浪费的装备位置」对强化成立，别类推到所有类。</p>
 </div>
 
-<p>现在把强化 B 和 C 换成一条易伤（+25%）和一条放大类（+20%）：</p>
+<p>把强化 B 和 C 换成一条易伤（+25%）和一条放大类（+20%）：</p>
 
 <table>
   <thead>
@@ -230,7 +238,7 @@
 
 <h3>一队人把东西全开，算一遍</h3>
 
-<p>把常见的组队画面拆开算。左边是每个人做的事，右边是它落在哪一类、算不算数：</p>
+<p>把常见的组队画面拆开算：</p>
 
 <table>
   <thead>
@@ -239,7 +247,7 @@
   <tbody>
     <tr><td>猎人 · 暗影箭矢：狩猎陷阱（虚空大箭）</td><td><span class="b one">全局易伤</span></td><td class="num">+35%</td><td>生效</td></tr>
     <tr><td>泰坦 · 黎明护罩（泡泡盾）</td><td><span class="b one">全局易伤</span></td><td class="num">+15%</td><td>被顶掉</td></tr>
-    <tr><td>全职业 · 牵引器火炮（推推炮）</td><td>全局易伤</td><td class="num">+30%</td><td>被顶掉</td></tr>
+    <tr><td>全职业 · 牵引器火炮（推推炮）</td><td><span class="b one">全局易伤</span></td><td class="num">+30%</td><td>被顶掉</td></tr>
     <tr><td>全职业 · 神圣裁决（神性）· 本职是精准笼</td><td><span class="b one">全局易伤</span></td><td class="num">+15%</td><td>被顶掉</td></tr>
     <tr><td>全职业 · 统御琢面（虚空手雷）</td><td><span class="b one">全局易伤</span></td><td class="num">+15%</td><td>被顶掉</td></tr>
     <tr><td>泰坦 · 光之武器</td><td><span class="b one">强化</span></td><td class="num">+25%</td><td>生效</td></tr>
@@ -247,24 +255,23 @@
   </tbody>
 </table>
 
-<p>这七条只落在两类里。生效的是狩猎陷阱的 35% 和光之武器的 25%，所以是 <code>1.35 × 1.25 ≈ 1.69</code>——不是把两条强化都乘进去（<code>1.35 × 1.25 × 1.25 ≈ 2.11</code>），也不是只留一个 1.35。</p>
+<p>生效的只有狩猎陷阱的 35% 和光之武器的 25%：<code>1.35 × 1.25 ≈ 1.69</code>——不是两条强化都乘进去（<code>1.35 × 1.25 × 1.25 ≈ 2.11</code>），也不是只留一个 1.35。</p>
 
 <div class="note warn">
   <span class="h">七条里有五条，数值被顶掉</span>
-  <p>泡泡盾、推推炮、神性、棱镜手雷这四条全挤在全局易伤里，只能留最高的那一条；光之武器和火中同为强化 25%，也只算一条。</p>
-  <p>这不是谁配错了，是所有能施加易伤的东西本来就在抢同一个位置。<strong>判断一样东西会不会白开，看的不是数值多大，是它落在哪一类。</strong></p>
+  <p>这不是谁配错了，是所有能施加易伤的东西都在抢同一个位置。<strong>判断一样东西会不会白开，看的是它落在哪一类，不是数值多大。</strong></p>
 </div>
 
 <div class="note">
-  <span class="h">神性的 15% 被顶掉，不代表神性没用</span>
-  <p>它在这队人里真正的作用是<strong>精准笼</strong>：持续命中同一目标后生成，命中笼子的射击算精准命中——靠精准倍率吃饭的武器，以及「精准命中 / 精准击杀」类的 Perk 和模组，靠它才打得满。</p>
-  <p><strong>精准笼不属于七个乘区里的任何一个</strong>，所以它不进上面那个算式，也不跟任何人抢位置。被顶掉的，只是神性顺带给的那 15% 易伤。</p>
-  <p>判断一件装备值不值得带，先看它有没有<strong>不占乘区</strong>的功能，再看它的增伤落在哪一类。神性精准笼的细节写在<a href="#cage">增伤清单那一节末</a>。</p>
+  <span class="h">神圣裁决的 15% 被顶掉，不代表神圣裁决没用</span>
+  <p>它真正的作用是<strong>精准笼</strong>：持续命中同一目标后生成，命中精准笼的射击算精准命中——靠精准倍率吃饭的武器和「精准命中 / 精准击杀」类特性、模组，靠它才打得满。</p>
+  <p><strong>精准笼不属于七个乘区里的任何一个</strong>，不进上面那个算式，也不跟人抢位置。被顶掉的只是神圣裁决顺带给的 15% 易伤。</p>
+  <p>判断一件装备值不值得带，先看有没有<strong>不占乘区</strong>的功能，再看增伤落在哪一类。神圣裁决精准笼的细节见<a href="#cage">增伤清单那一节末</a>。</p>
 </div>
 
 <h3>换几个配置，看同一件事</h3>
 
-<p>上面那队人是把七类全摆开算的。下面四组是日常真会遇到的配置，每组里都有东西是白带的：</p>
+<p>下面四组是日常真会遇到的配置，每组里都有东西是白带的：</p>
 
 <table>
   <thead>
@@ -272,17 +279,17 @@
   </thead>
   <tbody>
     <tr><td>术士：站在自己的强能裂痕里，身上还挂着焕光</td><td><span class="b one">强化</span> 20% + 20%</td><td>只算 <strong>20%</strong>。两条数值撞在同一档，焕光不额外加伤害</td></tr>
-    <tr><td>打首领：神性、推推炮、棱镜手雷一起上</td><td><span class="b one">全局易伤</span> 15% / 30% / 15%</td><td>只算 <strong>30%</strong>。神性靠精准笼回本，手雷那 15% 是真白带</td></tr>
+    <tr><td>打首领：神圣裁决、牵引器火炮、棱镜手雷一起上</td><td><span class="b one">全局易伤</span> 15% / 30% / 15%</td><td>只算 <strong>30%</strong>。神圣裁决靠精准笼回本，手雷那 15% 是真白带</td></tr>
     <tr><td>腿部插了 1 份武器激涌模组，身上又有觅敌者满层</td><td><span class="b one">武器激涌</span> 10% + 25%</td><td>只算 <strong>25%</strong>，模组那份不叠加</td></tr>
     <tr><td>焕光换了个来源：特技闪身换成火炬余烬</td><td><span class="b one">强化</span> 20% → 20%</td><td>伤害<strong>不变</strong>，只有挂多久不一样</td></tr>
   </tbody>
 </table>
 
-<p>四组的共同点：<strong>同一类里换来源、加数量，都不涨伤害。</strong>想涨只有两条路——把这一类里数值最高的那条换上，或者去开一个还空着的类。</p>
+<p>四组的共同点：<strong>同一类里换来源、加数量，都不涨伤害。</strong>想涨只有两条路——换上这一类数值最高的那条，或者去开一个空着的类。</p>
 
 <h3>七类全摆开：一把枪能叠到多少</h3>
 
-<p>上面那队人只占了两类，还有五类空着——每填一类就多乘一次。全填上是什么样，一次算清。下面这把是<strong>冰影火箭发射器</strong>，所以两条限定元素的也算得上：巴克里斯面具只加电弧与冰影武器，爆炸光能是这把枪自己的 Perk。</p>
+<p>那队人只占两类，还有五类空着——每填一类多乘一次。这把是<strong>冰影火箭发射器</strong>，所以两条限定元素的也算得上：巴克里斯面具只加电弧与冰影武器，爆炸光能是这把枪自己的特性。</p>
 
 <table class="lookup">
   <caption><b>算例</b>各项数值取自增伤清单 · 数据截至 2026-09</caption>
@@ -290,7 +297,7 @@
     <tr><th>哪一项</th><th>类别</th><th class="num">数值</th><th>时长</th><th class="num">乘完累计</th></tr>
   </thead>
   <tbody>
-    <tr><td><strong>爆炸光能</strong><span class="sub">这把枪自带的武器 Perk</span></td><td><span class="b mul">武器 Perk</span></td><td class="num">+25%<span class="sub">×1.25</span></td><td class="dur">时长未测</td><td class="num">1.25</td></tr>
+    <tr><td><strong>爆炸光能</strong><span class="sub">这把枪自带的武器特性</span></td><td><span class="b mul">武器特性</span></td><td class="num">+25%<span class="sub">×1.25</span></td><td class="dur">保留到开火</td><td class="num">1.25</td></tr>
     <tr><td><strong>武器激涌模组 ×3</strong><span class="sub">冰影 · 需要 3 层护甲充能</span></td><td><span class="b one">武器激涌</span></td><td class="num">+22%<span class="sub">×1.22</span></td><td class="dur">随护甲充能</td><td class="num">1.53</td></tr>
     <tr><td><strong>元素激涌</strong><span class="sub">活动卡片给的冰影修正</span></td><td><span class="b mul">世界与活动</span></td><td class="num">+25%<span class="sub">×1.25</span></td><td class="dur">随活动持续</td><td class="num">1.91</td></tr>
     <tr><td><strong>巴克里斯面具</strong><span class="sub">猎人异域头盔 · 3 层</span></td><td><span class="b mul">异域固有</span></td><td class="num">+33%<span class="sub">×1.33</span></td><td class="dur">11 秒</td><td class="num">2.54</td></tr>
@@ -300,23 +307,23 @@
   </tbody>
 </table>
 
-<p>七项分属七个类别，每一类都算数，一路乘下来：<code>1.25 × 1.22 × 1.25 × 1.33 × 1.35 × 1.25 × 1.22 ≈ 5.22</code>。同一场战斗，前面那队人打出来是 ×1.69，把空着的类补满就是约 <strong>5.22 倍</strong>——原来 100 点的一枪，变成约 522 点。</p>
+<p>七项分属七个类别，一路乘下来：<code>1.25 × 1.22 × 1.25 × 1.33 × 1.35 × 1.25 × 1.22 ≈ 5.22</code>。同一场战斗，那队人打出来是 ×1.69，补满空着的类就是约 <strong>5.22 倍</strong>——原来 100 点的一枪变成约 522 点。</p>
 
-<p>乘法可以中途停：只填前六项（少一个放大类），累计停在 <code>≈ 4.28</code>，也就是比原来多出约 328%。<strong>4.28 倍和 328% 说的是同一件事的两面</strong>——一个是乘完的总倍数，一个是多出来的那部分。</p>
+<p>乘法可以中途停：只填前六项（少一个放大类），累计停在 <code>≈ 4.28</code>，比原来多出约 328%。<strong>4.28 倍和 328% 是同一件事的两面</strong>——一个是总倍数，一个是多出来的那部分。</p>
 
-<p>这七项能全部生效，靠的不是数值挑得准，是<strong>七项占着七个不同的类别</strong>。换个人再开一次火中、再补一条易伤，那两条不会加进来，只会被顶掉。</p>
+<p>这七项全部生效，靠的不是数值挑得准，是<strong>占着七个不同的类别</strong>。再开一次光焰之井、再补一条易伤，那两条不会加进来，只会被顶掉。</p>
 
-<p>实战里这些条件不会同时凑齐：护甲充能要攒、井要有人放、拾取物要有人捡。这张表用来看「还有哪一类没开」，不是让你照着凑。表里几项用的还是常见档，不是各类的最高档——强化能到 35%，武器激涌能到 25%，放大类里严酷折射到 50%（但那只对追踪步枪）。换更狠的来源，结果还会往上走。</p>
+<p>这些条件实战里不会同时凑齐：护甲充能要攒、井要有人放、拾取物要有人捡。表用来查「哪一类还没开」，不是照凑。几项还是常见档，不是各类的最高档——强化能到 35%，武器激涌能到 25%，放大类严酷折射到 50%（只对追踪步枪），换更狠的来源还会更高。</p>
 
 <div class="note ok">
   <span class="h">这一节的全部内容</span>
-  <p>配装的核心逻辑是横向铺开：不要问「哪条增益最强」，要问「哪一类还是空的」。同一个类里，不管来自几个人、几把枪，只有最高的那一条算数；不同类之间照常相乘，多一类就多乘一次。</p>
-  <p>所以问「这个能不能和那个一起用」，该问的不是「会不会冲突」，而是「它们是不是同一类」——是同类就冲突，不是同类就叠。</p>
+  <p>配装的核心是横向铺开：不要问「哪条增益最强」，要问「哪一类还是空的」。同一个类里，不管来自几个人、几把枪，只有最高的一条算数；不同类之间照常相乘，多一类多乘一次。</p>
+  <p>所以问「能不能和那个一起用」，该问的不是「会不会冲突」，而是「是不是同一类」——同类就冲突，不同类就叠。</p>
 </div>
 
 <div class="note warn">
   <span class="h">近战是例外</span>
-  <p>提高近战伤害的那些修正之间是<strong>相加</strong>的，不是取最高。近战流配装时这条会改变收益计算，不能用上面那套「同类取最高」的逻辑去推。</p>
+  <p>近战伤害的那些修正之间是<strong>相加</strong>的，不是取最高——配装时收益计算会变，不能用上面那套「同类取最高」的逻辑去推。</p>
 </div>
 
 <details class="deep">
@@ -331,7 +338,7 @@
       <tr><td><span class="b one">武器激涌</span></td><td>走护甲充能系统的增益</td><td>取最高</td></tr>
       <tr><td><span class="b mul">放大类</span></td><td>直接加在武器或技能上的增益——武器属性、星相碎片、神器模组的增伤都在这</td><td>可叠加</td></tr>
       <tr><td><span class="b mul">异域固有</span></td><td>异域装备自带、直接加在武器或技能上的效果</td><td>可叠加</td></tr>
-      <tr><td><span class="b mul">武器 Perk</span></td><td>触发后为该武器开启的修正</td><td>可叠加</td></tr>
+      <tr><td><span class="b mul">武器特性</span></td><td>触发后为该武器开启的修正</td><td>可叠加</td></tr>
       <tr><td><span class="b mul">世界与活动</span></td><td>活动本身的修正（比如元素激涌）</td><td>可叠加</td></tr>
     </tbody>
   </table>
@@ -339,7 +346,7 @@
   <p><strong>「放大类」这四个字不好懂，是正常的：</strong>名字是英文 Amplifier 的直译。它不是按效果分的，是按排除法分的——不属于前三类、又直接加在武器或技能上的增益，全归它。里面装的东西互不相关，具体有哪些，<a href="mechanics.html#s3">第 1 页第 3 节</a>单独解释了一遍。</p>
   <p><strong>边界：</strong>第 1 页提到，这份分类里有几类只给出了示例清单，没有完整枚举。实际清点时如果某一条归不进任何一类，先确认它到底是不是伤害修正——很多看起来像增伤的东西其实是回复或减伤。</p>
   <p><strong>清单在哪：</strong>这一节只给分类和规则。七类的数值上限和排序在<a href="#types">类型汇总</a>，每条增伤叫什么、从哪拿、数值多少在<a href="#list">增伤清单</a>。</p>
-  <p><strong>核对：</strong>增伤页开头两段正文与这张分类表一致；页面末尾的「叠加算例」一节用一个完整实例走了一遍乘法：七类同时生效约 5.22 倍，只填前六类停在约 4.28 倍。</p>
+  <p><strong>核对：</strong>增伤与易伤页开头两段正文与这张分类表一致；页面末尾的「叠加算例」一节用一个完整实例走了一遍乘法：七类同时生效约 5.22 倍，只填前六类停在约 4.28 倍。</p>
 </details>
 
 <span class="src"><span class="t">公开整理</span>增伤与易伤页（buff-debuffs）分类表、叠加规则与叠加算例</span>
@@ -347,10 +354,10 @@
 <h2 id="s4"><span class="n">4</span>DPS 排行怎么读</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>排行榜最上面那行不是「最强的枪」，是「在某个特定口径下算出来的数」。先读列名，再看排名。</p>
+  <p><span class="tag">一句话</span>排行榜最上面那行不是「最强的枪」，是「某个口径下算出来的数」。先读列名，再看排名。</p>
 </div>
 
-<p>排行榜的列比排名重要。同一把枪在不同口径下的名次可以差很多，混着比就会得出错误结论。几个关键口径：</p>
+<p>排行榜的列比排名重要。同一把枪在不同口径下名次能差很多，混着比会得出错误结论。关键口径：</p>
 
 <table>
   <thead>
@@ -364,30 +371,30 @@
   </tbody>
 </table>
 
-<p>四个口径里最容易搞混的是<strong>持续输出和切枪</strong>——它们是两套不同的算法，<strong>不能混着比</strong>。一把枪在「持续输出」里排第一，在「切枪」里可能掉出前五，因为切枪体系吃的是整套配装的配合。</p>
+<p>最容易搞混的是<strong>持续输出和切枪</strong>——两套不同的算法，<strong>不能混着比</strong>。一把枪在「持续输出」排第一，在「切枪」可能掉出前五，因为切枪吃的是整套配装的配合。</p>
 
 <h3>DPS 和总伤是两件事</h3>
 
-<p>打得快和打得完，是不同的需求：</p>
+<p>打得快和打得完是两回事：</p>
 
 <ul>
-  <li><strong>DPS 高</strong>意味着单位时间内伤害多，适合有硬性时间限制的场合。</li>
-  <li><strong>总伤高</strong>意味着弹药打完能造成的总伤害多，适合打得久、需要撑到最后的场合。</li>
+  <li><strong>DPS 高</strong>是单位时间内伤害多，适合有硬性时间限制的场合。</li>
+  <li><strong>总伤高</strong>是弹药打完能造成的总伤害多，适合打得久、要撑到最后的场合。</li>
 </ul>
 
-<p>一把武器可以 DPS 很高但总伤一般（打完快，但弹药少），也可以反过来。<strong>排行榜只给你数字，判断哪一个重要是你的活。</strong></p>
+<p>一把武器可以 DPS 高但总伤一般（打完快、弹药少），也可以反过来。<strong>排行榜只给数字，判断哪个重要是你的活。</strong></p>
 
 <div class="note warn">
   <span class="h">排行榜的前提条件</span>
-  <p>排行表里通常会标注这个数字是在什么条件下算的——用了哪些 Perk、有没有激涌、有没有增益。<strong>条件不满足时，排名不成立。</strong>照着抄配装，但 Perk 没触发、激涌没叠上，打出来的数字和榜上差一截是必然的。</p>
-  <p>这也是「一样配装，别人打得比我高」最常见的原因，见<a href="quiz.html#s4">总测场景四</a>。</p>
+  <p>排行表会标注数字是在什么条件下算的——用了哪些特性、有没有激涌和增益。<strong>条件不满足时，排名不成立。</strong>照着抄配装，特性没触发、激涌没叠上，打出来和榜上差一截是必然的。</p>
+  <p>这是「一样配装，别人打得比我高」最常见的原因，见<a href="quiz.html#s4">总测场景四</a>。</p>
 </div>
 
 <details class="deep">
   <summary>DPS 这个数本身是怎么来的？展开</summary>
   <p>DPS 是「总伤害 ÷ 耗时」。这句话看着简单，但<strong>「耗时」的取法决定了结果</strong>：</p>
   <ul>
-    <li>算不算换弹时间？</li>
+    <li>算不算填装时间？</li>
     <li>算不算切枪、瞄准、走位的时间？</li>
     <li>从第一发开始算，还是从见到敌人开始算？</li>
   </ul>
@@ -400,32 +407,32 @@
 <h2 id="s5"><span class="n">5</span>弹药够不够打</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>输出不够有时不是伤害问题，是打到一半没弹了。这种情况换枪没用，要调的是弹药经济。</p>
+  <p><span class="tag">一句话</span>输出不够有时不是伤害问题，是打到一半没弹了。换枪没用，要调的是弹药经济。</p>
 </div>
 
-<p>这一节是<a href="mechanics.html#s6">第 1 页第 6 节</a>在实战里的应用。先记住那个反常值：<strong>重弹打重弹只有 3%–4%，是全表最低的一格。</strong></p>
+<p>这一节是<a href="mechanics.html#s6">第 1 页第 6 节</a>的实战应用。三档按武器位写：<strong>主武器（白弹）、特殊武器（绿弹）、威能武器（重弹）</strong>。先记住那个反常值：<strong>用威能武器击杀只掉威能弹药，只有 3%–4%，是全表最低的一格。</strong></p>
 
 <h3>怎么判断是不是弹药问题</h3>
 
-<p>看你的伤害统计和弹药余量：</p>
+<p>看伤害统计和弹药余量：</p>
 
 <ul>
-  <li>如果<strong>打到后半段伤害明显掉下来</strong>，而你并没有死——多半是重弹用完了，后半段只能靠白弹在打。</li>
-  <li>如果<strong>整场伤害都很平但总量偏低</strong>——那是伤害本身的问题，不是弹药。回到第 3 节检查乘区。</li>
+  <li>如果<strong>打到后半段伤害明显掉下来</strong>，而你没死——多半是威能弹药用完，后半段只能靠主武器打。</li>
+  <li>如果<strong>整场伤害都很平但总量偏低</strong>——那是伤害问题，不是弹药。回到第 3 节检查乘区。</li>
 </ul>
 
 <h3>三个可调的地方</h3>
 
 <ol class="steps">
-  <li><strong>一号位二号位的弹药生成属性。</strong>这是你补重弹的主要来源，属性越高补得越多（100 即区间上限）。</li>
-  <li><strong>打什么档位的敌人。</strong>同样一发白弹，打红血生成 6%–16% 的绿弹，打初级首领是 24%–50%。<strong>敌人越硬，补弹越快</strong>——所以清杂兵时反而要留意省弹。</li>
-  <li><strong>要不要用终结技。</strong>它可以补弹，但前提是<strong>终结之前有武器对这名敌人造成过伤害</strong>。纯技能打到残血再终结，什么都不会产生。</li>
+  <li><strong>前两个武器位的弹药生成属性。</strong>这是补威能弹药的主要来源，属性越高补得越多（100 即区间上限）。</li>
+  <li><strong>打什么档位的敌人。</strong>同样用主武器击杀，打红血生成 6%–16% 的特殊弹药，打初级首领 24%–50%。<strong>敌人越硬补弹越快</strong>——清杂兵时反而要省弹。</li>
+  <li><strong>要不要用终结技。</strong>它可以补弹，前提是<strong>终结之前有武器对这名敌人造成过伤害</strong>。纯技能打到残血再终结，什么都不产生。</li>
 </ol>
 
 <div class="note warn">
   <span class="h">技能补弹这条路走不通</span>
-  <p>技能对三档敌人都只能生成 4% / 8% / 16% 的弹药，远低于合格武器。手雷高出 50%，超能整整高一档（对初级首领能到 48%），但即使按超能那一档算，也补不过武器。</p>
-  <p>所以双特殊弹药武器这类高消耗配置，只能靠一号位二号位的武器补弹，不能指望技能。</p>
+  <p>技能对三档敌人都只能生成 4% / 8% / 16% 的弹药，远低于合格武器。手雷高 50%，超能高一整档（对初级首领能到 48%），但按超能那档算也补不过武器。</p>
+  <p>所以双特殊武器这类高消耗配置，只能靠前两个武器位补弹，不能指望技能。</p>
 </div>
 
 <details class="deep">
@@ -436,15 +443,15 @@
       <tr><th>击杀 → 生成</th><th class="num">红血</th><th class="num">橙血</th><th class="num">初级首领</th></tr>
     </thead>
     <tbody>
-      <tr><td>白弹 → 绿弹</td><td class="num">6%–16%</td><td class="num">12%–24%</td><td class="num">24%–50%</td></tr>
-      <tr><td>白弹 → 重弹</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
-      <tr><td>绿弹 → 绿弹</td><td class="num">3%–12%</td><td class="num">6%–18%</td><td class="num">12%–40%</td></tr>
-      <tr><td>绿弹 → 重弹</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
-      <tr><td>重弹 → 绿弹</td><td class="num">3%–16%</td><td class="num">6%–24%</td><td class="num">12%–50%</td></tr>
-      <tr class="hi"><td>重弹 → 重弹</td><td class="num">3%–4%</td><td class="num">6%–8%</td><td class="num">12%–16%</td></tr>
+      <tr><td>主武器 → 特殊弹药</td><td class="num">6%–16%</td><td class="num">12%–24%</td><td class="num">24%–50%</td></tr>
+      <tr><td>主武器 → 威能弹药</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
+      <tr><td>特殊武器 → 特殊弹药</td><td class="num">3%–12%</td><td class="num">6%–18%</td><td class="num">12%–40%</td></tr>
+      <tr><td>特殊武器 → 威能弹药</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
+      <tr><td>威能武器 → 特殊弹药</td><td class="num">3%–16%</td><td class="num">6%–24%</td><td class="num">12%–50%</td></tr>
+      <tr class="hi"><td>威能武器 → 威能弹药</td><td class="num">3%–4%</td><td class="num">6%–8%</td><td class="num">12%–16%</td></tr>
     </tbody>
   </table>
-  <p>另外，<strong>刀剑是特例</strong>：它没有弹药生成属性，也无法被弹药模组改变，击杀固定生成 3% 特殊弹药与 3% 重弹进度。</p>
+  <p>另外，<strong>刀剑是特例</strong>：它没有弹药生成属性，也无法被弹药模组改变，击杀固定生成 3% 特殊弹药与 3% 威能弹药进度。</p>
   <p><strong>核对：</strong>这张表与<a href="mechanics.html#s6">第 1 页第 6 节</a>同源，两边数值一致。</p>
 </details>
 
@@ -453,20 +460,20 @@
 <h2 id="s6"><span class="n">6</span>首领血量门槛</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>把前面所有东西换算成一个问题：你够不够在一个输出窗口里打完。不够的话，差的是伤害还是时间。</p>
+  <p><span class="tag">一句话</span>把前面所有东西换算成一个问题：你够不够在一个输出窗口里打完。不够，差的是伤害还是时间。</p>
 </div>
 
-<p>前面的调整都是定性的（「伤害高不高」），最后要落到定量：<strong>面对一个具体的首领，你的队伍需要多高的输出才够。</strong></p>
+<p>前面都是定性的（「伤害高不高」），最后落到定量：<strong>面对一个具体的首领，队伍需要多高的输出才够。</strong></p>
 
 <h3>先算你自己的实际输出</h3>
 
-<p>不用算得很精确，估个数量级就够：</p>
+<p>不用精确，估个数量级就够：</p>
 
 <ol class="steps">
-  <li><strong>测一次单个输出窗口的伤害。</strong>在能安稳输出的场合打一轮重弹，看伤害统计里这一轮掉了多少。</li>
-  <li><strong>看看这一个窗口有多长。</strong>通常是眩晕时长，或者首领的易伤阶段。宗师下勇士是 5.5 秒，这就是你的窗口上限。</li>
+  <li><strong>测一次单个输出窗口的伤害。</strong>找能安稳输出的场合打一轮威能武器，看统计掉了多少。</li>
+  <li><strong>看这个窗口有多长。</strong>通常是眩晕时长或首领的易伤阶段；宗师下勇士是 5.5 秒，这就是窗口上限。</li>
   <li><strong>算出你的窗口 DPS。</strong>窗口伤害 ÷ 窗口时长。</li>
-  <li><strong>对比首领血量。</strong>血量 ÷ 你的窗口 DPS = 需要几个窗口。</li>
+  <li><strong>对比首领血量。</strong>血量 ÷ 窗口 DPS = 需要几个窗口。</li>
 </ol>
 
 <h3>看结果，分三种情况</h3>
@@ -477,14 +484,14 @@
   </thead>
   <tbody>
     <tr><td>一个窗口就够</td><td>输出充足</td><td>不用调，把稳定性做好就行</td></tr>
-    <tr><td>需要两到三个窗口</td><td>差得不多</td><td>检查乘区有没有铺开（第 3 节），Perk 和激涌有没有触发</td></tr>
+    <tr><td>需要两到三个窗口</td><td>差得不多</td><td>检查乘区有没有铺开（第 3 节），特性和激涌有没有触发</td></tr>
     <tr class="hi"><td>需要五个以上，或者根本看不到血条动</td><td>差得很多</td><td>先回到第 1 节排除祸因、势不可挡勇士抗性和光等差——这个量级的差距通常不是配装能补的</td></tr>
   </tbody>
 </table>
 
 <div class="note">
   <span class="h">「差得多」时不要急着换枪</span>
-  <p>如果算出来需要十几个窗口，那不是「这把枪弱了 10%」的问题，而是有某一层的修正没生效——最常见的是首领身上有 60% 抗性的祸因，或者你的元素对不上它的护盾。<strong>这些是乘法级的差距，换枪补不回来。</strong></p>
+  <p>如果需要十几个窗口，那不是「这把枪弱了 10%」的问题，是有某一层修正没生效——最常见的是首领身上有 60% 抗性的祸因，或你的元素对不上护盾。<strong>这是乘法级的差距，换枪补不回来。</strong></p>
 </div>
 
 <details class="deep">
@@ -504,728 +511,929 @@
 <h2 id="list">增伤清单</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>这张表不是让你凑齐，是让你看清自己缺哪一类。同类里堆第二条等于没装。</p>
+  <p><span class="tag">一句话</span>这张表不是让你凑齐，是让你看清缺哪一类。同类里堆第二条等于没装。</p>
 </div>
 
-<p>前面六节讲的是顺序和方法，这一节是可以直接对的数据。来源散在好几处——技能、异域、模组、神器、武器、活动——没有哪一份把它们放在一起。这里按<strong>你怎么拿到它</strong>分组，因为你配装时面对的问题是「这个位置放什么」，不是「七类里哪一类最强」。</p>
+<p>这些数据来源散在技能、异域、模组、神器、武器、活动各处，没有哪一份放在一起。这里按<strong>你怎么拿到它</strong>分组——配装时面对的是「这个位置放什么」，不是「七类里哪一类最强」。</p>
 
-<p>每条后面的方框是它属于哪个<strong>乘区</strong>。<span class="b one">取最高</span>的，同类里只生效数值最高的那一条；<span class="b mul">可叠加</span>的，带几条都相乘。方框里的字是类别名，其中「放大类」这个名字看不出内容——它是按排除法分的，<a href="mechanics.html#s3">第 1 页第 3 节</a>有解释。</p>
+<p>「类别」列是它属于哪个<strong>乘区</strong>。先看这一列，再看同类怎么算：<span class="b one">取最高</span>的只生效数值最高的一条，<span class="b mul">可叠加</span>的带几条都相乘。「放大类」看不出内容，是按排除法分的，<a href="mechanics.html#s3">第 1 页第 3 节</a>有解释。</p>
 
-<p>名称下面的小字是来源和<strong>持续时间</strong>。数值高和持续时间长是两件事：同类里生效的是数值最高的那条，不看它有多长——所以低数值那条挂得再久也顶不掉高数值的那条。</p>
+<p>「来源」列是这份增益从哪来：职业、元素，以及它是装备、技能还是活动给的。「时长」列是它<strong>持续</strong>多久。数值高和持续久是两件事：同类里生效的是数值最高的那条，不看时长——低数值那条挂得再久也顶不掉高的。</p>
 
 <h3 id="types">先查这一张：七类各自能到多少</h3>
 
-<p>判断一样东西白不白带，两步：<strong>先看它落在哪一类，再看它在那类里排第几。</strong>同类只留最高的那条，不一样类就都算数。下面把七类的数值从高到低排开——你身上那条在不在最高档，对一眼就知道。</p>
+<p>判断白不白带就两步：<strong>先看它落在哪一类，再看它在那一类里排第几。</strong>同类取最高，不同类都算数。下面七类的数值从高到低排开——你身上那条在不在最高档，对一眼就知道。</p>
 
+<div class="tbl-wrap">
 <table class="lookup">
   <caption><b>查表</b>七类的数值上限与排序 · 数据截至 2026-09</caption>
   <thead>
-    <tr><th>类别</th><th>数值从高到低</th></tr>
+    <tr><th>类别</th><th>同类怎么算</th><th>数值从高到低</th></tr>
   </thead>
   <tbody>
     <tr>
-      <td><strong>全局易伤</strong><span class="b one">只留最高</span></td>
-      <td>+35% 狩猎陷阱 → +30% 邪冬的头盔 / 法夫纳 / 推推炮 → +27.6% 粒子重建满层 → +25% 被扩展深渊抬过的虚弱 → +20% 强化扫描 5 份 → +15% 其余全部</td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="b one">取最高</span></td>
+      <td>+35% 狩猎陷阱 → +30% 邪冬的头盔 / 法夫纳 / 牵引器火炮 → +27.6% 粒子重建满层 → +25% 被扩展深渊抬过的虚弱 → +20% 强化扫描增益 5 份 → +15% 其余全部</td>
     </tr>
     <tr>
-      <td><strong>强化</strong><span class="b one">只留最高</span></td>
-      <td>+35% 流明 / 矛隼 / 阿罕卡拉护手 / 没有 B 计划 / 危险推力 / 天空祝福 / 虫神爱抚 → +25% 光之武器 / 英杰圣盾 / 火中 → +20% 焕光（十一个来源都是这个数）/ 强能裂痕</td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="b one">取最高</span></td>
+      <td>+35% 流明 / 矛隼 / 阿罕卡拉护手 / 没有 B 计划 / 危险推力 / 天空祝福 / 虫神爱抚 → +25% 光之武器 / 哨兵圣盾 / 光焰之井 → +20% 焕光（十一个来源都是这个数）/ 强能裂痕</td>
     </tr>
     <tr>
-      <td><strong>武器激涌</strong><span class="b one">只留最高</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="b one">取最高</span></td>
       <td>+25% 满 4 层 → +22% 3 层 / 冰霜-EE5 → +17% 2 层 → +10% 1 层</td>
     </tr>
     <tr>
-      <td><strong>异域固有</strong><span class="b mul">可叠加</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="b mul">可叠加</span></td>
       <td>+33% 巴克里斯面具 → +25% 维王者之剑 / 领航员 → +18% 焚天者誓约 → +16% 亚克兴角 → +12.4% 燃烧舞步 → +10% 杀手之牙 → +5% 远程护盾</td>
     </tr>
     <tr>
-      <td><strong>放大类</strong><span class="b mul">可叠加</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="b mul">可叠加</span></td>
       <td>+50% 严酷折射 → +40% 雕文守护者 / 本影磨锐 → +35% 银白箭袋 → +30% 神器叠层 → +22% 元素超驰 → +20% 力量学派 → +15% 武器属性 / 动能固有 / 电弧复合</td>
     </tr>
     <tr>
-      <td><strong>武器 Perk</strong><span class="b mul">可叠加</span></td>
+      <td><span class="b mul">武器特性</span></td>
+      <td><span class="b mul">可叠加</span></td>
       <td>每把枪不同，不逐条列——+25% 的爆炸光能这类，去武器详情页看你手上那把</td>
     </tr>
     <tr>
-      <td><strong>世界与活动</strong><span class="b mul">可叠加</span></td>
+      <td><span class="b mul">世界与活动</span></td>
+      <td><span class="b mul">可叠加</span></td>
       <td>+25% 元素激涌</td>
     </tr>
   </tbody>
 </table>
+</div>
 
-<p>前三个类别是<strong>冲突区</strong>：同类里数值低的那条完全不生效，换来源、加数量都不涨伤害。后四个类别不冲突，带几条都相乘，所以是越多越好。</p>
+<p>前三个类别是<strong>冲突区</strong>：同类里数值低的那条完全不生效，换来源、加数量都不涨伤害。后四类不冲突，带几条都相乘，越多越好。</p>
 
-<p>查到你带的那条在哪一档之后，问题就只剩一个：<strong>这一类里有没有更高的一条，我够不够得着。</strong></p>
+<p>查到你那条在哪一档之后，问题只剩一个：<strong>这一类里有没有更高的一条，够不够得着。</strong></p>
 
 <h3>再查明细：每条从哪拿、数值多少、挂多久</h3>
 
-<p>每个名称下面依次排着：三个来源标签（职业 / 元素 / 位置）、<strong>时长</strong>、然后是细节。挑的时候<strong>数值和时长要一起看</strong>——+30% 只持续 1 秒，和 +25% 持续 10 秒，性价比完全不是一回事。</p>
+<p>名称右边五列是：<strong>类别</strong>（属于哪个乘区）、<strong>来源</strong>（职业 / 元素 / 位置）、<strong>时长</strong>、<strong>怎么触发</strong>、<strong>数值</strong>。挑的时候<strong>数值和时长要一起看</strong>——+30% 只持续 1 秒，和 +25% 持续 10 秒，性价比不是一回事。</p>
 
+<div class="tbl-wrap">
 <table class="lookup">
   <caption><b>查表</b>不必背，配装时回来对一遍自己占了几类 · 数值列是最高档 · 数据截至 2026-09</caption>
   <thead>
-    <tr><th>名称</th><th>怎么触发</th><th class="num">数值</th></tr>
+    <tr><th class="name-col">名称</th><th>类别</th><th>来源</th><th class="dur-col">时长</th><th>怎么触发</th><th class="num">数值</th></tr>
   </thead>
   <tbody>
 
-    <tr class="grp"><td colspan="3">超能与技能 · 放出来就有，不占装备位</td></tr>
-    <tr class="grp2"><td colspan="3">猎人</td></tr>
+    <tr class="grp"><td colspan="6">超能与技能 · 放出来就有，不占装备位</td></tr>
+    <tr class="grp"><td colspan="6">猎人</td></tr>
     <tr>
-      <td><strong>暗影箭矢：狩猎陷阱</strong><span class="aka">（虚空大箭）</span><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span> <span class="dur">随超能持续</span> · 同类里最高 · 按实时被束缚的敌人数浮动，不能被虚弱延长</span>
-      </td>
-      <td>陷落锚束缚住目标</td>
+      <td><strong>暗影箭矢：狩猎陷阱</strong><span class="aka">（虚空大箭）</span><span class="sub">同类里最高 · 按实时被束缚的敌人数浮动，不能被虚弱延长</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span></td>
+      <td><span class="dur">随超能持续</span></td>
+      <td>虚空之锚束缚住目标</td>
       <td class="num">+35%</td>
     </tr>
     <tr>
-      <td><strong>暗影箭矢：莫比乌斯箭袋</strong><span class="aka">（莫比乌斯）</span><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span> <span class="dur">随超能持续</span> · 比狩猎陷阱低一档，持续也更短</span>
-      </td>
-      <td>莫比乌斯锚束缚住目标</td>
+      <td><strong>暗影箭矢：莫比乌斯箭袋</strong><span class="aka">（莫比乌斯）</span><span class="sub">比狩猎陷阱低一档，持续也更短</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span></td>
+      <td><span class="dur">随超能持续</span></td>
+      <td>虚空之锚束缚住目标</td>
       <td class="num">+30%</td>
     </tr>
     <tr>
-      <td><strong>鬼灵利刃</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span> <span class="dur">6 秒</span></span>
-      </td>
+      <td><strong>鬼灵利刃</strong></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>重攻击命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>陷阱炸弹</strong><span class="aka">（烟幕弹）</span><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">近战</span> <span class="dur">8 秒</span></span>
-      </td>
-      <td>烟幕弹造成伤害</td>
+      <td><strong>陷阱炸弹</strong><span class="aka">（烟幕弹）</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">近战</span></td>
+      <td><span class="dur">8 秒</span></td>
+      <td>陷阱炸弹造成伤害</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>伺机而动</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">星相</span> <span class="dur">6 秒</span> · 穿过烟幕的使用者与盟友获得隐身</span>
-      </td>
+      <td><strong>伺机而动</strong><span class="sub">穿过烟幕的使用者与盟友获得隐身</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">星相</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>击杀优先目标，使其炸成一团虚弱烟幕</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>潇洒行刑者</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">星相</span> <span class="dur">5 秒</span></span>
-      </td>
+      <td><strong>潇洒行刑者</strong></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">星相</span></td>
+      <td><span class="dur">5 秒</span></td>
       <td>由潇洒行刑者触发的隐身期间近战命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>捕猎者的伏击</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">星相</span> <span class="dur">10 秒</span></span>
-      </td>
+      <td><strong>捕猎者的伏击</strong></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">星相</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>装备隐身步法时，迅坠烟幕的伤害</td>
       <td class="num">+15%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">泰坦</td></tr>
+    <tr class="grp"><td colspan="6">泰坦</td></tr>
     <tr>
-      <td><strong>黎明护罩</strong><span class="aka">（泡泡盾）</span><span class="b one">全局易伤</span><span class="sub"><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span> <span class="dur">6 秒</span> · 一次给两样：这条挂在敌人身上，站进泡泡盾的队友另有 25% 光之武器</span>
-      </td>
+      <td><strong>黎明护罩</strong><span class="aka">（泡泡盾）</span><span class="sub">一次给两样：这条挂在敌人身上，站进黎明护罩的队友另有 25% 光之武器</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>释放时的脉冲，以及罩内的战斗人员</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>暮光军火</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span> <span class="dur">6 秒</span> · 每次命中都会续期</span>
-      </td>
+      <td><strong>暮光军火</strong><span class="sub">每次命中都会续期</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>战斧超能命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>光之武器</strong><span class="b one">强化</span><span class="sub"><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span> <span class="dur">15 秒</span> · 穿过护罩的盟友同样获得；装备圣人 14 号的头盔时，离开护罩后仍保留 15 秒</span>
-      </td>
+      <td><strong>光之武器</strong><span class="sub">穿过护罩的盟友同样获得；装备圣人 14 号的头盔时，离开护罩后仍保留 15 秒</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span></td>
+      <td><span class="dur">15 秒</span></td>
       <td>队友站进圣盾之后或护罩之内</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>英杰圣盾</strong><span class="b one">强化</span><span class="sub"><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span> <span class="dur">随圣盾持续</span> · 圣盾挨打越多消失越快</span>
-      </td>
-      <td>站在泰坦的英杰圣盾之后</td>
+      <td><strong>哨兵圣盾</strong><span class="sub">圣盾挨打越多消失越快</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span></td>
+      <td><span class="dur">随圣盾持续</span></td>
+      <td>站在泰坦的哨兵圣盾之后</td>
       <td class="num">+25%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">术士</td></tr>
+    <tr class="grp"><td colspan="6">术士</td></tr>
     <tr>
-      <td><strong>新星折跃</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span> <span class="dur">6 秒</span></span>
-      </td>
+      <td><strong>新星折跃</strong></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">超能</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>暗影瞬移放出虚弱追踪弹</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>旧神之子</strong><span class="aka">（虚空之魂）</span><span class="b one">全局易伤</span><span class="sub"><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">星相</span> <span class="dur">5 秒</span> · 虚空之魂每次命中都会续期</span>
-      </td>
-      <td>虚空之魂的汲取伤害</td>
+      <td><strong>旧神之子</strong><span class="aka">（虚空之魂）</span><span class="sub">旧神之子每次命中都会续期</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">星相</span></td>
+      <td><span class="dur">5 秒</span></td>
+      <td>旧神之子的汲取伤害</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>光焰之井</strong><span class="aka">（火中）</span><span class="b one">强化</span><span class="sub"><span class="tg">术士</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">超能</span> <span class="dur">30 秒（超能 200 时 40 秒）</span> · 离开井时另给 8 秒的 20% 焕光</span>
-      </td>
+      <td><strong>光焰之井</strong><span class="aka">（火中）</span><span class="sub">离开井时另给 8 秒的 20% 焕光</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">术士</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">超能</span></td>
+      <td><span class="dur">30 秒（超能 200 时 40 秒）</span></td>
       <td>站在井内</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>强能裂痕</strong><span class="b one">强化</span><span class="sub"><span class="tg">术士</span><span class="tg">职业技能</span> <span class="dur">15 秒</span> · 装备血红炼金术时击杀会暂停计时</span>
-      </td>
+      <td><strong>强能裂痕</strong><span class="sub">装备血红炼金术时击杀会暂停计时</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">术士</span><span class="tg">职业技能</span></td>
+      <td><span class="dur">15 秒</span></td>
       <td>站在裂痕内</td>
       <td class="num">+20%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">全职业</td></tr>
+    <tr class="grp"><td colspan="6">全职业</td></tr>
     <tr>
-      <td><strong>弱化回声</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">碎片</span> <span class="dur">5 秒</span> · 滞留型手雷续期到最后一跳</span>
-      </td>
+      <td><strong>弱化回声</strong><span class="sub">滞留型手雷续期到最后一跳</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">碎片</span></td>
+      <td><span class="dur">5 秒</span></td>
       <td>虚空手雷造成伤害</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>统御琢面</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-prism"></i>棱镜</span><span class="tg">碎片</span> <span class="dur">5 秒</span> · 滞留型手雷续期到最后一跳 · 冰冻奇点的虚空效果同样触发</span>
-      </td>
+      <td><strong>统御琢面</strong><span class="sub">滞留型手雷续期到最后一跳 · 冰冻奇点的虚空效果同样触发</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-prism"></i>棱镜</span><span class="tg">碎片</span></td>
+      <td><span class="dur">5 秒</span></td>
       <td>虚空手雷造成伤害</td>
       <td class="num">+15%</td>
     </tr>
 
-    <tr class="grp"><td colspan="3">焕光 · 一个增益，来源各不相同</td></tr>
-    <tr class="grp2"><td colspan="3">全职业</td></tr>
+    <tr class="grp"><td colspan="6">焕光 · 一个增益，来源各不相同</td></tr>
+    <tr class="grp"><td colspan="6">全职业</td></tr>
     <tr>
-      <td><strong>焕光</strong><span class="b one">强化</span><span class="sub"><span class="tg">全职业</span> <span class="dur">4–10 秒</span> · 按来源不同 · 同一个 20% 增益，下面十一个来源给的都是它 · 只为使用者，或同时给 8 米内盟友</span>
-      </td>
+      <td><strong>焕光</strong><span class="sub">按来源不同 · 同一个 20% 增益，下面十一个来源给的都是它 · 只为使用者，或同时给 8 米内盟友</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">全职业</span></td>
+      <td><span class="dur">4–10 秒</span></td>
       <td>任一来源触发</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>火炬余烬</strong><span class="b one">强化</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">碎片</span> <span class="dur">8 秒</span> · 为 8 米内盟友提供</span>
-      </td>
+      <td><strong>火炬余烬</strong><span class="sub">为 8 米内盟友提供</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">碎片</span></td>
+      <td><span class="dur">8 秒</span></td>
       <td>充能近战命中</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>黎明琢面</strong><span class="b one">强化</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-prism"></i>棱镜</span><span class="tg">碎片</span> <span class="dur">4 秒</span> · 击杀时为 8 米内盟友提供</span>
-      </td>
+      <td><strong>黎明琢面</strong><span class="sub">击杀时为 8 米内盟友提供</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-prism"></i>棱镜</span><span class="tg">碎片</span></td>
+      <td><span class="dur">4 秒</span></td>
       <td>充能近战命中</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>焕光能量球</strong><span class="b one">强化</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">10 秒</span> · 猎人日志 · 只为使用者</span>
-      </td>
+      <td><strong>焕光能量球</strong><span class="sub">猎人日志 · 只为使用者</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>装备烈日或棱镜分支时拾取能量球</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>发热寒颤</strong><span class="b one">强化</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">10 秒</span> · 好奇之器与女王兰香炉 · 只为使用者</span>
-      </td>
+      <td><strong>发热寒颤</strong><span class="sub">好奇之器与女王兰香炉 · 只为使用者</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>烈日武器连续精准命中</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>烈焰之心</strong><span class="b one">强化</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">10 秒</span> · 女王兰香炉 · 为 15 米内盟友提供</span>
-      </td>
+      <td><strong>烈焰之心</strong><span class="sub">女王兰香炉 · 为 15 米内盟友提供</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>释放超能</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>棱镜转移</strong><span class="b one">强化</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">10 秒</span> · 猎人日志 · 为 25 米内超能元素与自己不同的盟友提供</span>
-      </td>
+      <td><strong>棱镜转移</strong><span class="sub">猎人日志 · 为 25 米内超能元素与自己不同的盟友提供</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>释放超能</td>
       <td class="num">+20%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">猎人</td></tr>
+    <tr class="grp"><td colspan="6">猎人</td></tr>
     <tr>
-      <td><strong>轻质飞刀</strong><span class="b one">强化</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">近战</span> <span class="dur">10 秒</span> · 只为使用者</span>
-      </td>
+      <td><strong>轻质飞刀</strong><span class="sub">只为使用者</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">近战</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>飞刀精准命中</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>特技闪身</strong><span class="b one">强化</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">职业技能</span> <span class="dur">10 秒</span> · 为 8 米内盟友提供</span>
-      </td>
+      <td><strong>特技闪身</strong><span class="sub">为 8 米内盟友提供</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">职业技能</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>使用职业技能</td>
       <td class="num">+20%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">术士</td></tr>
+    <tr class="grp"><td colspan="6">术士</td></tr>
     <tr>
-      <td><strong>烈焰之歌</strong><span class="b one">强化</span><span class="sub"><span class="tg">术士</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">超能</span> <span class="dur">随超能持续</span> · 只为使用者</span>
-      </td>
+      <td><strong>烈焰之歌</strong><span class="sub">只为使用者</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">术士</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">超能</span></td>
+      <td><span class="dur">随超能持续</span></td>
       <td>释放超能</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>火焰润雨</strong><span class="b one">强化</span><span class="sub"><span class="tg">术士</span><span class="tg">异域腿部</span> <span class="dur">7.5 秒</span> · 只为使用者，但加成作用于全部武器</span>
-      </td>
+      <td><strong>火焰润雨</strong><span class="sub">只为使用者，但加成作用于全部武器</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">术士</span><span class="tg">异域腿部</span></td>
+      <td><span class="dur">7.5 秒</span></td>
       <td>线性融合或融合步枪击杀</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>冥火之刺</strong><span class="b one">强化</span><span class="sub"><span class="tg">术士</span><span class="tg">异域腿部</span> <span class="dur">7 秒</span> · 为 8 米内盟友提供</span>
-      </td>
+      <td><strong>冥火之刺</strong><span class="sub">为 8 米内盟友提供</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">术士</span><span class="tg">异域腿部</span></td>
+      <td><span class="dur">7 秒</span></td>
       <td>在治愈裂痕内用武器击杀</td>
       <td class="num">+20%</td>
     </tr>
 
-    <tr class="grp"><td colspan="3">异域装备 · 占一个异域位置</td></tr>
-    <tr class="grp2"><td colspan="3">猎人护甲</td></tr>
+    <tr class="grp"><td colspan="6">异域装备 · 占一个异域位置</td></tr>
+    <tr class="grp"><td colspan="6">猎人护甲</td></tr>
     <tr>
-      <td><strong>鬼神胸甲</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域胸甲</span> <span class="dur">10 秒</span> · 常态与超能状态下都能生成</span>
-      </td>
+      <td><strong>鬼神胸甲</strong><span class="sub">常态与超能状态下都能生成</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域胸甲</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>在敌人附近脱离隐身时放出虚弱烟幕</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>凯布利之刺</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域护臂</span> <span class="dur">15 秒</span> · 比同类的 6 秒长</span>
-      </td>
+      <td><strong>凯布利之刺</strong><span class="sub">比同类的 6 秒长</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域臂铠</span></td>
+      <td><span class="dur">15 秒</span></td>
       <td>击杀已被虚弱的目标，在其死亡位置放出烟幕</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>矛隼胸甲</strong><span class="b one">强化</span><span class="sub"><span class="tg">猎人</span><span class="tg">异域胸甲</span> <span class="dur">6 秒</span></span>
-      </td>
+      <td><strong>矛隼胸甲</strong></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">猎人</span><span class="tg">异域胸甲</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>隐身状态下使用终结技</td>
       <td class="num">+35%</td>
     </tr>
     <tr>
-      <td><strong>封印阿罕卡拉护手</strong><span class="b one">强化</span><span class="sub"><span class="tg">猎人</span><span class="tg">异域护臂</span> <span class="dur">7 秒</span> · 加成给的是随后拔出的那把武器，换枪击杀可一直续期</span>
-      </td>
+      <td><strong>封印阿罕卡拉护手</strong><span class="sub">加成给的是随后拔出的那把武器，换枪击杀可一直续期</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">猎人</span><span class="tg">异域臂铠</span></td>
+      <td><span class="dur">7 秒</span></td>
       <td>充能近战或终结技击杀</td>
       <td class="num">+35%</td>
     </tr>
     <tr>
-      <td><strong>巴克里斯面具</strong><span class="b mul">异域固有</span><span class="sub"><span class="tg">猎人</span><span class="tg"><i class="el-dual"></i>电弧／冰影</span><span class="tg">异域头盔</span> <span class="dur">11 秒</span> · 需装备电弧或冰影超能 · 1 层 10%、2 层 21%</span>
-      </td>
+      <td><strong>巴克里斯面具</strong><span class="sub">需装备电弧或冰影超能 · 1 层 10%、2 层 21%</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="tg">猎人</span><span class="tg"><i class="el-dual"></i>电弧／冰影</span><span class="tg">异域头盔</span></td>
+      <td><span class="dur">11 秒</span></td>
       <td>用凌光偏转叠层</td>
       <td class="num">+33%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">泰坦护甲</td></tr>
+    <tr class="grp"><td colspan="6">泰坦护甲</td></tr>
     <tr>
-      <td><strong>第二次机会</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域护臂</span> <span class="dur">10 秒</span></span>
-      </td>
+      <td><strong>第二次机会</strong></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">泰坦</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域臂铠</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>圣盾投掷命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>没有 B 计划</strong><span class="b one">强化</span><span class="sub"><span class="tg">泰坦</span><span class="tg">异域护臂</span> <span class="dur">随被动元素增益持续</span> · 只对霰弹枪生效</span>
-      </td>
+      <td><strong>没有 B 计划</strong><span class="sub">只对霰弹枪生效</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">泰坦</span><span class="tg">异域臂铠</span></td>
+      <td><span class="dur">随被动元素增益持续</span></td>
       <td>持有被动元素增益期间</td>
       <td class="num">+35%</td>
     </tr>
     <tr>
-      <td><strong>危险推力</strong><span class="b one">强化</span><span class="sub"><span class="tg">泰坦</span><span class="tg">异域胸甲</span> <span class="dur">10 秒</span> · 只对微型飞弹与爆炸物 · 1 层 10% 递增到 6 层满</span>
-      </td>
+      <td><strong>危险推力</strong><span class="sub">只对微型飞弹与爆炸物 · 1 层 10% 递增到 6 层满</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">泰坦</span><span class="tg">异域胸甲</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>用出逃火箭击伤目标</td>
       <td class="num">+35%</td>
     </tr>
     <tr>
-      <td><strong>虫神爱抚</strong><span class="b one">强化</span><span class="sub"><span class="tg">泰坦</span><span class="tg">异域护臂</span> <span class="dur">1 层 9.5 秒 → 5 层 3 秒</span> · 层数越高衰减越快 · 2 层 20% 递增到 5 层满</span>
-      </td>
+      <td><strong>虫神爱抚</strong><span class="sub">层数越高衰减越快 · 2 层 20% 递增到 5 层满</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">泰坦</span><span class="tg">异域臂铠</span></td>
+      <td><span class="dur">1 层 9.5 秒 → 5 层 3 秒</span></td>
       <td>近战、偃月近战或终结技击杀叠层</td>
       <td class="num">+35%</td>
     </tr>
     <tr>
-      <td><strong>亚克兴角战役钻机</strong><span class="b mul">异域固有</span><span class="sub"><span class="tg">泰坦</span><span class="tg">异域胸甲</span> <span class="dur">随层数</span> · 每层 1.6%，最多 10 层</span>
-      </td>
+      <td><strong>亚克兴角战役钻机</strong><span class="sub">每层 1.6%，最多 10 层</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="tg">泰坦</span><span class="tg">异域胸甲</span></td>
+      <td><span class="dur">随层数</span></td>
       <td>自动步枪或机枪击杀叠层</td>
       <td class="num">+16%</td>
     </tr>
     <tr>
-      <td><strong>燃烧舞步之道</strong><span class="b mul">异域固有</span><span class="sub"><span class="tg">泰坦</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">异域腿部</span> <span class="dur">随咆哮烈焰层数</span> · 需装备咆哮烈焰 · 最多 3 层</span>
-      </td>
+      <td><strong>燃烧舞步之道</strong><span class="sub">需装备咆哮烈焰 · 最多 3 层</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="tg">泰坦</span><span class="tg"><i class="el-solar"></i>烈日</span><span class="tg">异域腿部</span></td>
+      <td><span class="dur">随咆哮烈焰层数</span></td>
       <td>咆哮烈焰层数提高烈日武器伤害</td>
       <td class="num">+12.4%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">术士护甲</td></tr>
+    <tr class="grp"><td colspan="6">术士护甲</td></tr>
     <tr>
-      <td><strong>炫火</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域胸甲</span> <span class="dur">6 秒</span></span>
-      </td>
+      <td><strong>炫火</strong></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域胸甲</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>精准击杀生成一片虚空范围</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>反转之握</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域护臂</span> <span class="dur">6 秒</span> · 蓄力手雷</span>
-      </td>
+      <td><strong>反转之握</strong><span class="sub">蓄力手雷</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域臂铠</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>蓄力手雷命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>邪冬的头盔</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域头盔</span> <span class="dur">10–20 秒</span> · 按目标档位 · 击杀或终结给 30% · 近战命中另有一版 15%，6 秒 · 可自我续期，也可被任意虚弱延长</span>
-      </td>
+      <td><strong>邪冬的头盔</strong><span class="sub">按目标档位 · 击杀或终结给 30% · 近战命中另有一版 15%，6 秒 · 可自我续期，也可被任意虚弱延长</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">术士</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">异域头盔</span></td>
+      <td><span class="dur">10–20 秒</span></td>
       <td>充能近战击杀，或终结技</td>
       <td class="num">+30%</td>
     </tr>
     <tr>
-      <td><strong>天空祝福</strong><span class="b one">强化</span><span class="sub"><span class="tg">术士</span><span class="tg">异域腿部</span> <span class="dur">5 秒</span> · 追踪体每次命中都会续期</span>
-      </td>
+      <td><strong>天空祝福</strong><span class="sub">追踪体每次命中都会续期</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">术士</span><span class="tg">异域腿部</span></td>
+      <td><span class="dur">5 秒</span></td>
       <td>强能裂痕放出的追踪体命中盟友</td>
       <td class="num">+35%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">武器 · 任何职业</td></tr>
+    <tr class="grp"><td colspan="6">武器 · 任何职业</td></tr>
     <tr>
-      <td><strong>牵引器火炮</strong><span class="aka">（推推炮）</span><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器</span> <span class="dur">10 秒</span> · 威能霰弹枪 · 命中即施加；可自我续期，也可被任意虚弱延长</span>
-      </td>
+      <td><strong>牵引器火炮</strong><span class="aka">（推推炮）</span><span class="sub">威能霰弹枪 · 命中即施加；可自我续期，也可被任意虚弱延长</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>命中造成伤害</td>
       <td class="num">+30%</td>
     </tr>
     <tr>
-      <td><strong>法夫纳</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器</span> <span class="dur">5 秒</span> · 威能线性融合步枪 · 只对 10 米内 · 量子新星本身按开火消耗的备弹持续 4–20 秒</span>
-      </td>
+      <td><strong>法夫纳</strong><span class="sub">威能线性融合步枪 · 只对 10 米内 · 量子新星本身按开火消耗的备弹持续 4–20 秒</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器</span></td>
+      <td><span class="dur">5 秒</span></td>
       <td>触发量子新星后命中</td>
       <td class="num">+30%</td>
     </tr>
     <tr>
-      <td><strong>神圣裁决</strong><span class="aka">（神性）</span><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器</span> <span class="dur">随命中持续</span> · 特殊弹药追踪步枪 · 笼子给的是精准命中，不是弱点命中，见本节末</span>
-      </td>
+      <td><strong>神圣裁决</strong><span class="aka">（神性）</span><span class="sub">特殊弹药追踪步枪 · 精准笼给的是精准命中，不是弱点命中，见本节末</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器</span></td>
+      <td><span class="dur">随命中持续</span></td>
       <td>持续命中同一目标</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>流明·天空祝福</strong><span class="b one">强化</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器</span> <span class="dur">11 秒</span> · 主武器手炮 · 高尚弹药会续期 · 一个队友身上只能挂一层</span>
-      </td>
+      <td><strong>流明·天空祝福</strong><span class="sub">主武器手炮 · 高尚弹药会续期 · 一个队友身上只能挂一层</span></td>
+      <td><span class="b one">强化</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器</span></td>
+      <td><span class="dur">11 秒</span></td>
       <td>击杀生成残响，拾取后射向盟友</td>
       <td class="num">+35%</td>
     </tr>
     <tr>
-      <td><strong>维王者之剑</strong><span class="b mul">异域固有</span><span class="sub"><span class="tg">泰坦</span><span class="tg">武器</span> <span class="dur">常驻</span> · 特殊弹药偃月 · 泰坦专属 · 只对 Vex</span>
-      </td>
+      <td><strong>维王者之剑</strong><span class="sub">特殊弹药偃月 · 泰坦专属 · 只对 Vex</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="tg">泰坦</span><span class="tg">武器</span></td>
+      <td><span class="dur">常驻</span></td>
       <td>固有，装上就有</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>领航员</strong><span class="b mul">异域固有</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器</span> <span class="dur">常驻</span> · 特殊弹药追踪步枪</span>
-      </td>
+      <td><strong>领航员</strong><span class="sub">特殊弹药追踪步枪</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器</span></td>
+      <td><span class="dur">常驻</span></td>
       <td>持有织造铠甲期间</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>焚天者誓约</strong><span class="b mul">异域固有</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器</span> <span class="dur">常驻</span> · 主武器斥候步枪 · 只对卡巴尔</span>
-      </td>
+      <td><strong>焚天者誓约</strong><span class="sub">主武器斥候步枪 · 只对卡巴尔</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器</span></td>
+      <td><span class="dur">常驻</span></td>
       <td>固有，装上就有</td>
       <td class="num">+18%</td>
     </tr>
     <tr>
-      <td><strong>杀手之牙</strong><span class="b mul">异域固有</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器</span> <span class="dur">常驻</span> · 特殊弹药霰弹枪 · 只对堕落者与背弃者</span>
-      </td>
+      <td><strong>杀手之牙</strong><span class="sub">特殊弹药霰弹枪 · 只对堕落者与背弃者</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器</span></td>
+      <td><span class="dur">常驻</span></td>
       <td>固有，装上就有</td>
       <td class="num">+10%</td>
     </tr>
     <tr>
-      <td><strong>远程护盾</strong><span class="b mul">异域固有</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器</span> <span class="dur">10 秒</span> · 玄武行动之刃 · 再次穿过护盾可续期 · 为自己与盟友提高武器伤害</span>
-      </td>
+      <td><strong>远程护盾</strong><span class="sub">玄武行动之刃 · 再次穿过护盾可续期 · 为自己与盟友提高武器伤害</span></td>
+      <td><span class="b mul">异域固有</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>穿过防护护盾</td>
       <td class="num">+5%</td>
     </tr>
 
-    <tr class="grp"><td colspan="3">护甲充能与模组 · 走充能那套系统</td></tr>
-    <tr class="grp2"><td colspan="3">职业专属</td></tr>
+    <tr class="grp"><td colspan="6">护甲充能与模组 · 走充能那套系统</td></tr>
+    <tr class="grp"><td colspan="6">职业专属</td></tr>
     <tr>
-      <td><strong>永恒战士 / 毁灭之牙肩甲</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">泰坦</span><span class="tg">异域头盔／护臂</span> <span class="dur">11 秒</span> · 继续击杀可续期 · 1 层 10% 递增到 4 层满；配浩劫之拳时超能结束直接给满 4 层，30 秒</span>
-      </td>
+      <td><strong>永恒战士 / 毁灭之牙肩甲</strong><span class="sub">继续击杀可续期 · 1 层 10% 递增到 4 层满；配浩劫之拳时超能结束直接给满 4 层，30 秒</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">泰坦</span><span class="tg">异域头盔／臂铠</span></td>
+      <td><span class="dur">11 秒</span></td>
       <td>约每 2 次元素击杀叠 1 层</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>凋零游侠 / 巴利道斯织怒工</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">猎人／术士</span><span class="tg">模组</span> <span class="dur">11–21 秒</span> · 按来源不同 · 猎人头盔（需电弧法杖）/ 术士护臂（需冰影超能）· 凋零游侠 21 秒不可续期；织怒工三档——冰霜脉冲裂痕给 2 层、11 秒，严冬之怒冲击波给满 4 层、15 秒可续期</span>
-      </td>
+      <td><strong>凋零游侠 / 巴利道斯织怒工</strong><span class="sub">按来源不同 · 猎人头盔（需电弧法杖）/ 术士臂铠（需冰影超能）· 凋零游侠 21 秒不可续期；织怒工三档——冰霜脉冲裂痕给 2 层、11 秒，严冬之怒冲击波给满 4 层、15 秒可续期</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">猎人／术士</span><span class="tg">模组</span></td>
+      <td><span class="dur">11–21 秒</span></td>
       <td>超能结束时直接给满 4 层</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>觅敌者</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">猎人</span><span class="tg">异域头盔</span> <span class="dur">16 秒</span> · 击中另一个未被标记的目标可续期 · 激涌元素跟技能元素一致</span>
-      </td>
+      <td><strong>觅敌者</strong><span class="sub">击中另一个未被标记的目标可续期 · 激涌元素跟技能元素一致</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">猎人</span><span class="tg">异域头盔</span></td>
+      <td><span class="dur">16 秒</span></td>
       <td>用元素技能击中强力战斗人员或守护者</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>战斗和谐护肩 / 血红炼金术</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">术士</span><span class="tg">异域胸甲</span> <span class="dur">11 秒 / 随裂痕持续</span> · 护肩可续期，超能结束时还会一次给满五种激涌（10 秒）；炼金术随裂痕或井持续</span>
-      </td>
+      <td><strong>战斗和谐护肩 / 血红炼金术</strong><span class="sub">护肩可续期，超能结束时还会一次给满五种激涌（10 秒）；炼金术随裂痕或井持续</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">术士</span><span class="tg">异域胸甲</span></td>
+      <td><span class="dur">11 秒 / 随裂痕持续</span></td>
       <td>超能满时用同元素武器击杀 / 站在裂痕或光焰之井内</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>冰霜-EE5</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">猎人</span><span class="tg">异域腿部</span> <span class="dur">随冰霜护甲持续</span></span>
-      </td>
+      <td><strong>冰霜-EE5</strong></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">猎人</span><span class="tg">异域腿部</span></td>
+      <td><span class="dur">随冰霜护甲持续</span></td>
       <td>持有任意层冰霜护甲</td>
       <td class="num">+22%</td>
     </tr>
-    <tr class="grp2"><td colspan="3">全职业</td></tr>
+    <tr class="grp"><td colspan="6">全职业</td></tr>
     <tr>
-      <td><strong>武器激涌模组</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">全职业</span><span class="tg">模组</span> <span class="dur">随护甲充能</span> · 腿部护甲模组 · 每层 10 秒 · 1 份 10%、2 份 17% · 元素要和武器匹配</span>
-      </td>
+      <td><strong>武器激涌模组</strong><span class="sub">腿部护甲模组 · 每层 10 秒 · 1 份 10%、2 份 17% · 元素要和武器匹配</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">全职业</span><span class="tg">模组</span></td>
+      <td><span class="dur">随护甲充能</span></td>
       <td>持有至少 1 层护甲充能</td>
       <td class="num">+22%</td>
     </tr>
     <tr>
-      <td><strong>永恒战士之灵 / 觅敌者之灵</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">全职业</span><span class="tg">棱镜之灵</span> <span class="dur">30 秒 / 16 秒</span> · 不可续期的那个（永恒战士之灵）时间更长，觅敌者之灵可续期</span>
-      </td>
+      <td><strong>永恒战士之灵 / 觅敌者之灵</strong><span class="sub">不可续期的那个（永恒战士之灵）时间更长，觅敌者之灵可续期</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">全职业</span><span class="tg">棱镜星相</span></td>
+      <td><span class="dur">30 秒 / 16 秒</span></td>
       <td>超能结束，或用元素技能击中强力目标</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>虚空武器输能</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span> <span class="dur">11 秒</span> · NPA 斥力调节器 · 1 层 10%、2 层 17%、3 层 22%、4 层 25%</span>
-      </td>
+      <td><strong>虚空武器输能</strong><span class="sub">NPA 斥力调节器 · 1 层 10%、2 层 17%、3 层 22%、4 层 25%</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span></td>
+      <td><span class="dur">11 秒</span></td>
       <td>至少有一个虚空技能充能完毕时，用虚空武器击杀</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>精准平等 / 鲜弹芬芳</strong><span class="b one">武器激涌</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">11 秒</span> · 加密数据盘 / 好奇之器 · 前者任意元素，后者是动能激涌</span>
-      </td>
+      <td><strong>精准平等 / 鲜弹芬芳</strong><span class="sub">加密数据盘 / 好奇之器 · 前者任意元素，后者是动能激涌</span></td>
+      <td><span class="b one">武器激涌</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">11 秒</span></td>
       <td>拾取精准平等生成的能量球 / 拾取弹药</td>
       <td class="num">+17%</td>
     </tr>
 
-    <tr class="grp"><td colspan="3">星相、碎片与神器模组 · 跟着赛季和分支走</td></tr>
+    <tr class="grp"><td colspan="6">星相、碎片与神器模组 · 跟着赛季和分支走</td></tr>
     <tr>
-      <td><strong>粒子重建</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">10 秒</span> · 废墟石板 · 只对融合与线性融合 · 1 层 5%、3 层 15.8%、5 层满 · 30% 那一档的虚弱会覆盖它</span>
-      </td>
+      <td><strong>粒子重建</strong><span class="sub">废墟石板 · 只对融合与线性融合 · 1 层 5%、3 层 15.8%、5 层满 · 30% 那一档的虚弱会覆盖它</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>同类武器持续命中，逐层叠加减益</td>
       <td class="num">+27.6%</td>
     </tr>
     <tr>
-      <td><strong>扩展深渊</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span> <span class="dur">随虚弱持续</span> · 猎人日志 · 它自己不产生虚弱，只把已有的往上抬：15%→25%、30%→35%、35%→40% · 对神圣裁决的虚弱无效</span>
-      </td>
+      <td><strong>扩展深渊</strong><span class="sub">猎人日志 · 它自己不产生虚弱，只把已有的往上抬：15%→25%、30%→35%、35%→40% · 对神圣裁决的虚弱无效</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span></td>
+      <td><span class="dur">随虚弱持续</span></td>
       <td>挂在已有的虚弱上</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>削弱清敌</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">20 秒</span> · 杀手公爵药剂师背包 · 两次施加之间有 10 秒冷却，冷却结束后任何虚弱来源都能为它续期</span>
-      </td>
+      <td><strong>削弱清敌</strong><span class="sub">杀手公爵药剂师背包 · 两次施加之间有 10 秒冷却，冷却结束后任何虚弱来源都能为它续期</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">20 秒</span></td>
       <td>用榴弹发射器击伤勇士、首领或打破护盾</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>超新星</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span> <span class="dur">8 秒</span> · NPA 斥力调节器或杀手公爵药剂师背包 · 爆裂半径 5 米</span>
-      </td>
+      <td><strong>超新星</strong><span class="sub">NPA 斥力调节器或杀手公爵药剂师背包 · 爆裂半径 5 米</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span></td>
+      <td><span class="dur">8 秒</span></td>
       <td>拾取虚空裂口后 10 秒内的第一次虚空伤害</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>弱化波</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span> <span class="dur">6 秒</span> · 杀手公爵药剂师背包 · 波形半径 15 米</span>
-      </td>
+      <td><strong>弱化波</strong><span class="sub">杀手公爵药剂师背包 · 波形半径 15 米</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>装备虚空超能时用终结技处决</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>邪恶收割</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span> <span class="dur">6 秒</span> · 废墟石板 · 爆裂半径 7 米</span>
-      </td>
+      <td><strong>邪恶收割</strong><span class="sub">废墟石板 · 爆裂半径 7 米</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>施加不稳定后，下一次虚空武器伤害</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>虚空感染</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span> <span class="dur">6 秒</span> · 加密数据盘 · 追踪半径 15 米</span>
-      </td>
+      <td><strong>虚空感染</strong><span class="sub">加密数据盘 · 追踪半径 15 米</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>击杀已被虚弱的目标</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>奇点利刃</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span> <span class="dur">6 秒</span> · 加密数据盘 · 击杀时另有一次虚弱爆裂，半径 4 米</span>
-      </td>
+      <td><strong>奇点利刃</strong><span class="sub">加密数据盘 · 击杀时另有一次虚弱爆裂，半径 4 米</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">神器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>持有虚空增益时，近战与刀剑命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>冲击 / 震慑 / 扭曲 / 尖刺雕文守护者</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">副本模组</span> <span class="dur">15 秒</span> · 门徒誓约模组 · 1 份 20%、2 份 25%、3 份 35% · 各自只提高对应几类武器，仅在门徒誓约内生效</span>
-      </td>
+      <td><strong>冲击 / 震慑 / 扭曲 / 尖刺雕文守护者</strong><span class="sub">门徒誓约模组 · 1 份 20%、2 份 25%、3 份 35% · 各自只提高对应几类武器，仅在门徒誓约内生效</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">副本模组</span></td>
+      <td><span class="dur">15 秒</span></td>
       <td>用手雷击伤雕文守护者</td>
       <td class="num">+40%</td>
     </tr>
     <tr>
-      <td><strong>本影磨锐</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">副本模组</span> <span class="dur">15 秒</span> · 门徒誓约模组 · 档位与上面四条相同，这条对全部武器生效</span>
-      </td>
+      <td><strong>本影磨锐</strong><span class="sub">门徒誓约模组 · 档位与上面四条相同，这条对全部武器生效</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">副本模组</span></td>
+      <td><span class="dur">15 秒</span></td>
       <td>持有 4 层以上的弥漫暗影</td>
       <td class="num">+40%</td>
     </tr>
     <tr>
-      <td><strong>力量学派</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">模组</span> <span class="dur">30 秒</span> · 永劫教派模组 · 不可续期，对首领无效 · 自成一类，与其它全部增益、易伤都叠加</span>
-      </td>
+      <td><strong>力量学派</strong><span class="sub">永劫教派模组 · 不可续期，对首领无效 · 自成一类，与其它全部增益、易伤都叠加</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">模组</span></td>
+      <td><span class="dur">30 秒</span></td>
       <td>3 秒内对橙血及以上打出 4 次精准命中，或眩晕一个勇士</td>
       <td class="num">+20%</td>
     </tr>
     <tr>
-      <td><strong>严酷折射</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">4 秒</span> · 废墟石板 · 要打承受同元素减益的目标；缩影对任意元素减益都吃满</span>
-      </td>
+      <td><strong>严酷折射</strong><span class="sub">废墟石板 · 要打承受同元素减益的目标；缩影对任意元素减益都吃满</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">4 秒</span></td>
       <td>传说追踪步枪命中同元素减益的目标</td>
       <td class="num">+50%</td>
     </tr>
     <tr>
-      <td><strong>银白箭袋 / 银白重炮 / 银白利刃</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">随层数 / 4.5 秒 / 5 秒</span> · 各赛季神器 · 箭袋 35%（主武器）随层数；重炮 15%；利刃 15%</span>
-      </td>
+      <td><strong>银白箭袋 / 银白重炮 / 银白利刃</strong><span class="sub">各赛季神器 · 箭袋 35%（主武器）随层数；重炮 15%；利刃 15%</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">随层数 / 4.5 秒 / 5 秒</span></td>
       <td>持有护甲充能时，用弓箭 / 火箭 / 刀剑输出</td>
       <td class="num">+35%</td>
     </tr>
     <tr>
-      <td><strong>元素超驰</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">7 秒</span> · 好奇之器 · 界面写的是激涌加成，实际与全部增益叠加</span>
-      </td>
+      <td><strong>元素超驰</strong><span class="sub">好奇之器 · 界面写的是激涌加成，实际与全部增益叠加</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">7 秒</span></td>
       <td>拾取元素拾取物</td>
       <td class="num">+22%</td>
     </tr>
     <tr>
-      <td><strong>单人特工 / 狙击手冥想 / 瞄准自动填装器 / 火炬</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">5 秒 / 7 秒 / 15 秒 / 5 秒</span> · 各赛季神器 · 都是叠层类</span>
-      </td>
+      <td><strong>单人特工 / 狙击手冥想 / 瞄准自动填装器 / 火炬</strong><span class="sub">各赛季神器 · 都是叠层类</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">5 秒 / 7 秒 / 15 秒 / 5 秒</span></td>
       <td>精准击杀或命中叠层</td>
       <td class="num">+30%</td>
     </tr>
     <tr>
-      <td><strong>电弧复合</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-arc"></i>电弧</span><span class="tg">神器</span> <span class="dur">随致盲持续</span> · 杀手公爵药剂师背包 · 只有致盲触发，迷失类效果不触发；闪光手雷在首领身上触发不了</span>
-      </td>
+      <td><strong>电弧复合</strong><span class="sub">杀手公爵药剂师背包 · 只有致盲触发，迷失类效果不触发；闪光手雷在首领身上触发不了</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-arc"></i>电弧</span><span class="tg">神器</span></td>
+      <td><span class="dur">随致盲持续</span></td>
       <td>对被致盲的目标造成电弧伤害</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>组合银白利刃</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">神器</span> <span class="dur">5 秒</span> · 加密数据盘 · 不可续期</span>
-      </td>
+      <td><strong>组合银白利刃</strong><span class="sub">加密数据盘 · 不可续期</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">神器</span></td>
+      <td><span class="dur">5 秒</span></td>
       <td>攻击、停顿、再攻击</td>
       <td class="num">+15%</td>
     </tr>
 
-    <tr class="grp"><td colspan="3">武器自带 · 跟着枪走</td></tr>
+    <tr class="grp"><td colspan="6">武器自带 · 跟着枪走</td></tr>
     <tr>
-      <td><strong>武器属性</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg">角色属性</span> <span class="dur">常驻</span> · 0–100 点对红血橙血，101–200 点对首领；威能武器每点低 0.05%</span>
-      </td>
+      <td><strong>武器属性</strong><span class="sub">0–100 点对红血橙血，101–200 点对首领；威能武器每点低 0.05%</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg">角色属性</span></td>
+      <td><span class="dur">常驻</span></td>
       <td>见<a href="mechanics.html#s4">第 1 页第 4 节</a></td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>动能固有加成</strong><span class="b mul">放大类</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-kinetic"></i>动能</span><span class="tg">武器</span> <span class="dur">常驻</span> · 特殊弹药 15%、主武器 10% · 对首领无效 · 动能武器没有元素，换来的是基础伤害更高</span>
-      </td>
+      <td><strong>动能固有加成</strong><span class="sub">特殊弹药 15%、主武器 10% · 对首领无效 · 动能武器没有元素，换来的是基础伤害更高</span></td>
+      <td><span class="b mul">放大类</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-kinetic"></i>动能</span><span class="tg">武器</span></td>
+      <td><span class="dur">常驻</span></td>
       <td>固有，装上就有</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>爆炸光能</strong><span class="b mul">武器 Perk</span><span class="sub"><span class="tg">全职业</span><span class="tg">武器 Perk</span> <span class="dur">时长未测</span> · 这一类里的代表 · 触发后只对该武器生效</span>
-      </td>
-      <td>击杀后装填的弹药造成额外伤害</td>
+      <td><strong>爆炸光能</strong><span class="sub">这一类里的代表 · 触发后只对该武器生效</span></td>
+      <td><span class="b mul">武器特性</span></td>
+      <td><span class="tg">全职业</span><span class="tg">武器特性</span></td>
+      <td><span class="dur">保留到开火</span></td>
+      <td>拾取能量球叠层（最多 6 层），开火消耗 1 层</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>瓦解</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器 Perk</span> <span class="dur">6 秒</span> · 爆裂半径 7 米</span>
-      </td>
+      <td><strong>瓦解</strong><span class="sub">爆裂半径 7 米</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器特性</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>精准击杀引发一次虚弱爆裂</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>枯萎凝视</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器 Perk</span> <span class="dur">6 秒</span></span>
-      </td>
+      <td><strong>枯萎凝视</strong></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器特性</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>开镜静止 1.5 秒（强化后 1.4 秒）填装一发虚弱弹</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>深埋血脉</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">5 秒</span> · 特殊弹药手枪（需催化剂）</span>
-      </td>
+      <td><strong>深埋血脉</strong><span class="sub">特殊弹药手枪（需催化剂）</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">5 秒</span></td>
       <td>吞食生效期间命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>集体义务</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">10 秒</span> · 主武器脉冲步枪 · 吸取更强的易伤会被折算成标准 15%</span>
-      </td>
+      <td><strong>集体义务</strong><span class="sub">主武器脉冲步枪 · 吸取更强的易伤会被折算成标准 15%</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">10 秒</span></td>
       <td>已吸取虚弱并切到副射击模式后命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>命定混沌</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">6 秒</span> · 威能机枪</span>
-      </td>
+      <td><strong>命定混沌</strong><span class="sub">威能机枪</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>每第 4 发重金属弹</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>心影</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">6 秒</span> · 威能刀剑</span>
-      </td>
+      <td><strong>心影</strong><span class="sub">威能刀剑</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>重攻击命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>英勇利刃</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">6 秒</span> · 特殊弹药刀剑</span>
-      </td>
+      <td><strong>英勇利刃</strong><span class="sub">特殊弹药刀剑</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>装备虚空超能时，近战、弹反或远程命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>杀手之牙（虚弱版）</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">6 秒</span> · 特殊弹药霰弹枪 · 与异域装备那一行的 10% 是两份不同的加成</span>
-      </td>
+      <td><strong>杀手之牙（虚弱版）</strong><span class="sub">特殊弹药霰弹枪 · 与异域装备那一行的 10% 是两份不同的加成</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>夜誓之视生效期间，子弹丸命中</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>细分曲面</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">6 秒</span> · 特殊弹药融合步枪（需催化剂）· 换成别的元素则施加对应的元素效果，例如烈日是灼烧</span>
-      </td>
+      <td><strong>细分曲面</strong><span class="sub">特殊弹药融合步枪（需催化剂）· 换成别的元素则施加对应的元素效果，例如烈日是灼烧</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>装备虚空手雷时的蓄能射击</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>三度迭代</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">6 秒</span> · 主武器斥候步枪（需催化剂）</span>
-      </td>
+      <td><strong>三度迭代</strong><span class="sub">主武器斥候步枪（需催化剂）</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>融合弹的精准击杀扩散</td>
       <td class="num">+15%</td>
     </tr>
     <tr>
-      <td><strong>叛贼</strong><span class="b one">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span> <span class="dur">6 秒</span> · 主武器手炮</span>
-      </td>
+      <td><strong>叛贼</strong><span class="sub">主武器手炮</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg"><i class="el-void"></i>虚空</span><span class="tg">武器</span></td>
+      <td><span class="dur">6 秒</span></td>
       <td>释能状态下命中</td>
       <td class="num">+15%</td>
     </tr>
 
-    <tr class="grp"><td colspan="3">活动与队友 · 不占你的位置</td></tr>
+    <tr class="grp"><td colspan="6">活动与队友 · 不占你的位置</td></tr>
     <tr>
-      <td><strong>元素激涌</strong><span class="b mul">世界与活动</span><span class="sub"><span class="tg">全职业</span><span class="tg">活动</span> <span class="dur">随活动持续</span> · 活动修改器 · 卡片上有这一项就生效，不需要你做任何事</span>
-      </td>
+      <td><strong>元素激涌</strong><span class="sub">活动修改器 · 卡片上有这一项就生效，不需要你做任何事</span></td>
+      <td><span class="b mul">世界与活动</span></td>
+      <td><span class="tg">全职业</span><span class="tg">活动</span></td>
+      <td><span class="dur">随活动持续</span></td>
       <td>你的武器元素匹配活动元素</td>
       <td class="num">+25%</td>
     </tr>
     <tr>
-      <td><strong>强化扫描增益</strong><span class="b mul">全局易伤</span><span class="sub"><span class="tg">全职业</span><span class="tg">副本模组</span> <span class="dur">时长未测</span> · 深岩墓室模组 · 1 份 8%、2 份 13.7%、3 份 17.3%、4 份 19.3%、5 份 20%</span>
-      </td>
+      <td><strong>强化扫描增益</strong><span class="sub">深岩墓室模组 · 1 份 8%、2 份 13.7%、3 份 17.3%、4 份 19.3%、5 份 20% · 公开资料里没有持续秒数</span></td>
+      <td><span class="b one">全局易伤</span></td>
+      <td><span class="tg">全职业</span><span class="tg">副本模组</span></td>
+      <td><span class="dur">仅副本内生效</span></td>
       <td>对初级首领或首领造成精准命中</td>
       <td class="num">+20%</td>
     </tr>
 
 </tbody>
 </table>
+</div>
 
 <h3>这张表里有三件事，是拆开看每份来源都看不出来的</h3>
 
 <ol class="steps">
-  <li><strong>虚弱那一大串几乎全是 15%。</strong>触发方式五花八门——技能、星相、碎片、武器 Perk、模组都有，数值都是 15%。所以<strong>你不需要收集虚弱，只需要挑一个最好触发的</strong>——有击杀类、有技能类、有武器 Perk，哪个顺手用哪个，堆第二条一点收益都没有。</li>
-  <li><strong>强化类是三档：20% / 25% / 35%。</strong>焕光一系统一 20%，超能类（光焰之井、光之武器）25%，异域类（流明、矛隼、虫神爱抚等）35%。<strong>如果你身上已经挂着 20% 的焕光，再放一个光焰之井是白放。</strong></li>
-  <li><strong>武器激涌只看层数，不看来源。</strong>模组、异域护甲、棱镜之灵走的都是同一套层数表：1 层 10%、2 层 17%、3 层 22%、4 层 25%。所以<strong>换一件激涌装备不会让你变强，把层数叠满才会。</strong></li>
+  <li><strong>虚弱那一大串几乎全是 15%。</strong>触发方式五花八门——技能、星相、碎片、武器特性、模组都有。所以<strong>不用收集虚弱，挑一个最好触发的就行</strong>——有击杀类、技能类、武器特性，哪个顺手用哪个，堆第二条没收益。</li>
+  <li><strong>强化类是三档：20% / 25% / 35%。</strong>焕光统一 20%，超能类（光焰之井、光之武器）25%，异域类（流明、矛隼、虫神爱抚等）35%。<strong>已经挂着 20% 的焕光，再放一个光焰之井是白放。</strong></li>
+  <li><strong>武器激涌只看层数，不看来源。</strong>模组、异域护甲、棱镜星相走同一套层数表：1 层 10%、2 层 17%、3 层 22%、4 层 25%。所以<strong>换一件激涌装备不会变强，叠满层数才会。</strong></li>
 </ol>
 
 <div class="note warn">
   <span class="h">这张表最容易被误用的一点</span>
-  <p>看到 35% 就想办法去凑 35%，是错的方向。因为<strong>同类取最高</strong>——你已经有 20% 的焕光时，把它换成 35% 只多 15 个百分点；而<strong>去开一个完全空着的类别，是从 ×1 变成 ×1.25</strong>。</p>
-  <p>所以正确的用法是：对着七类数一遍自己占了几类，缺的那几类才是收益。表里的高数值只在「这一类我一条都没有」的时候才值得专门为它改配装。</p>
+  <p>看到 35% 就去凑 35%，是错的方向。因为<strong>同类取最高</strong>——已有 20% 的焕光时，换成 35% 只多 15 个百分点；而<strong>去开一个空着的类别，是从 ×1 变成 ×1.25</strong>。</p>
+  <p>正确的用法是对着七类数一遍自己占了几类，缺的才是收益。表里的高数值只在「这一类一条都没有」时才值得为它改配装。</p>
 </div>
 
 <div class="note">
   <span class="h">表里没写的东西</span>
-  <p><strong>没写 PvP 数值。</strong>来源页里每个数都带一个方括号，方括号里是 PvP 的值，本教程只讲 PvE，全部取前面那个。</p>
-  <p><strong>收的是来源页列出的全部条目。</strong>同一件装备有多档数值或多个触发条件的，并成了一行，数值列写最高档。另有一类不在这里：<strong>武器 Perk 和起源特性</strong>——它们数量太多且每把枪不同，去武器详情页看。清点时别忘了算上你手里那把枪带的。</p>
+  <p><strong>没写 PvP 数值。</strong>来源页里每个数都带方括号，里面是 PvP 的值；本教程只讲 PvE，全部取前面那个。</p>
+  <p><strong>收的是来源页列出的全部条目。</strong>同一件装备有多档数值或多个触发条件的并成一行，数值列写最高档。另有一类不在这里：<strong>武器特性和起源特性</strong>——数量太多且每把枪不同，去武器详情页看；清点时别忘了算上你手里那把枪带的。</p>
 </div>
 
-<h3 id="cage">神性的精准笼给的是「精准命中」，不是「弱点命中」</h3>
+<h3 id="cage">神圣裁决的精准笼给的是「精准命中」，不是「弱点命中」</h3>
 
-<p>神性（神圣裁决）持续命中 10 次后，除了那 15% 虚弱，还会在目标身上生成一个<strong>精准笼</strong>。命中笼子的射击<strong>转化为精准命中，但不算弱点命中</strong>——游戏里这是两套判定，神性正好卡在中间。所以问「神性的精准生不生效」，得先分清你要的是哪一边。</p>
+<p>神圣裁决（神性）持续命中 10 次后，除那 15% 虚弱外，还会在目标身上生成<strong>精准笼</strong>。命中精准笼的射击<strong>转化为精准命中，但不算弱点命中</strong>——游戏里这是两套判定，神圣裁决正好卡在中间。问「精准生不生效」，先分清要哪一边。</p>
 
 <table>
   <thead>
-    <tr><th>你靠什么吃伤害</th><th>要的是哪一边</th><th>笼子</th></tr>
+    <tr><th>你靠什么吃伤害</th><th>要的是哪一边</th><th>精准笼</th></tr>
   </thead>
   <tbody>
     <tr><td>有精准倍率的武器——手炮、斥候、狙击、线性融合等</td><td>精准命中</td><td>生效</td></tr>
-    <tr><td>要求「精准命中 / 精准击杀」的 Perk、模组与叠层</td><td>精准命中</td><td>生效</td></tr>
+    <tr><td>要求「精准命中 / 精准击杀」的特性、模组与叠层</td><td>精准命中</td><td>生效</td></tr>
     <tr><td>超临界（神器模组，弱点伤害 +140%）</td><td>弱点命中</td><td>不生效</td></tr>
-    <tr><td>武器 Perk 的「弱点伤害」——盒式呼吸法这类</td><td>弱点命中</td><td>不生效</td></tr>
+    <tr><td>武器特性的「弱点伤害」——盒式呼吸法这类</td><td>弱点命中</td><td>不生效</td></tr>
     <tr><td>火箭发射器、融合步枪这类没有精准倍率的武器</td><td>—</td><td>不受益</td></tr>
   </tbody>
 </table>
 
-<p>来源页把这几条写得很直白：<strong>命中精准笼罩的射击转化为精准命中，但不算作弱点命中</strong>；<strong>无法造成精准伤害的武器（如火箭发射器与融合步枪）不受益于精准命中</strong>；<strong>弱点增益对神圣裁决力场无效</strong>。</p>
+<p>来源页原文（把精准笼写作「精准笼罩」）：<strong>命中精准笼罩的射击转化为精准命中，但不算作弱点命中</strong>；<strong>无法造成精准伤害的武器（如火箭发射器与融合步枪）不受益于精准命中</strong>；<strong>弱点增益对神圣裁决力场无效</strong>。</p>
 
 <div class="note warn">
   <span class="h">还有三个坑</span>
-  <p><strong>15% 虚弱作用于目标整个身体</strong>，不限于笼子覆盖的部位——打身上哪个位置，易伤都在。</p>
-  <p><strong>笼子会盖住本来就放大的精准判定框。</strong>有些战斗人员（例如傀儡）本身有更高的精准倍率，笼子盖上去等于换成标准值，反而打出更低的伤害。</p>
-  <p><strong>笼子会顶掉粒子重建。</strong>粒子重建叠到 5 层是 27.6%，神性的虚弱会把它压回 15%。</p>
+  <p><strong>15% 虚弱作用于目标整个身体</strong>，不只精准笼覆盖的部位——打哪个位置易伤都在。</p>
+  <p><strong>精准笼会盖住本来就放大的精准判定框。</strong>有些战斗人员（例如傀儡）本身精准倍率更高，精准笼盖上去等于换成标准值，反而打出更低伤害。</p>
+  <p><strong>精准笼会顶掉粒子重建。</strong>粒子重建叠到 5 层是 27.6%，神圣裁决的虚弱会把它压回 15%。</p>
 </div>
 
-<span class="src"><span class="t">公开整理</span>增伤与易伤页（buff-debuffs）四张分表与叠加算例，合并为按获取途径分组；来源页本身按乘区分为四张表，本表不改变其中任何数值。神圣裁决一段另据异域武器页、神器模组页与武器 Perk 页的注解。</span>
+<span class="src"><span class="t">公开整理</span>增伤与易伤页（buff-debuffs）四张分表与叠加算例，合并为按获取途径分组；来源页本身按乘区分为四张表，本表不改变其中任何数值。神圣裁决一段另据异域武器页、神器模组页与武器特性页的注解。</span>
 
 <h2 id="quiz">自测</h2>
 
-<p class="quiz-head">四道题。考的是排查顺序。</p>
+<p class="quiz-head">四道题，考排查顺序。</p>
 
 <details class="quiz">
   <summary>宗室里一个橙血敌人，血条旁边有额外标记，你打了半天血几乎不动。第一件事该做什么？</summary>
   <div class="ans">
     <p>先确认它是不是带祸因。带祸因的敌人对所有伤害有 60% 抗性；如果是「受保护」类型，只要护卫无人机还在场，抗性是 90%。</p>
-    <p>这种情况换枪没用——先处理无人机，或者用压制停用祸因技能。这是乘法级的差距，不是调 Perk 能补的。</p>
+    <p>这种情况换枪没用——先处理无人机，或者用压制停用祸因技能。这是乘法级的差距，不是调特性能补的。</p>
     <p class="back">回看第 1 节。</p>
   </div>
 </details>
@@ -1233,7 +1441,7 @@
 <details class="quiz">
   <summary>活动卡片上有「元素匹配」，你的主力武器元素不匹配。调属性能补回来吗？</summary>
   <div class="ans">
-    <p>不能。元素匹配的规则是：战斗人员护盾受到非匹配伤害时，伤害<strong>降低 80%</strong>。这是硬性限制，没有任何属性或 Perk 能绕过。</p>
+    <p>不能。元素匹配的规则是：战斗人员护盾受到非匹配伤害时，伤害<strong>降低 80%</strong>。这是硬性限制，没有任何属性或特性能绕过。</p>
     <p>唯一的解法是换武器元素，或者留一个位置专门带对应元素的武器。</p>
     <p class="back">回看第 2 节。</p>
   </div>
@@ -1251,8 +1459,8 @@
 <details class="quiz">
   <summary>打到后半段你的伤害明显掉下来了，但你没有死。最可能是哪里出了问题？</summary>
   <div class="ans">
-    <p>弹药。后半段重弹用完，只能靠白弹在打，所以伤害曲线掉下来。这换枪解决不了，要调的是弹药经济。</p>
-    <p>可调的地方：一号位二号位的弹药生成属性、注意别浪费打初级首领的补弹机会、必要时用终结技（前提是之前有武器伤害）。</p>
+    <p>弹药。后半段威能弹药用完，只能靠主武器在打，所以伤害曲线掉下来。这换枪解决不了，要调的是弹药经济。</p>
+    <p>可调的地方：前两个武器位的弹药生成属性、注意别浪费打初级首领的补弹机会、必要时用终结技（前提是之前有武器伤害）。</p>
     <p class="back">回看第 5 节。</p>
   </div>
 </details>

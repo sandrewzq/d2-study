@@ -7,7 +7,7 @@
 <meta name="description" content="四个真实场景，考的是跨页的判断顺序。">
 <link rel="stylesheet" href="assets/style.css">
 </head>
-<body data-page="quiz">
+<body data-block="mechanics" data-page="quiz">
 
 <button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
 
@@ -16,6 +16,14 @@
   <p class="brand-sub">《命运 2 学习手册》· 战斗机制</p>
 
   <nav class="g-nav">
+    <p class="nav-title">学习手册</p>
+    <a href="../index.html" data-key="home"><span class="k">·</span>总目录</a>
+    <a href="index.html" data-key="mechanics"><span class="k">·</span>战斗机制</a>
+    <a href="../系统入门/index.html" data-key="systems"><span class="k">·</span>游戏系统入门</a>
+  </nav>
+
+  <nav class="c-nav">
+    <p class="nav-title">本教程</p>
     <a href="index.html" data-key="index"><span class="k">·</span>从这里开始</a>
     <a href="mechanics.html" data-key="mechanics"><span class="k">1</span>通用机制</a>
     <a href="terms.html" data-key="terms"><span class="k">2</span>看不懂词</a>
@@ -26,9 +34,9 @@
   </nav>
 
   <nav class="l-nav">
-    <p class="l-title">本页</p>
+    <p class="nav-title">本页</p>
     <a href="#s0">怎么用这一页</a>
-    <a href="#s1">场景一 · 宗师打不动 BOSS</a>
+    <a href="#s1">场景一 · 宗师打不动首领</a>
     <a href="#s2">场景二 · 传说战役一直死</a>
     <a href="#s3">场景三 · 没打过的活动</a>
     <a href="#s4">场景四 · 一样配装，别人打得比我高</a>
@@ -50,37 +58,37 @@
 
 <h2 id="s0"><span class="n">0</span>怎么用这一页</h2>
 
-<p>这一页和每页末尾的自测不一样。那里考的是「这一节的结论你记住了吗」，这里考的是「几个结论摆在一起，你知道先用哪个吗」。</p>
+<p>和每页末尾的自测不同：那里考「这一节的结论记住了吗」，这里考「几个结论摆在一起，先查哪个」。</p>
 
 <ul>
-  <li>每个场景分成若干步。每步先自己想「下一步查什么」，再展开对照。</li>
+  <li>每步先自己想「下一步查什么」，再展开对照。</li>
   <li>答案给的是<strong>路径</strong>，不是唯一正确解——顺序合理就算对。</li>
   <li>答错了回对应页重看那一节，页内自测可以再做一遍。</li>
 </ul>
 
 <div class="note">
   <span class="h">建议做法</span>
-  <p>不要一口气看完全部答案。先自己想完整个排查链，再逐条展开——每一步都先给自己一个答案，再对照。</p>
+  <p>不要一口气看完全部答案。先自己想完整条排查链，再逐条展开对照。</p>
 </div>
 
-<h2 id="s1"><span class="n">1</span>场景一 · 宗师打不动 BOSS</h2>
+<h2 id="s1"><span class="n">1</span>场景一 · 宗师打不动首领</h2>
 
-<p>宗师难度，光等差 −50。你用的是一套社区推荐的配装，杂兵清得很顺，但打 BOSS 血条几乎不动。</p>
+<p>宗师难度，光等差 −50。你用的是一套社区推荐的配装，杂兵清得很顺，但打首领血条几乎不动。</p>
 
 <details class="quiz">
   <summary>第一步：先怀疑枪，还是先怀疑别的？</summary>
   <div class="ans">
     <p>先怀疑别的。关键线索是<strong>杂兵清得很顺</strong>——同一套武器打杂兵没问题，说明武器本身没有故障。</p>
-    <p>差别出在「打谁」上。所以第一步不该是换枪，而是找出 BOSS 和你刚才打的杂兵有什么不同。</p>
+    <p>差别出在「打谁」上。所以第一步不该是换枪，而是找出首领和你刚才打的杂兵有什么不同。</p>
     <p class="back">对应 <a href="damage.html#s1">第 4 页第 1 节</a>的排查思路。</p>
   </div>
 </details>
 
 <details class="quiz">
-  <summary>第二步：BOSS 身上会带「祸因」吗？</summary>
+  <summary>第二步：首领身上会带「祸因」吗？</summary>
   <div class="ans">
-    <p><strong>不会。</strong>祸因是加在<strong>非首领</strong>战斗人员身上的词缀，BOSS 不带。所以祸因不是这次的原因，可以直接排除。</p>
-    <p>但如果 BOSS 是势不可挡勇士，就要看下一条了。</p>
+    <p><strong>不会。</strong>祸因是加在<strong>非首领</strong>战斗人员身上的词缀，首领不带。所以祸因不是这次的原因，可以直接排除。</p>
+    <p>但如果首领是势不可挡勇士，就要看下一条了。</p>
     <p class="back">对应 <a href="damage.html#s1">第 4 页第 1 节</a>祸因规则。</p>
   </div>
 </details>
@@ -123,7 +131,7 @@
 
 <div class="note ok">
   <span class="h">这条链的顺序</span>
-  <p>杂兵能清（武器没坏）→ BOSS 不带祸因（排除）→ 是不是勇士、晕没晕 → 光等差 → 增伤铺开没有 → 最后才看武器。</p>
+  <p>杂兵能清（武器没坏）→ 首领不带祸因（排除）→ 是不是勇士、晕没晕 → 光等差 → 增伤铺开没有 → 最后才看武器。</p>
   <p><strong>注意武器排在最后。</strong>前五步里只要中了一条，换枪就是白换。</p>
 </div>
 
@@ -205,8 +213,8 @@
   <div class="ans">
     <p>把答案翻译成装备语言：</p>
     <ul>
-      <li>主要打杂兵 → 一号位二号位放清怪效率高的，<strong>弹药生成属性尽量高</strong></li>
-      <li>主要打首领、只有一个输出窗口 → 把爆发集中在重弹上</li>
+      <li>主要打杂兵 → 前两个武器位放清怪效率高的，<strong>弹药生成属性尽量高</strong></li>
+      <li>主要打首领、只有一个输出窗口 → 把爆发集中在威能武器（重弹）上</li>
       <li>有必须处理的护盾 → <strong>留一个位置对应该元素</strong>，这一条优先于伤害考虑</li>
     </ul>
     <p class="back">对应 <a href="build.html#s1">第 3 页第 1 节</a>与 <a href="build.html#s5">第 5 节</a>。</p>
@@ -254,8 +262,8 @@
   <div class="ans">
     <p>两处最容易漏的：<strong>武器属性和弹药生成属性。</strong></p>
     <ul>
-      <li>武器属性 100 点以上给对首领伤害（主武器和特殊弹药 +15%，威能 +10%）——少这 100 点，双方的面板看起来一样，实际伤害不同。</li>
-      <li>弹药生成属性决定你的重弹补给。打同样的敌人，属性低的一方后半段可能就没弹了，伤害曲线直接掉下来。</li>
+      <li>武器属性 100 点以上给对首领伤害（主武器和特殊武器 +15%，威能 +10%）——少这 100 点，双方的面板看起来一样，实际伤害不同。</li>
+      <li>弹药生成属性决定你的威能弹药补给。打同样的敌人，属性低的一方后半段可能就没弹了，伤害曲线直接掉下来。</li>
     </ul>
     <p class="back">对应 <a href="mechanics.html#s4">第 1 页第 4 节</a>与 <a href="damage.html#s5">第 4 页第 5 节</a>。</p>
   </div>
@@ -264,8 +272,8 @@
 <details class="quiz">
   <summary>第三步：排行榜里的排名，什么时候不成立？</summary>
   <div class="ans">
-    <p>排行榜的每个数字都是在<strong>某个条件下</strong>算出来的——用了哪些 Perk、有没有武器激涌、有没有增益。条件不满足时，排名就不成立。</p>
-    <p>照着抄配装，但 Perk 没触发、武器激涌没叠上、增益没吃到，打出来的数字和榜上差一截是必然的。这不是「别人比你强」，是<strong>条件差了一项</strong>。</p>
+    <p>排行榜的每个数字都是在<strong>某个条件下</strong>算出来的——用了哪些特性、有没有武器激涌、有没有增益。条件不满足时，排名就不成立。</p>
+    <p>照着抄配装，但特性没触发、武器激涌没叠上、增益没吃到，打出来的数字和榜上差一截是必然的。这不是「别人比你强」，是<strong>条件差了一项</strong>。</p>
     <p class="back">对应 <a href="damage.html#s4">第 4 页第 4 节</a>。</p>
   </div>
 </details>
@@ -277,7 +285,7 @@
     <ul>
       <li><strong>输出窗口的利用率</strong>——窗口只有 5.5 秒，你有没有把爆发全部塞进去，还是前两秒在找位置。</li>
       <li><strong>弱点命中</strong>——许多敌人有弱点部位，打没打中差距很大。</li>
-      <li><strong>触发时机</strong>——Perk 和武器激涌有没有在输出那一刻真的生效。</li>
+      <li><strong>触发时机</strong>——特性和武器激涌有没有在输出那一刻真的生效。</li>
       <li><strong>目标选择</strong>——把伤害打在了谁身上。</li>
     </ul>
     <p>这一题的结论是：<strong>排行榜给的是「条件满足时的上限」，不是「你实际能打出的数」。</strong>装备一样只是起点。</p>
@@ -287,7 +295,7 @@
 
 <div class="note ok">
   <span class="h">四个场景做完</span>
-  <p>如果每条排查链都能自己走下来，这份教程的目的就达到了。剩下的具体数值随版本变，回对应的来源页面查当期的就行。</p>
+  <p>具体数值随版本变，回对应的来源页面查当期的就行。</p>
 </div>
 
 <div class="pager">

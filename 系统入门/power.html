@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1 · 光等 · 命运 2 系统入门</title>
+<meta name="description" content="光等分两段：200 以下是基础，以上是奖励光等。怎么涨、涨到哪、什么时候会被削。">
+<link rel="stylesheet" href="../机制教程/assets/style.css">
+</head>
+<body data-block="systems" data-page="power">
+
+<button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
+
+<aside id="side">
+  <a class="brand" href="index.html">命运 2 系统入门</a>
+  <p class="brand-sub">《命运 2 学习手册》· 游戏系统入门</p>
+
+  <nav class="g-nav">
+    <p class="nav-title">学习手册</p>
+    <a href="../index.html" data-key="home"><span class="k">·</span>总目录</a>
+    <a href="../机制教程/index.html" data-key="mechanics"><span class="k">·</span>战斗机制</a>
+    <a href="index.html" data-key="systems"><span class="k">·</span>游戏系统入门</a>
+  </nav>
+
+  <nav class="c-nav">
+    <p class="nav-title">本教程</p>
+    <a href="index.html" data-key="index"><span class="k">·</span>从这里开始</a>
+    <a href="power.html" data-key="power"><span class="k">1</span>光等</a>
+  </nav>
+
+  <nav class="l-nav">
+    <p class="nav-title">本页</p>
+    <a href="#s1">1 光等分两段</a>
+    <a href="#s2">2 怎么往上走</a>
+    <a href="#s3">3 什么时候会被削</a>
+    <a href="#s4">4 奖励的阶级</a>
+    <a href="#s5">5 三个容易混的词</a>
+    <a href="#quiz">自测</a>
+  </nav>
+
+  <button class="theme-btn" id="theme">配色</button>
+
+  <div class="side-foot">
+    <p>PvE 向。数值以 <a href="https://starside.work/index.html" target="_blank" rel="noopener">Starside</a> 对应页面为准，本手册只在正文里引用并标注出处。</p>
+  </div>
+</aside>
+
+<main>
+<article>
+
+<h1>1 · 光等</h1>
+<p class="subtitle">光等从哪来、涨到哪、什么时候会被削。</p>
+<p class="page-ask">这一页回答：<b>我的光等现在到哪一步了，下一步该打什么？</b></p>
+
+<p class="lead">光等（游戏文本里写「能量等级」）不是一条一直往上爬的线。2025 年 7 月的「宿命边缘」资料片把它整个重做了一次：数字压小了大约十倍，同时切成两段——一段永久打底，一段原本每赛季重来（2025 年 12 月起取消重置）。网上多数攻略还在讲压缩前的 1900／2000／2010，跟你在游戏里看到的对不上，原因就在这里。</p>
+
+<div class="note warn">
+  <span class="h">先分清你看的是哪一套</span>
+  <p>只要一个数字是四位数（1900、2010、2020），那它就是<strong>压缩前</strong>的旧体系，2025 年 7 月以后已经作废。现在的数字全在 <strong>10 到 550</strong> 之间。</p>
+</div>
+
+<h2 id="s1"><span class="n">1</span>光等分两段</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>200 是分界线：以下是基础，以上是奖励光等。</p>
+</div>
+
+<p>你的能量等级由两部分相加：<strong>基础</strong>和<strong>奖励光等</strong>。200 以下是基础，靠身上的装备撑起来，永久保留；200 以上是奖励光等，来自赛季内容。</p>
+
+<p>原本奖励光等每赛季清零、资料片上线时全员跌回 200。2025 年 12 月起 Bungie 取消了重置，改成带进下个赛季，所以现在堆上去就不用担心白堆。</p>
+
+<table class="lookup">
+  <caption><b>查表</b>两段的分工，判断该打什么时用 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th>段</th><th class="num">范围</th><th>性质</th><th>靠什么涨</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>基础</td><td class="num">10 → 200</td><td>永久</td><td>普通掉落，灌注</td></tr>
+    <tr class="hi"><td>奖励光等</td><td class="num">200 → 550</td><td>不再重置<span class="sub">2025-12 前每赛季清零</span></td><td>门户活动</td></tr>
+  </tbody>
+</table>
+
+<p>还有一条独立的线：巡逻、先锋打击、日落（NF）、智谋这类活动只给到 300。你在这些地方怎么刷都超不过去。攻略里管这叫「世界区域」，游戏文本里不出现这个词。</p>
+
+<details class="deep">
+  <summary>为什么要压这一刀？展开看压缩前后</summary>
+  <p>压缩前的基础是 1900，赛季往上加，最后落在 2010（强力上限）到 2020（巅峰上限）。这套数字涨了七年，每一档的绝对值越来越大，但相邻档之间的<strong>比例</strong>越来越小——2000 和 2010 差 0.5%，玩家看不出区别，Bungie 也难调。</p>
+  <p>压完之后所有数值除以大约十倍，回到 10 起步、200 打底。同样的相对差距，数字小一个量级，读起来和调起来都清楚。</p>
+  <p><strong>边界：</strong>压缩只发生在宿命边缘上线那一次。此后每个赛季的上限怎么走，是另一件事——2025 年 12 月的「反叛」就没再抬高上限。</p>
+</details>
+
+<span class="src"><span class="t m">官方</span>「能量等级」「日落」「不稳定的光能能量」「世界等级」等名词取自游戏本体数据文件的中文本地化文本；<span class="t">公开整理</span> 各段数值来自社区实测整理</span>
+
+<h2 id="s2"><span class="n">2</span>怎么往上走</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>200 以前靠掉落，200 以后靠活动。</p>
+</div>
+
+<p>四个阶段的<strong>来源</strong>和<strong>材料</strong>都不一样。最容易卡住的是 200 那一档——从那里开始，普通掉落不再给你任何提升，灌注也要换一种材料。</p>
+
+<table class="lookup">
+  <caption><b>查表</b>卡住时对照自己在哪一段 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th class="row-col">阶段</th><th class="num">能到</th><th>来源</th><th>灌注用什么</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>起步</td><td class="num">200</td><td>普通掉落</td><td>强化核心</td></tr>
+    <tr class="hi"><td>中段</td><td class="num">300</td><td>世界区域封顶</td><td>不稳定的光能能量</td></tr>
+    <tr><td>上段</td><td class="num">400</td><td>门户：单人行动、火力战队行动、巅峰行动</td><td>同上</td></tr>
+    <tr><td>顶端</td><td class="num">550</td><td>宗师难度、无序边界</td><td>同上</td></tr>
+  </tbody>
+</table>
+
+<p>几个具体的卡点：</p>
+
+<ul>
+  <li><strong>200 → 300</strong>：过 200 之后，灌注要换成<strong>「不稳定的光能能量」</strong>，普通强化核心不再管用。世界区域把你送到这里就到头了，再往上是门户内容的地盘。</li>
+  <li><strong>300 → 400</strong>：「快速游戏」系列的火力战队行动打到 400 就不再给更高装备，得换成门户里的其他活动。</li>
+  <li><strong>400 → 550</strong>：大师难度的掉落封顶在 400，再往上要靠宗师难度和无序边界。这一段每件的涨幅只有 +1 上下，慢是正常的。</li>
+</ul>
+
+<details class="deep">
+  <summary>为什么越往上越慢？展开看涨幅递减</summary>
+  <p>低段的装备每件能顶好几点，高段只有一两点。原因不是随机数变小，是设计上就要求后面几十点必须靠高难内容堆——低难内容给的高光等装备越多，高难内容就越没人打。</p>
+  <p><strong>边界：</strong>具体每个来源给多少点、每周能给几件，会随赛季调整，这里不列。要算清楚某周能涨多少，看当期的来源清单，不要按上一季的经验推。</p>
+</details>
+
+<span class="src"><span class="t m">官方</span>「不稳定的光能能量」「巅峰行动」等名称与描述取自游戏本体数据文件；<span class="t">公开整理</span> 各阶段上限与来源来自社区实测整理</span>
+
+<h2 id="s3"><span class="n">3</span>什么时候会被削</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>难度直接决定削你多少，跟你的光等高低无关。</p>
+</div>
+
+<p>光等差怎么影响伤害，<a href="../机制教程/mechanics.html#s1">第 1 页第 1 节</a>已经讲过：负向掉得比正向涨得快，−50 之后还有拐点。这里讲的是另一头——<strong>这个差值是定的，不是你算出来的</strong>。</p>
+
+<p>2025 年 10 月的改动之后，难度名直接对应一个固定的光等上限。你比它高多少都不改变结果，堆光等换不来碾压。</p>
+
+<table class="lookup">
+  <caption><b>查表</b>选难度前对一眼，知道自己会被削到哪 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th>难度</th><th class="num">压光</th><th class="num">征服难度</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>普通</td><td class="num">0</td><td class="num">—</td></tr>
+    <tr><td>高级</td><td class="num">−10</td><td class="num">—</td></tr>
+    <tr><td>专家</td><td class="num">−15</td><td class="num">−20</td></tr>
+    <tr class="hi"><td>大师</td><td class="num">−20</td><td class="num">−30</td></tr>
+    <tr class="hi"><td>宗师</td><td class="num">−25</td><td class="num">−40</td></tr>
+    <tr><td>终极</td><td class="num">−30</td><td class="num">−50</td></tr>
+  </tbody>
+</table>
+
+<p>三条实际影响：</p>
+
+<ul>
+  <li><strong>堆光等不能碾压。</strong>你能用上的有效光等是难度定的，高出来的部分不产生收益。</li>
+  <li><strong>达不达标差别很大。</strong>低于这个值会被罚得更重——伤害降低、受伤增加，方向和<a href="../机制教程/mechanics.html#s1">第 1 页那条曲线</a>一致。</li>
+  <li><strong>手动选难度要先达标。</strong>没达到活动要求的能量等级时，系统不再自动给你分配难度。</li>
+</ul>
+
+<p>另外，<strong>老副本大多不再是拦路虎</strong>。老的突袭和地牢现在多归到「标准」难度，推荐能量普遍比新内容低，想去补剧情或者刷装备，通常不用先堆光等。具体数值看活动界面——同一代副本之间的定档并不统一，别按一个去推另一个。</p>
+
+<details class="deep">
+  <summary>为什么改成固定压光？展开看它替掉了什么</summary>
+  <p>旧规则是「推荐光等 + 实时比对」：活动给一个推荐值，你带着自己的光等进去，系统现算差值。好处是光等有意义，坏处是同一个活动在不同人手里难度差很多，而且每周靠调整装备就能重新算一遍。</p>
+  <p>改成固定值之后，难度名直接对应一个确定的量，活动和活动之间可比，玩家也少了一层要盯的数字。</p>
+  <p><strong>核对：</strong>游戏文本里这类档位的写法是「该活动的难度不可更改。你的有效能量等级最高为 N」——是<strong>封顶</strong>，不是真的把你的光等减掉。另有一类规则写「此活动中所有战斗人员将比你当前的能量等级至少高出 N 点」，那是抬敌人。两条路都能压出负的光等差。</p>
+  <p><strong>边界：</strong>这张表的数值来自社区转述的 2025 年 10 月官方周报，Bungie 改过不止一次。<strong>以游戏内难度界面上显示的数字为准</strong>，不要按这张表去推。</p>
+</details>
+
+<span class="src"><span class="t">公开整理</span>压光数值来自社区对 2025-10 官方周报的整理（「终极 −30」与资料站交叉核对一致）；<span class="t m">官方</span> 「宗师」「终极」等难度名与「有效能量等级最高为 N」的写法取自游戏本体数据文件的本地化文本</span>
+
+<h2 id="s4"><span class="n">4</span>奖励的阶级</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>旧的「强力／巅峰」换成了 1 到 5 阶，你的光等决定能解码到几阶。</p>
+</div>
+
+<p>压缩光等的同时，奖励也换了分类方式。以前分「强力装备」和「巅峰装备」，用来看哪一档奖励能把光等推过上限；现在分<strong>阶级</strong>，看的是这件东西本身有多好，而<strong>能不能解码到高阶，取决于你的能量等级</strong>。</p>
+
+<table class="lookup">
+  <caption><b>查表</b>解码上限跟着能量等级走 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th class="num">能量等级</th><th class="num">最高可解码</th><th>说明</th></tr>
+  </thead>
+  <tbody>
+    <tr><td class="num">200</td><td class="num">2 阶</td><td>刚过基础线</td></tr>
+    <tr><td class="num">300</td><td class="num">3 阶</td><td>世界区域封顶</td></tr>
+    <tr><td class="num">400</td><td class="num">4 阶</td><td>门户活动段</td></tr>
+    <tr class="hi"><td class="num">500</td><td class="num">5 阶</td><td>护甲封顶；武器最高 4 阶</td></tr>
+  </tbody>
+</table>
+
+<p>两个词还在用，但意思搬了家，按旧的意思读会读错：</p>
+
+<ul>
+  <li><strong>「强力装备」现在指一种具体品阶。</strong>游戏里那颗水晶的描述是「一块包含一件 2 阶武器或护甲装备物品的记忆水晶」——它变成了 2 阶掉落的名称，不再是「能突破上限的奖励」。</li>
+  <li><strong>「巅峰」现在指一类活动。</strong>「巅峰行动」是门户里的高难活动，奖励是 4 阶记忆水晶。以前说的「巅峰装备」是另一回事。</li>
+</ul>
+
+<p>另外，门户里拿到 <strong>A 级评价</strong>，掉落（完成、加成、聚焦）会全部变成 5 阶。这是快速拿高阶装备的入口。</p>
+
+<details class="deep">
+  <summary>阶级和「装备阶级升级」不是一回事，展开分清</summary>
+  <p>游戏里有两套东西都翻译成「阶」，容易混：</p>
+  <ul>
+    <li><strong>奖励阶级</strong>：掉落品本身的档，1 到 5 阶，就是上面这张表讲的。</li>
+    <li><strong>装备阶级</strong>：武器塑形里的升级线（「1 阶升级」到「5 阶升级」），升的是<strong>同一把武器</strong>的特性和模组槽，跟它掉落的档次无关。</li>
+  </ul>
+  <p>判断办法是看它出现在哪：出现在掉落和记忆水晶上的是奖励阶级，出现在塑形界面里的是装备阶级。</p>
+  <p><strong>边界：</strong>还有一条「反叛装备阶级升级」，描述是「所有反叛装备奖励的阶级永久提升 1 阶」——它改的是<strong>奖励阶级</strong>，不是武器的塑形等级。</p>
+</details>
+
+<span class="src"><span class="t m">官方</span>「护甲」「武器」「强力装备」「巅峰行动装备」「反叛装备阶级升级」的描述文字取自游戏本体数据文件；<span class="t">公开整理</span> 各阶级对应的能量等级来自社区实测整理</span>
+
+<h2 id="s5"><span class="n">5</span>三个容易混的词</h2>
+
+<div class="oneline">
+  <p><span class="tag">一句话</span>光等是你的，世界等级是地图的，装备阶级是东西的。</p>
+</div>
+
+<p>这三个词都带「等级」或「阶」，出现在不同的地方，管的是完全不同的事。分清楚了，看活动界面和装备界面时就不会串。</p>
+
+<table>
+  <thead>
+    <tr><th>词</th><th>是谁的</th><th>回答什么</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>光等<span class="aka">（能量等级）</span></td><td>你的角色</td><td>你有多强。10 到 550，分基础和奖励两段</td></tr>
+    <tr><td>世界等级</td><td>地图</td><td>这块地有多难。开普勒上分勇者、闻名、神话几档</td></tr>
+    <tr><td>装备阶级</td><td>单件东西</td><td>这件掉落有多好，1 到 5 阶</td></tr>
+  </tbody>
+</table>
+
+<p>世界等级值得单独说一句：<strong>它是地图难度档，不是你的光等</strong>。等级越高，材料奖励翻倍、装备掉落率提升，但敌人也更硬。你在开普勒看到的「闻名任务」「神话任务」就是按这个分的——前者推荐能量 150，后者 200。</p>
+
+<details class="deep">
+  <summary>「软光」「硬光」现在对应哪两个数？展开看</summary>
+  <p>这两个词是玩家叫法，游戏文本里不出现，官方写的是「软上限」。老体系里它们指三条线：普通掉落能到的软上限、强力奖励能到的硬上限、巅峰奖励能到的最高上限。</p>
+  <p>压缩之后三条线并成两条，所以现在听到这两个词，要先问对方指的是哪一层：</p>
+  <ul>
+    <li>如果问的是<strong>普通掉落能到哪</strong>：基础线到 <strong>200</strong>，世界区域到 <strong>300</strong>。</li>
+    <li>如果问的是<strong>总共能到哪</strong>：<strong>550</strong>。</li>
+    <li>如果问的是<strong>哪部分会掉</strong>：200 以下是永久的基础，200 以上是本来会重置的奖励光等。</li>
+  </ul>
+  <p><strong>核对：</strong>「软上限」这个词在游戏本体数据文件里能查到实例——加速器道具的描述写「将此角色升级至能量等级软上限」。</p>
+</details>
+
+<span class="src"><span class="t m">官方</span>「世界等级」「闻名」「神话」「软上限」等字样取自游戏本体数据文件；<span class="t">公开整理</span> 各档数值来自社区实测整理</span>
+
+<h2 id="quiz">自测</h2>
+
+<p class="quiz-head">四道题。考的是判断顺序，不是背数字。</p>
+
+<details class="quiz">
+  <summary>你在一个攻略里看到「先把光等堆到 2010」，这条还用得上吗？</summary>
+  <div class="ans">
+    <p>用不上。四位数是<strong>压缩前</strong>的旧体系，2025 年 7 月的「宿命边缘」之后就作废了。</p>
+    <p>现在的数字全在 10 到 550 之间。看到四位数，先确认这篇攻略是什么时候写的——很可能是压缩前的存档文。</p>
+    <p class="back">回看第 1 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>你 250 光等，只打先锋打击，最多能到哪？</summary>
+  <div class="ans">
+    <p>先锋打击属于「世界区域」，这一档封顶 300——在这里能涨，但涨到 300 就到头了，再往上必须换门户活动。</p>
+    <p>另外从 200 开始，灌注要换「不稳定的光能能量」，普通强化核心不再管用。这一段的出路是门户活动（单人行动、火力战队行动、巅峰行动）。</p>
+    <p class="back">回看第 2 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>你的光等比朋友高 40 点，一起打宗师，你会比他轻松吗？</summary>
+  <div class="ans">
+    <p>不会。宗师是<strong>固定压光</strong>的：系统按难度把你削到固定值，你高出来的 40 点不产生收益。</p>
+    <p>但反过来，<strong>低于</strong>那个值罚得很重——伤害降低、受伤增加。所以真正的分界是「有没有达标」，不是「比队友高多少」。</p>
+    <p class="back">回看第 3 节。</p>
+  </div>
+</details>
+
+<details class="quiz">
+  <summary>游戏里那颗「强力装备」水晶，现在是什么档次的东西？</summary>
+  <div class="ans">
+    <p><strong>2 阶。</strong>它的描述是「一块包含一件 2 阶武器或护甲装备物品的记忆水晶」——「强力」这个词还在，但含义已经从「能突破上限的奖励」变成了一种具体品阶。</p>
+    <p>同样搬家的还有「巅峰」：现在指「巅峰行动」这类门户活动，不是以前说的巅峰装备。</p>
+    <p class="back">回看第 4 节。</p>
+  </div>
+</details>
+
+<div class="pager">
+  <a href="index.html">
+    <span class="dir">上一页</span>
+    从这里开始
+  </a>
+</div>
+
+</article>
+
+<div class="foot">
+  <p><strong>本页数据来源。</strong>名词与描述文字核对于游戏本体数据文件的中文本地化文本；各段上限、压光数值、阶级门槛来自社区实测整理页与官方周报的公开转述。压缩前后的体系差异见正文各节折叠块。数值用于说明机制，具体数值与最新版本以游戏内显示和来源页面为准。</p>
+</div>
+</main>
+
+<script src="../机制教程/assets/nav.js"></script>
+</body>
+</html>

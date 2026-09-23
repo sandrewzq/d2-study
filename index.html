@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>命运 2 学习手册</title>
-<meta name="description" content="《命运 2 学习手册》总目录。按「你处于哪个阶段」分成五块，目前写完的是战斗机制。PvE 向。">
+<meta name="description" content="《命运 2 学习手册》总目录。按「你处于哪个阶段」分成五块，战斗机制已写完，游戏系统入门已有光等一页。PvE 向。">
 <link rel="stylesheet" href="机制教程/assets/style.css">
 </head>
-<body data-page="home">
+<body data-block="home">
 
 <button class="nav-toggle" id="navtoggle" aria-expanded="false">目录</button>
 
@@ -16,12 +16,14 @@
   <p class="brand-sub">按「你处于哪个阶段」分块</p>
 
   <nav class="g-nav">
+    <p class="nav-title">学习手册</p>
     <a href="index.html" data-key="home"><span class="k">·</span>总目录</a>
-    <a href="机制教程/index.html"><span class="k">·</span>战斗机制</a>
+    <a href="机制教程/index.html" data-key="mechanics"><span class="k">·</span>战斗机制</a>
+    <a href="系统入门/index.html" data-key="systems"><span class="k">·</span>游戏系统入门</a>
   </nav>
 
   <nav class="l-nav">
-    <p class="l-title">本页</p>
+    <p class="nav-title">本页</p>
     <a href="#s0">现在能读的</a>
     <a href="#s1">五块内容与进度</a>
     <a href="#s2">来源与更新</a>
@@ -43,25 +45,26 @@
 
 <h2 id="s0"><span class="n">·</span>现在能读的</h2>
 
-<p class="lead">只有一块写完了：战斗机制。它回答的是「打不动、站不住的时候该先查什么」。</p>
+<p class="lead">战斗机制写完了，游戏系统入门开了个头——目前只有「光等」一页。其余三块还没开始。</p>
 
-<p>这份教程补的是数据表和实战之间那段路。<strong>单个数字它一个都不重复</strong>——想知道某把枪排第几、某个 BOSS 多少血，去对应页面查就行。它做的是另外两件事：把<strong>数字之间的关系</strong>讲清楚，以及把<strong>散在几张表里的同类数据合并成一张清单</strong>。</p>
+<p>这份教程补的是数据表和实战之间那段路。<strong>单个数字它一个都不重复</strong>——某把枪排第几、某个首领多少血，去对应页面查就行。它做两件事：讲清<strong>数字之间的关系</strong>，把<strong>散在几张表里的同类数据合并成一张清单</strong>。</p>
 
 <div class="note ok">
   <span class="h">从这里进</span>
   <p><a href="机制教程/index.html">战斗机制</a>：五页正文加一页总测。第 1 页到第 3 页是主干，第 4 页和第 5 页是主干上的两条分支，可以单独进。</p>
+  <p><a href="系统入门/index.html">游戏系统入门</a>：现在只有「光等」一页，讲光等分哪两段、怎么往上走、什么时候会被削。</p>
 </div>
 
 <h2 id="s1"><span class="n">1</span>五块内容与进度</h2>
 
-<p>手册按「你处于哪个阶段」分块，目前规划了五块。只有战斗机制这一块写完了，其余四块还没开始。</p>
+<p>手册规划了五块。战斗机制已写完，游戏系统入门开始动工，其余三块还没开始。</p>
 
 <table>
   <thead>
-    <tr><th>块</th><th>回答什么</th><th>状态</th></tr>
+    <tr><th class="row-col">块</th><th>回答什么</th><th class="state-col">状态</th></tr>
   </thead>
   <tbody>
-    <tr><td>游戏系统入门</td><td>有哪些活动、各自怎么玩、光等怎么升、赛季怎么运作</td><td>未开始</td></tr>
+    <tr><td><a href="系统入门/index.html">游戏系统入门</a></td><td>有哪些活动、各自怎么玩、光等怎么升、赛季怎么运作</td><td>已有 1 页</td></tr>
     <tr><td>角色与职业</td><td>三个职业的区别、六个元素分支、技能与星相体系</td><td>未开始</td></tr>
     <tr><td>装备系统</td><td>武器与护甲、模组与异域、拿到一件装备怎么判断留不留</td><td>未开始</td></tr>
     <tr class="hi"><td><a href="机制教程/index.html">战斗机制</a></td><td>伤害和生存是怎么算的、打不动或站不住时怎么查</td><td><b>已写完</b></td></tr>
@@ -71,19 +74,21 @@
 
 <div class="note warn">
   <span class="h">战斗机制不覆盖什么</span>
-  <p>它假设你已经会玩这个游戏——知道去哪打、光等怎么升、装备从哪来。它解决的是「玩得下去但打不好」。如果你现在需要的是「这个游戏有哪些活动」「这件装备该不该留」，那是上面另外几块的内容，战斗机制帮不上。</p>
+  <p>它假设你已经会玩这个游戏——知道去哪打、光等怎么升、装备从哪来，解决的是「玩得下去但打不好」。需要「这个游戏有哪些活动」「这件装备该不该留」的话，那是上面另外几块的内容，战斗机制帮不上。</p>
 </div>
 
 <h2 id="s2"><span class="n">2</span>来源与更新</h2>
 
-<p>手册里的每个数值都挂了来源标签。名词以游戏本体数据文件的中文本地化文本为准；具体数字来自社区实测整理页；部分数值与英文原始表交叉核对。各页脚注写明该节引用的具体来源。</p>
+<p>手册里每个数值都挂了来源标签。名词以游戏本体数据文件的中文本地化文本为准；具体数字来自社区实测整理页；部分数值与英文原始表交叉核对。</p>
 
-<p>游戏每个赛季都在调数值。手册讲的是<strong>规则和关系</strong>（比如同类取最高、跨类相乘），这类东西很少变；具体数字变了，回来源页面查当期的。正文里标了<strong>查表</strong>徽章的那些表都带数据日期，方便判断有没有过期。</p>
+<p>名词写法上，正文只用游戏内的官方译名，第一次出现时用括号给出玩家俗称，之后再出现就不带括号了——比如「威能武器（重弹）」。完整对照见战斗机制的<a href="机制教程/terms.html#s6">第 2 页「看不懂词」第 6 节</a>。</p>
+
+<p>游戏每个赛季都在调数值。手册讲的是<strong>规则和关系</strong>（比如同类取最高、跨类相乘），这类很少变；数字变了，回来源页面查当期的。标了<strong>查表</strong>徽章的表都带数据日期，方便判断有没有过期。</p>
 
 <span class="src"><span class="t m">官方</span>游戏本体数据文件（中文本地化）；<span class="t">公开整理</span> 社区实测数据页，见 Starside 各对应页面；<span class="t a">英文原始</span> 部分数值的交叉核对来源</span>
 
 <div class="foot">
-  <p><strong>关于这份手册。</strong>《命运 2 学习手册》按玩家所处阶段分块，目前完成的是战斗机制这一块。正文为自行组织，数据来源见各页脚注。数值用于说明机制，具体数值与最新版本以来源页面为准。</p>
+  <p><strong>关于这份手册。</strong>《命运 2 学习手册》按玩家所处阶段分块，目前完成的是战斗机制。正文为自行组织，来源见各页脚注。数值用于说明机制，具体数值与最新版本以来源页面为准。</p>
 </div>
 
 </article>

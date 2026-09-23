@@ -144,13 +144,17 @@ aside{
   line-height:1.5;
 }
 
-/* --- 全局页导航 --- */
-.g-nav{
+/* --- 侧栏导航：一套外观，两处用 --- */
+/* .g-nav 装学习手册的块（总目录、战斗机制……），每个页面侧栏顶部都有，靠它跨块跳转；
+   .c-nav 装当前这一块自己的页，只有教程页面才有。两者长得一样，靠标题区分。 */
+.g-nav,
+.c-nav{
   margin:0 0 1.1rem;
   padding:0 0 1rem;
   border-bottom:1px solid var(--line);
 }
-.g-nav a{
+.g-nav a,
+.c-nav a{
   display:flex;
   align-items:baseline;
   gap:.5rem;
@@ -161,26 +165,32 @@ aside{
   font-size:.845rem;
   line-height:1.4;
 }
-.g-nav a .k{
+.g-nav a .k,
+.c-nav a .k{
   flex:0 0 auto;
   font-size:.7rem;
   color:var(--muted);
   font-variant-numeric:tabular-nums;
   min-width:.9em;
 }
-.g-nav a:hover{background:var(--soft);color:var(--fg)}
-.g-nav a.on{background:var(--accent-bg);color:var(--accent);font-weight:600}
-.g-nav a.on .k{color:var(--accent);opacity:.75}
+.g-nav a:hover,
+.c-nav a:hover{background:var(--soft);color:var(--fg)}
+.g-nav a.on,
+.c-nav a.on{background:var(--accent-bg);color:var(--accent);font-weight:600}
+.g-nav a.on .k,
+.c-nav a.on .k{color:var(--accent);opacity:.75}
 
-/* --- 当前页锚点 --- */
-.l-nav{margin:0}
-.l-nav .l-title{
+/* --- 侧栏小标题：分块用 --- */
+.nav-title{
   font-size:.7rem;
   letter-spacing:.09em;
   color:var(--muted);
   font-weight:600;
   margin:0 .5rem .45rem;
 }
+
+/* --- 当前页锚点 --- */
+.l-nav{margin:0}
 .l-nav a{
   display:block;
   padding:.26rem .5rem .26rem .85rem;
@@ -368,6 +378,48 @@ table caption{
 
 /* --- 表内通用零件：类别徽章、来源标签、俗称、时长、小字 --- */
 /* 这套零件在所有表里长一个样，不限于查表；查表专属的只有 caption 与分组行。 */
+
+/* --- 标签：全站唯一，一个外观 --- */
+/* 边框、圆角、内边距、字号只写一份；颜色交给修饰类，边框用 currentColor 跟着字色走，
+   所以修饰类只需要改一个属性。字号用固定值：标签多半嵌在小字行里，跟着周围文字缩放会掉到 9.5px
+   以下读不清，一个值才能让表格、小字行、正文里的 512 处标签长得完全一样。
+   .pill 是正式类名；.b / .t / table .tg / caption b 是待淘汰的旧名，暂时并列在这组里共用外观。 */
+.pill,
+.b,
+table .tg,
+.src .t,
+.t,
+table.lookup caption b{
+  display:inline-block;
+  padding:0 .34em;
+  border:1px solid currentColor;
+  border-radius:3px;
+  font-size:.72rem;
+  line-height:1.5;
+  vertical-align:1px;
+  white-space:nowrap;
+  color:var(--fg2);
+}
+/* 类别标签：乘区、手段两条维度共用一组颜色 */
+.pill--accent,
+.b.one,
+.b.dr{color:var(--accent)}
+.pill--ok,
+.b.mul,
+.b.hp{color:var(--ok)}
+.pill--warn,
+.b.sh{color:var(--warn)}
+.pill--muted,
+.b.at{color:var(--muted)}
+/* 来源可靠性 */
+.t.m{color:var(--ok)}
+.t.a{color:var(--warn)}
+/* 位置微调：跟在名称后面、连续排列；第 2 步随类名一起归到 .pill 的语境规则 */
+.b{margin-left:.4em}
+table .tg{margin-right:.3em}
+.src .t{margin-right:.35em}
+table.lookup caption b{margin-right:.45em}
+
 /* --- 查表：会随版本过期的数据表，标数据日期 --- */
 table.lookup caption{
   caption-side:top;
@@ -376,17 +428,6 @@ table.lookup caption{
   color:var(--muted);
   padding:0 .1rem .45rem;
   line-height:1.5;
-}
-table.lookup caption b{
-  display:inline-block;
-  border:1px solid var(--line);
-  border-radius:3px;
-  padding:0 .35em;
-  margin-right:.45em;
-  font-size:.7rem;
-  font-weight:600;
-  color:var(--fg2);
-  vertical-align:1px;
 }
 table.lookup tr.grp td{
   padding:.3rem .62rem;
@@ -406,42 +447,18 @@ table .sub{
   color:var(--muted);
   line-height:1.45;
 }
-table .b{
-  display:inline-block;
-  margin-left:.4em;
-  padding:0 .32em;
-  border:1px solid var(--line);
-  border-radius:3px;
-  font-size:.66rem;
-  font-weight:400;
-  color:var(--muted);
-  vertical-align:1px;
-  white-space:nowrap;
-}
-table .b.one{color:var(--accent);border-color:var(--accent)}
-table .b.mul{color:var(--ok);border-color:var(--ok)}
-table .b.unk{color:var(--muted);border-style:dashed}
 /* 徽章单独占一格时（类别列）不需要左边距 */
 table td>.b:first-child{margin-left:0}
-/* 玩家俗称：放在正式名称后面，检索时按俗称找也能对得上 */
+/* 玩家俗称：放在正式名称后面，检索时按俗称找也能对得上。
+   整个俗称当成一个词，别在括号中间断开——「（莫比乌斯）」拆成两行就认不出来了。 */
 table .aka{
   margin-left:.3em;
   font-size:.7rem;
   font-weight:400;
   color:var(--muted);
-}
-/* 来源标签：职业 / 元素 / 位置，放在名称下面的小字最前面 */
-table .tg{
-  display:inline-block;
-  margin-right:.3em;
-  padding:0 .34em;
-  border:1px solid var(--line);
-  border-radius:3px;
-  font-size:.66rem;
-  line-height:1.5;
-  color:var(--fg2);
   white-space:nowrap;
 }
+/* 元素色点：放在标签内，配合标签文字一起读 */
 table .tg i{
   display:inline-block;
   width:6px;
@@ -460,6 +477,18 @@ table .tg i{
 .el-dual{background:var(--el-dual)}
 /* 时长：清单每行都从它开头，扫一列就能比出生效时间 */
 table .dur{color:var(--fg2);font-weight:600;}
+/* 时长这一列留一个下限（约六个字）：短值要像「6 秒」一样占满一行，
+   不然「随超能持续」会被挤成「随超能持 / 续」，扫这一列时多出一个孤字。
+   超长的值（如 30 秒（超能 200 时 40 秒））照常折行，所以这里只设下限、不禁止折行。 */
+table.lookup thead th.dur-col{min-width:5.2rem}
+/* 状态列同样留个下限（约三个字）：「已写完 / 未开始」被挤成两行的话，
+   这一列就没法当标记扫了。只写下限，不禁折行。 */
+table thead th.state-col{min-width:4.8rem}
+/* 首列是行名（「活动类型」「起步」这种）时给个下限：名字被拆成
+   「活动类 / 型」就看不出是哪一行。查到六个字够用，再长照常折行。
+   别和查表用的 name-col 混：那个窄屏另有 12rem 下限，是给长装备名留的，
+   套到四列的行名表上会把来源、数值几列挤成竖条。 */
+table thead th.row-col{min-width:6.8rem}
 /* 二级分组：一级组内再按职业或来源类型分开 */
 table.lookup tr.grp2 td{
   padding:.28rem .62rem .28rem 1.05rem;
@@ -470,11 +499,6 @@ table.lookup tr.grp2 td{
   color:var(--fg2);
 }
 table.lookup tr.grp2 td::before{content:"▸ ";color:var(--accent);opacity:.65}
-/* 生存手段清单用同一套方框标手段类型 */
-table .b.dr{color:var(--accent);border-color:var(--accent)}
-table .b.hp{color:var(--ok);border-color:var(--ok)}
-table .b.sh{color:var(--warn);border-color:var(--warn)}
-table .b.at{color:var(--muted);border-color:var(--muted)}
 /* 侧栏里标出哪几节是查表 */
 .l-nav a.chk{color:var(--fg2)}
 .l-nav a.chk::after{
@@ -561,18 +585,6 @@ figcaption{
   line-height:1.55;
 }
 .src::before{content:"来源 · ";opacity:.75}
-.src .t{
-  display:inline-block;
-  font-size:.68rem;
-  border:1px solid var(--line);
-  border-radius:3px;
-  padding:0 .3em;
-  margin-right:.35em;
-  color:var(--muted);
-  vertical-align:1px;
-}
-.src .t.m{color:var(--ok);border-color:var(--ok)}
-.src .t.a{color:var(--warn);border-color:var(--warn)}
 
 /* --- 深度折叠：正文给结论，展开给推导 --- */
 details.deep{
@@ -742,9 +754,16 @@ details.quiz .ans .back{
   table.lookup th,table.lookup td{padding:.4rem .45rem}
   table.lookup tr.grp td{padding:.28rem .45rem}
   table .sub{font-size:.67rem}
-  /* 窄屏把俗称与来源标签抬回 11px 上下，手机上才看得清 */
+  /* 窄屏把俗称抬回 11px 上下，手机上才看得清；标签是固定字号，不用再抬 */
   table .aka{font-size:.75rem}
-  table .tg{font-size:.72rem}
+}
+
+/* 窄屏的清单表：说明文字全在名称那一格里，自动布局会把这一列挤到只剩几个字宽，
+   文字变成一条竖着的字带，整张表反而长了一倍（390px 下 5.4k → 11k）。
+   560px 以下表格本来就要横滑，给名称列一个下限换回可读的行宽；
+   560px 以上自动布局就够宽，不加这条，免得把宽屏版式带偏。 */
+@media (max-width:560px){
+  table.lookup thead th.name-col{min-width:12rem}
 }
 
 @media print{
