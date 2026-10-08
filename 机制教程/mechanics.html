@@ -197,13 +197,13 @@
     <tr><th>类别</th><th>谁给的</th><th>同类之间</th></tr>
   </thead>
   <tbody>
-    <tr><td><span class="b one">全局易伤</span></td><td>你施加到目标身上的减益</td><td>取最高</td></tr>
-    <tr><td><span class="b one">强化</span></td><td>直接加在你身上的增益</td><td>取最高</td></tr>
-    <tr><td><span class="b one">武器激涌</span></td><td>走「护甲充能」那套系统的增益</td><td>取最高</td></tr>
+    <tr><td><span class="b one">全局易伤</span></td><td>你施加到目标身上的减益——牵引器火炮、神圣裁决、暗影箭矢：狩猎陷阱都在这</td><td>取最高</td></tr>
+    <tr><td><span class="b one">强化</span></td><td>直接加在你身上的增益——光焰之井、光之武器、英杰圣盾、强能裂痕都在这</td><td>取最高</td></tr>
+    <tr><td><span class="b one">武器激涌</span></td><td>走「护甲充能」那套系统的增益——武器激涌模组、永恒战士、冰霜-EE5 都在这</td><td>取最高</td></tr>
     <tr><td><span class="b mul">放大类</span></td><td>直接加在武器或技能上的增益——武器属性、星相碎片、神器模组的增伤都在这</td><td>可叠加</td></tr>
     <tr><td><span class="b mul">异域固有</span></td><td>异域装备自带、直接加在武器或技能上的效果</td><td>可叠加</td></tr>
-    <tr><td><span class="b mul">武器特性</span></td><td>触发后为该武器开启的修正</td><td>可叠加</td></tr>
-    <tr><td><span class="b mul">世界与活动</span></td><td>活动本身的修正（比如元素激涌）</td><td>可叠加</td></tr>
+    <tr><td><span class="b mul">武器特性</span></td><td>触发后为该武器开启的修正——爆炸光能这类枪上的 Perk</td><td>可叠加</td></tr>
+    <tr><td><span class="b mul">世界与活动</span></td><td>活动本身的修正——元素激涌、冰影活动激涌都在这</td><td>可叠加</td></tr>
   </tbody>
 </table>
 
@@ -212,7 +212,7 @@
   <li><strong>跨类之间照常相乘，而且乘的顺序不影响结果。</strong></li>
 </ol>
 
-<h3>「放大类」是什么，以及为什么不用记它</h3>
+<h3>「放大类」是什么</h3>
 
 <p>名字是英文 Amplifier 的直译，字面看不出指什么。它<strong>不是按效果分的，是按排除法分的</strong>：前三类各有归属——挂敌人身上的是<strong>全局易伤</strong>，加你身上的是<strong>强化</strong>，走护甲充能那套的是<strong>武器激涌</strong>；剩下凡直接加在武器或技能上的增益全归<strong>放大类</strong>。</p>
 
@@ -223,6 +223,8 @@
   <li>一批<strong>赛季神器模组</strong>——元素超驰、严酷折射、银白箭袋、单人特工、电弧复合</li>
   <li>活动<strong>副本模组</strong>——雕文守护者、本影磨锐；以及赛季模组里的<strong>力量学派</strong></li>
 </ul>
+
+<p><strong>它和「武器特性」的区别只在来源。</strong>武器特性写在枪上——武器 Perk 和起源特性；放大类是模组和碎片给的。两者的叠加规则一字不差，都跟所有增益相乘、自身也能叠。</p>
 
 <p><strong>异域装备不在这里。</strong>巴克里斯面具、领航员、维王者之剑、焚天者誓约、杀手之牙这些异域自带的增伤单列一类，叫<strong>异域固有</strong>。两类叠加规则一样（都能叠），分开只是按来源归类。</p>
 
@@ -238,8 +240,9 @@
 
 <h3>一个完整的算例</h3>
 
-<p>来源页有个完整实例——同一把<strong>冰影火箭发射器</strong>吃到七个类别的增益，七项占满七类：</p>
+<p>拿<strong>无效安慰</strong>这把冰影火箭发射器走一遍，七项占满七类：</p>
 
+<div class="tbl-wrap">
 <table class="lookup">
   <caption><b>算例</b>与<a href="damage.html#list">第 4 页的增伤清单</a>逐项对应 · 数据截至 2026-09</caption>
   <thead>
@@ -255,6 +258,7 @@
     <tr><td><strong>元素超驰</strong><span class="sub">拾取元素拾取物</span></td><td><span class="b mul">放大类</span></td><td class="num">+22%<span class="sub">×1.22</span></td><td class="dur">7 秒</td><td class="num">5.22</td></tr>
   </tbody>
 </table>
+</div>
 
 <p>七项分属七个不同类别，所以全部生效，一路相乘：<code>1.25 × 1.22 × 1.25 × 1.33 × 1.35 × 1.25 × 1.22 ≈ 5.22</code>。乘法也可以中途停：只填前六项（少一个放大类），累计停在 <code>≈ 4.28</code>，也就是比原来多出约 328%。</p>
 
@@ -424,51 +428,190 @@
 <h2 id="s6"><span class="n">6</span>弹药经济</h2>
 
 <div class="oneline">
-  <p><span class="tag">一句话</span>弹药不是捡来的，是打出来的。用威能武器击杀、掉的还是威能弹药，是全表最差的一格，所以前两个武器位要放会生弹的武器。</p>
+  <p><span class="tag">一句话</span>弹药不是捡来的，是打出来的。威能武器打威能弹药是全表最低的一格，所以前两个武器位要放会生弹的武器。</p>
 </div>
 
-<p>击杀会按一个百分比生成弹药，由四项决定：<strong>击杀用的武器类型、生成的弹药类型、敌人档位、武器的弹药生成属性。</strong>下表三档按武器位写：<strong>主武器（白弹）、特殊武器（绿弹）、威能武器（重弹）</strong>。</p>
+<h3>进度怎么涨</h3>
 
+<p>每击杀一次推进一段<strong>弹药进度</strong>，攒满 100% 掉一个弹药块；<strong>特殊弹药和威能弹药各有一条进度，同一次击杀两条一起涨</strong>。推进多少看四项：<strong>击杀武器类型、生成的弹药类型、敌人档位、武器的弹药生成属性</strong>。下表按武器位分三组：<strong>主武器（白弹）、特殊武器（绿弹）、威能武器（重弹）</strong>。</p>
+
+<p><strong>弹药生成属性</strong>是武器自带的 0–100 的值，游戏里不显示，多数武器落在 25–60（中位数约 48）。<strong>属性 0 取每对数字里小的，属性 100 取大的，中间按比例走。</strong></p>
+
+<div class="tbl-wrap">
 <table class="lookup">
-  <caption><b>查表</b>判断断不断弹时回来对 · 数据截至 2026-09</caption>
+  <caption><b>查表</b>每档敌人下分两列：武器的弹药生成属性 0 与属性 100 各出多少 · 数据截至 2026-09</caption>
   <thead>
-    <tr><th>击杀 → 生成</th><th class="num">红血</th><th class="num">橙血</th><th class="num">初级首领</th></tr>
+    <tr><th>击杀 → 生成</th><th class="num">红血<br>属性 0</th><th class="num">红血<br>属性 100</th><th class="num">橙血<br>属性 0</th><th class="num">橙血<br>属性 100</th><th class="num">初级首领<br>属性 0</th><th class="num">初级首领<br>属性 100</th></tr>
   </thead>
   <tbody>
-    <tr><td>主武器 → 特殊弹药</td><td class="num">6%–16%</td><td class="num">12%–24%</td><td class="num">24%–50%</td></tr>
-    <tr><td>主武器 → 威能弹药</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
-    <tr><td>特殊武器 → 特殊弹药</td><td class="num">3%–12%</td><td class="num">6%–18%</td><td class="num">12%–40%</td></tr>
-    <tr><td>特殊武器 → 威能弹药</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
-    <tr><td>威能武器 → 特殊弹药</td><td class="num">3%–16%</td><td class="num">6%–24%</td><td class="num">12%–50%</td></tr>
-    <tr class="hi"><td>威能武器 → 威能弹药</td><td class="num">3%–4%</td><td class="num">6%–8%</td><td class="num">12%–16%</td></tr>
+    <tr><td>主武器 → 特殊弹药</td><td class="num">6%</td><td class="num">16%</td><td class="num">12%</td><td class="num">24%</td><td class="num">24%</td><td class="num">50%</td></tr>
+    <tr><td>主武器 → 威能弹药</td><td class="num">3%</td><td class="num">8%</td><td class="num">6%</td><td class="num">16%</td><td class="num">12%</td><td class="num">32%</td></tr>
+    <tr><td>特殊武器 → 特殊弹药</td><td class="num">3%</td><td class="num">12%</td><td class="num">6%</td><td class="num">18%</td><td class="num">12%</td><td class="num">40%</td></tr>
+    <tr><td>特殊武器 → 威能弹药</td><td class="num">3%</td><td class="num">8%</td><td class="num">6%</td><td class="num">16%</td><td class="num">12%</td><td class="num">32%</td></tr>
+    <tr><td>威能武器 → 特殊弹药</td><td class="num">3%</td><td class="num">16%</td><td class="num">6%</td><td class="num">24%</td><td class="num">12%</td><td class="num">50%</td></tr>
+    <tr class="hi"><td>威能武器 → 威能弹药</td><td class="num">3%</td><td class="num">4%</td><td class="num">6%</td><td class="num">8%</td><td class="num">12%</td><td class="num">16%</td></tr>
   </tbody>
 </table>
+</div>
 
-<p>区间取决于武器的弹药生成属性：<strong>100 属性即区间上限</strong>，区间随属性线性变化。</p>
+<p>两条规律：<strong>属性 0 那三列成倍数</strong>（橙血 ×2、初级首领 ×4），记红血那列就够；<strong>属性 100 那三列不成比例</strong>，得单独看。属性 100 封顶，再高也不会更快；<strong>威能武器打威能弹药是全表最低的一格</strong>，拉满也只有 4%。</p>
 
-<h3>先记住两个事实</h3>
+<h3>加弹药生成属性：把落点往右推</h3>
 
-<ol>
-  <li><strong>档位之间成倍数。</strong>橙血约是红血的两倍，初级首领约是四倍。记住红血那一列就能推另外两列。</li>
-  <li><strong>用威能武器击杀只掉威能弹药。</strong>全表最差的一格，只有 3%–4%。</li>
-</ol>
+<p>下面这些东西加的都是<strong>弹药生成属性</strong>：每 +1 点，落点就朝这一格的上限挪<strong>整段的 1%</strong>（100 点正好落到上限）。拿「打红血那格」来说：它从 6% 到 16%、整段 10 个点，弹药带 +5 挪 5%，也就是 0.5 个点，6% 变 6.5%。几个来源直接相加（封顶 100）。它们不改主表里的数字，只是把你从左端往右端推。</p>
 
-<h3>推论一：前两个武器位要放「会生弹」的武器</h3>
+<div class="tbl-wrap">
+<table class="lookup">
+  <caption><b>查表</b>加弹药生成属性的来源 · 最后一列拿「主武器击杀红血敌人 → 特殊弹药」举例：左边是弹药生成属性 0 的枪原本出的，右边是装上之后 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th class="row-col">来源</th><th class="num">装几个</th><th class="num">加的弹药生成属性</th><th class="num">打红血那格<br>装上前 → 装上后</th></tr>
+  </thead>
+  <tbody>
+    <tr class="grp"><td colspan="4">武器模组</td></tr>
+    <tr><td>弹药带</td><td class="num">—</td><td class="num">+5</td><td class="num">6% → 6.5%</td></tr>
+    <tr><td>丰足弹药</td><td class="num">—</td><td class="num">+10</td><td class="num">6% → 7%</td></tr>
+    <tr class="grp"><td colspan="4">胸甲模组 · 按元素分七种，只对与模组元素相同的武器生效 · 刀剑改成加弹药容量，同样按份数 +20 / +30 / +35</td></tr>
+    <tr><td rowspan="3">弹药生成</td><td class="num">1 个</td><td class="num">+20</td><td class="num">6% → 8%</td></tr>
+    <tr><td class="num">2 个</td><td class="num">+40</td><td class="num">6% → 10%</td></tr>
+    <tr><td class="num">3 个</td><td class="num">+50</td><td class="num">6% → 11%</td></tr>
+    <tr class="grp"><td colspan="4">武器特性</td></tr>
+    <tr><td>空中扳机</td><td class="num">—</td><td class="num">+20</td><td class="num">6% → 8%</td></tr>
+    <tr><td>沙场备战</td><td class="num">—</td><td class="num">+20</td><td class="num">6% → 8%</td></tr>
+    <tr><td>嫉妒军械库</td><td class="num">—</td><td class="num">+10</td><td class="num">6% → 7%</td></tr>
+    <tr><td>爆炸弩弹</td><td class="num">—</td><td class="num">+2</td><td class="num">6% → 6.2%</td></tr>
+    <tr class="grp"><td colspan="4">异域护甲</td></tr>
+    <tr><td>亚克兴角战役钻机</td><td class="num">—</td><td class="num">每层 +5</td><td class="num">每层 6% → 6.5%<br>10 层 6% → 11%</td></tr>
+  </tbody>
+</table>
+</div>
 
-<p>用威能武器击杀只掉威能弹药，转化最差；威能弹药的补给其实靠主武器和特殊武器的输出。<strong>前两个武器位各放一把弹药生成属性高的武器，是弹药经济的基础。</strong></p>
+<p>「装几个」是模组份数：<strong>一件护甲有三个通用模组位，同一个模组能装多份</strong>；装几份按表里那一行算，<strong>不是把每份的加成相加</strong>——两个 +40、三个 +50，不是 +60。武器模组和武器特性没有份数，填「—」。</p>
 
-<h3>推论二：靠技能补弹走不通</h3>
+<p>「强化版」是强化核心升的那一档，单独一个模组：弹药带 +7、丰足弹药 +12、空中扳机 +30、沙场备战 +30，嫉妒军械库与爆炸弩弹只有强化版。单个来源里加得最多的是胸甲装三个和亚克兴角战役钻机叠满（都是 +50），后者只对自动步枪和机枪生效。</p>
+
+<h3>加生成系数：把结果整个乘上去</h3>
+
+<p>这一类跟上一节是两套东西：上一节推<strong>弹药生成属性</strong>，这一节<strong>不碰属性</strong>，直接乘在推出来的百分比上。<strong>特殊武器弹药搜寻者只管特殊弹药那条进度，对威能弹药无效</strong>（表里填「—」），重型弹药搜寻者反过来。同一个加成装在多把武器上也只算一份；几个系数同时在场不是逐项相乘，而是把各自多出来的部分先加起来再乘一次。</p>
+
+<div class="tbl-wrap">
+<table class="lookup">
+  <caption><b>查表</b>弹药生成系数的来源 · 右两列拿主表里「满属性的主武器击杀红血敌人」那一格算起：特殊弹药本来一次推进 16%，威能弹药 8%，格子里的算式就是以这两个数为基准乘出来的 · 数据截至 2026-09</caption>
+  <thead>
+    <tr><th class="row-col">来源</th><th class="num">装几个</th><th class="num">特殊弹药进度</th><th class="num">威能弹药进度</th></tr>
+  </thead>
+  <tbody>
+    <tr class="grp"><td colspan="4">头盔模组</td></tr>
+    <tr><td rowspan="3">特殊武器弹药搜寻者</td><td class="num">1 个</td><td class="num">16% × 1.25 = 20%</td><td class="num">—</td></tr>
+    <tr><td class="num">2 个</td><td class="num">16% × 1.40 = 22.4%</td><td class="num">—</td></tr>
+    <tr><td class="num">3 个</td><td class="num">16% × 1.50 = 24%</td><td class="num">—</td></tr>
+    <tr><td rowspan="3">重型弹药搜寻者</td><td class="num">1 个</td><td class="num">—</td><td class="num">8% × 1.25 = 10%</td></tr>
+    <tr><td class="num">2 个</td><td class="num">—</td><td class="num">8% × 1.40 = 11.2%</td></tr>
+    <tr><td class="num">3 个</td><td class="num">—</td><td class="num">8% × 1.50 = 12%</td></tr>
+    <tr class="grp"><td colspan="4">武器特性</td></tr>
+    <tr><td>光中藏弹</td><td class="num">—</td><td class="num">16% × 1.25 = 20%</td><td class="num">—</td></tr>
+    <tr><td>即兴弹药</td><td class="num">—</td><td class="num">16% × 1.15 = 18.4%</td><td class="num">8% × 1.10 = 8.8%</td></tr>
+    <tr class="grp"><td colspan="4">术士职业技能</td></tr>
+    <tr><td>强能裂痕</td><td class="num">—</td><td class="num">16% × 1.15 = 18.4%</td><td class="num">8% × 1.15 = 9.2%</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>一个头盔三个通用模组位，同一个搜寻者能装三份；<strong>倍率看装几份，不是把每份的加成叠起来</strong>——三份叠加是 1 + 0.25×3 = ×1.75，实际取表里 ×1.50 那一行。</p>
+
+<p>几项叠在一起时，用带即兴弹药的那把武器击杀红血敌人，基础值按 12% 算——两把枪各带光中藏弹、再一把带即兴弹药、头盔上三个特殊武器弹药搜寻者：</p>
+
+<p><strong>12% × (1 + 0.25 + 0.25 + 0.15 + 0.50) = 25.8%</strong></p>
+
+<p>两个光中藏弹各出 0.25、即兴弹药 0.15、三个搜寻者 0.50，加起来 1.15 一次乘上；逐项相乘会算成 32.3%，偏高。</p>
+
+<p><strong>边界：</strong>加属性和加系数这两套之间怎么叠加没有实测，所以这里分开讲。光中藏弹当前版本还有个 Bug——它的加成对所有武器生效，例子里两个光中藏弹能同时计入就是靠这个。</p>
+
+<p>反过来，活动修改器里的<strong>弹药饥荒</strong>把生成率乘 0.8。它分三种：特殊弹药饥荒、威能弹药饥荒各管一种，全弹药饥荒两种都管。这是活动自带的规则，不在你的配装里。</p>
+
+<h3>一块弹药块给几发</h3>
+
+<p>上面算的是<strong>进度</strong>。一块拾起来给几发是另一套规则，看三项：<strong>武器类型、腿部模组「回收利用」、是不是强化弹药块</strong>。</p>
+
+<div class="tbl-wrap">
+  <table class="lookup">
+    <caption><b>查表</b>一块弹药块拾起来给多少发 · 数据截至 2026-09</caption>
+    <thead>
+      <tr><th>武器</th><th class="num">常规</th><th class="num">+ 回收利用</th><th class="num">强化</th><th class="num">强化 + 回收利用</th></tr>
+    </thead>
+    <tbody>
+      <tr class="grp"><td colspan="5">特殊弹药（绿弹）</td></tr>
+      <tr><td>霰弹枪</td><td class="num">2–3</td><td class="num">4</td><td class="num">6</td><td class="num">7–8</td></tr>
+      <tr><td>榴弹发射器</td><td class="num">3–4</td><td class="num">4–5</td><td class="num">6</td><td class="num">7</td></tr>
+      <tr><td>融合步枪</td><td class="num">3</td><td class="num">4</td><td class="num">6–7</td><td class="num">7–8</td></tr>
+      <tr><td>狙击枪</td><td class="num">3–5</td><td class="num">4–6</td><td class="num">6–10</td><td class="num">7–11</td></tr>
+      <tr><td>追踪步枪</td><td class="num">75</td><td class="num">127</td><td class="num">150</td><td class="num">201</td></tr>
+      <tr><td>偃月</td><td class="num">6</td><td class="num">7</td><td class="num">12</td><td class="num">13</td></tr>
+      <tr><td>火箭手枪</td><td class="num">6</td><td class="num">7</td><td class="num">12</td><td class="num">13</td></tr>
+      <tr><td>火箭脉冲</td><td class="num">3</td><td class="num">4</td><td class="num">5</td><td class="num">6</td></tr>
+      <tr class="grp"><td colspan="5">威能弹药（重弹）</td></tr>
+      <tr><td>刀剑</td><td class="num">9–13</td><td class="num">15–21</td><td class="num">11–16</td><td class="num">16–24</td></tr>
+      <tr><td>榴弹发射器</td><td class="num">3</td><td class="num">4</td><td class="num">4</td><td class="num">5</td></tr>
+      <tr><td>火箭发射器</td><td class="num">1</td><td class="num">2</td><td class="num">2</td><td class="num">3</td></tr>
+      <tr><td>线性融合步枪</td><td class="num">3</td><td class="num">4</td><td class="num">4</td><td class="num">5</td></tr>
+      <tr><td>机枪</td><td class="num">38–58</td><td class="num">45–65</td><td class="num">57–87</td><td class="num">64–94</td></tr>
+      <tr><td>重型弩箭</td><td class="num">1</td><td class="num">2</td><td class="num">2</td><td class="num">3</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>回收利用在<strong>追踪步枪、刀剑、火箭发射器</strong>上收益最高；绿弹的强化块几乎都翻倍，重弹那边提升有限，火箭发射器、机枪与重型弩箭相对高。装两把特殊武器时，绿弹拾取量<strong>砍半并向下取整</strong>（火箭脉冲除外）。</p>
+
+<p>强化弹药块的掉率另算：看六项护甲属性里的<strong>武器属性</strong>超过 100 的部分，每点 +1%，200 属性时必出。</p>
+
+<h3>队友这条线：助攻、斥候、特殊终结技</h3>
+
+<p><strong>你用武器打过、队友收掉的那次击杀，按击杀值的 75% 计入你的量表。</strong>技能助攻、以及你给队友上 buff 后他带 buff 拿下的最后一击也计入；这两种是 9.5.0 版本才补上的，量都很小，没有公开数值。你完全没参与的队友击杀，不推进你的量表。</p>
+
+<p>你要拿到队友生成的弹药，只有两条路，而且两条都得由<strong>他</strong>装模组。</p>
+
+<p><strong>一是弹药斥候</strong>（头盔）：他填满对应量表时，会额外为盟友生成较小的弹药盒。你捡到的这一块有多大，看他装了几份：</p>
+
+<div class="tbl-wrap">
+  <table class="lookup">
+    <caption><b>查表</b>弹药斥候给盟友生成的弹药盒有多大 · 表里是常规弹药块的百分比，具体发数按上一张表的「常规」列折算 · 数据截至 2026-09</caption>
+    <thead>
+      <tr><th class="row-col">来源</th><th class="num">装 1 份</th><th class="num">装 2 份</th><th class="num">装 3 份</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>特殊弹药斥候</td><td class="num">37%</td><td class="num">67%</td><td class="num">100%</td></tr>
+      <tr><td>重型弹药斥候</td><td class="num">37%</td><td class="num">67%</td><td class="num">100%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<p>斥候给的这一块就算带强化外观也只是发光，不会多加量。斥候和搜寻者抢的是<strong>同一个头盔的三个通用模组位</strong>——三份全给了搜寻者，就没位置放斥候。</p>
+
+<p><strong>二是特殊终结技</strong>（职业物品，消耗 3 层护甲充能）：<strong>终结技为整个火力战队生成特殊弹药</strong>。它不看终结时手里拿的是什么武器，代价是只出绿弹、不出重弹，双特殊配置缺绿弹时拿它兜底。</p>
+
+<details class="deep">
+  <summary>除了这两个模组，还有哪些装备能直接给队伍出弹药？展开看完整清单</summary>
+  <div class="tbl-wrap">
+    <table class="lookup">
+      <caption><b>查表</b>会直接给队友出弹药的装备 · 数据截至 2026-09</caption>
+      <thead>
+        <tr><th class="row-col">来源</th><th>给队伍出什么</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>负武者之咏<br>永劫邪教套装</td><td>对精英用终结技出绿弹；对首领或初级首领用终结技出重弹</td></tr>
+        <tr><td>残余炼金术<br>异域榴弹发射器「阿莱索尼姆」</td><td>拾取残余攒能量，能在射弹命中位置为你和盟友生成弹药；50% 能量解锁绿弹模式，100% 解锁重弹模式</td></tr>
+        <tr><td>恐怖终结技<br>神器模组（往季）</td><td>终结击败强力战斗人员出绿弹；对镇压者、折磨者或勇士出更多</td></tr>
+        <tr><td>光明终结技<br>神器模组（往季）</td><td>对光明邪魔族负光者或勇士用终结技出重弹</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>核对：</strong>四条效果的文案都在游戏本体数据里能查到原文；负武者之咏来自永劫邪教套装的三件（永劫灵魂 / 永劫雨燕 / 永劫安泰），残余炼金术来自异域榴弹发射器「阿莱索尼姆」，两处名称与护甲、异域武器两页的条目一致。两条神器条目是往季神器里出现过的，当季神器表里都查不到——它们记录规则，不是现在能带的东西。</p>
+</details>
+
+<p>反过来同样成立：你装斥候、你放特殊终结技，受益的是队友。</p>
+
+<h3>技能补弹走不通</h3>
 
 <p>几乎所有技能对三档敌人都只生成 4% / 8% / 16% 的弹药，远低于合格武器。手雷高 50%、超能高一整档，但按超能那档算也补不过武器。</p>
-
-<h3>推论三：终结技不一定回弹</h3>
-
-<p>终结技生成多少弹药，取决于<strong>终结当下所持的武器</strong>，与用什么手段终结无关。前提是：<strong>终结之前必须有武器对这名敌人造成过伤害。</strong></p>
-
-<div class="note warn">
-  <span class="h">所以这条路是断的</span>
-  <p>只用技能把敌人打到残血、再用终结技收掉，不产生任何弹药进度。双特殊武器配置靠技能补弹走不通。</p>
-</div>
 
 <details class="deep">
   <summary>技能、手雷、超能各自生成多少？展开看完整对照</summary>
@@ -485,12 +628,27 @@
       <tr><td>超能 → 威能弹药</td><td class="num">8%</td><td class="num">16%</td><td class="num">32%</td></tr>
     </tbody>
   </table>
-  <p>两个例外：<strong>手雷生成特殊弹药的速度比其他技能高 50%；超能整整高出一档。</strong>超能打初级首领时能生成 48% 的特殊弹药，是全表技能类里最高的。</p>
+  <p>两个例外：<strong>手雷生成特殊弹药比其他技能快 50%；超能整整高出一档。</strong>超能打初级首领时能生成 48% 的特殊弹药，是全表技能类里最高的。</p>
   <p><strong>刀剑是特例：</strong>它没有弹药生成属性，也无法被弹药模组改变，击杀固定生成 3% 特殊弹药与 3% 威能弹药进度。</p>
   <p><strong>核对：</strong>武器类各行来自弹药页的「弹药生成系数」表，技能类来自同页「技能与超能弹药生成」节，两处对同一个「威能武器生成威能弹药最低」的结论一致。</p>
 </details>
 
-<span class="src"><span class="t">公开整理</span>弹药生成机制页的生成系数表与技能生成节</span>
+<h3>终结技不一定回弹</h3>
+
+<p>终结技生成多少弹药，取决于<strong>终结当下所持的武器</strong>，与用什么手段终结无关。前提是：<strong>终结之前必须有武器对这名敌人造成过伤害。</strong></p>
+
+<div class="note warn">
+  <span class="h">所以这条路是断的</span>
+  <p>只用技能把敌人打到残血、再用终结技收掉，不产生任何弹药进度。双特殊武器配置靠技能补弹走不通。</p>
+</div>
+
+<p>例外是职业物品模组<strong>特殊终结技</strong>：它不看武器、也不按上面的进度算，终结就给整个火力战队掉一块绿弹（见「队友这条线」）。</p>
+
+<h3>所以怎么用</h3>
+
+<p>威能武器打威能弹药转化最差；威能弹药的补给其实靠主武器和特殊武器的输出。<strong>前两个武器位各放一把弹药生成属性高的武器，是弹药经济的基础。</strong></p>
+
+<span class="src"><span class="t">公开整理</span>弹药生成机制页的生成系数表、弹药生成属性节、弹药块拾取量节、技能生成节与终结技/助攻节；护甲模组页的胸甲「弹药生成」与头盔「弹药搜寻者」「弹药斥候」条目、职业物品「特殊终结技」条目；异域武器页的「阿莱索尼姆」条目；游戏机制页的活动修改器（弹药饥荒）；<span class="t">游戏数据</span> 武器弹药生成属性的取值范围与分布、护甲每件三个通用模组位、负武者之咏 / 残余炼金术 / 恐怖终结技 / 光明终结技四条特性的效果原文与宿主；<span class="t m">官方</span>「特殊弹药斥候」「重型弹药斥候」「特殊终结技」的模组描述原文、9.5.0 版本更新说明的弹药量表进度条目</span>
 
 <h2 id="quiz">自测</h2>
 
@@ -525,7 +683,7 @@
 <details class="quiz">
   <summary>为什么前两个武器位要放弹药生成属性高的武器？</summary>
   <div class="ans">
-    <p>因为用威能武器击杀只掉威能弹药，是全表最差的一格（3%–4%），威能弹药的补给实质上靠主武器和特殊武器在养。这两个位置的弹药生成属性决定你打得久不久。</p>
+    <p>因为威能武器打威能弹药是全表最低的一格（3%–4%），威能弹药的补给实质上靠主武器和特殊武器在养。这两个位置的弹药生成属性决定你打得久不久。</p>
     <p class="back">回看第 6 节。</p>
   </div>
 </details>

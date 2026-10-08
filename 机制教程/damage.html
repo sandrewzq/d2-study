@@ -289,8 +289,9 @@
 
 <h3>七类全摆开：一把枪能叠到多少</h3>
 
-<p>那队人只占两类，还有五类空着——每填一类多乘一次。这把是<strong>冰影火箭发射器</strong>，所以两条限定元素的也算得上：巴克里斯面具只加电弧与冰影武器，爆炸光能是这把枪自己的特性。</p>
+<p>那队人只占两类，还有五类空着——每填一类多乘一次。<strong>无效安慰</strong>是冰影火箭发射器，所以两条限定元素的也算得上：巴克里斯面具只加电弧与冰影武器，爆炸光能是这把枪自己的特性。</p>
 
+<div class="tbl-wrap">
 <table class="lookup">
   <caption><b>算例</b>各项数值取自增伤清单 · 数据截至 2026-09</caption>
   <thead>
@@ -306,6 +307,7 @@
     <tr><td><strong>元素超驰</strong><span class="sub">拾取元素拾取物</span></td><td><span class="b mul">放大类</span></td><td class="num">+22%<span class="sub">×1.22</span></td><td class="dur">7 秒</td><td class="num">5.22</td></tr>
   </tbody>
 </table>
+</div>
 
 <p>七项分属七个类别，一路乘下来：<code>1.25 × 1.22 × 1.25 × 1.33 × 1.35 × 1.25 × 1.22 ≈ 5.22</code>。同一场战斗，那队人打出来是 ×1.69，补满空着的类就是约 <strong>5.22 倍</strong>——原来 100 点的一枪变成约 522 点。</p>
 
@@ -410,7 +412,7 @@
   <p><span class="tag">一句话</span>输出不够有时不是伤害问题，是打到一半没弹了。换枪没用，要调的是弹药经济。</p>
 </div>
 
-<p>这一节是<a href="mechanics.html#s6">第 1 页第 6 节</a>的实战应用。三档按武器位写：<strong>主武器（白弹）、特殊武器（绿弹）、威能武器（重弹）</strong>。先记住那个反常值：<strong>用威能武器击杀只掉威能弹药，只有 3%–4%，是全表最低的一格。</strong></p>
+<p>这一节是<a href="mechanics.html#s6">第 1 页第 6 节</a>的实战应用。三档按武器位写：<strong>主武器（白弹）、特殊武器（绿弹）、威能武器（重弹）</strong>。先记住那个反常值：<strong>威能武器打威能弹药只有 3%–4%，是全表最低的一格。</strong></p>
 
 <h3>怎么判断是不是弹药问题</h3>
 
@@ -437,20 +439,22 @@
 
 <details class="deep">
   <summary>弹药什么时候掉落？展开看完整生成表</summary>
+  <div class="tbl-wrap">
   <table class="lookup">
-    <caption><b>查表</b>区间随武器的弹药生成属性线性变化，100 属性即上限 · 数据截至 2026-09</caption>
+    <caption><b>查表</b>每档敌人下分两列：武器的弹药生成属性 0 与属性 100 各出多少 · 数据截至 2026-09</caption>
     <thead>
-      <tr><th>击杀 → 生成</th><th class="num">红血</th><th class="num">橙血</th><th class="num">初级首领</th></tr>
+      <tr><th>击杀 → 生成</th><th class="num">红血<br>属性 0</th><th class="num">红血<br>属性 100</th><th class="num">橙血<br>属性 0</th><th class="num">橙血<br>属性 100</th><th class="num">初级首领<br>属性 0</th><th class="num">初级首领<br>属性 100</th></tr>
     </thead>
     <tbody>
-      <tr><td>主武器 → 特殊弹药</td><td class="num">6%–16%</td><td class="num">12%–24%</td><td class="num">24%–50%</td></tr>
-      <tr><td>主武器 → 威能弹药</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
-      <tr><td>特殊武器 → 特殊弹药</td><td class="num">3%–12%</td><td class="num">6%–18%</td><td class="num">12%–40%</td></tr>
-      <tr><td>特殊武器 → 威能弹药</td><td class="num">3%–8%</td><td class="num">6%–16%</td><td class="num">12%–32%</td></tr>
-      <tr><td>威能武器 → 特殊弹药</td><td class="num">3%–16%</td><td class="num">6%–24%</td><td class="num">12%–50%</td></tr>
-      <tr class="hi"><td>威能武器 → 威能弹药</td><td class="num">3%–4%</td><td class="num">6%–8%</td><td class="num">12%–16%</td></tr>
+      <tr><td>主武器 → 特殊弹药</td><td class="num">6%</td><td class="num">16%</td><td class="num">12%</td><td class="num">24%</td><td class="num">24%</td><td class="num">50%</td></tr>
+      <tr><td>主武器 → 威能弹药</td><td class="num">3%</td><td class="num">8%</td><td class="num">6%</td><td class="num">16%</td><td class="num">12%</td><td class="num">32%</td></tr>
+      <tr><td>特殊武器 → 特殊弹药</td><td class="num">3%</td><td class="num">12%</td><td class="num">6%</td><td class="num">18%</td><td class="num">12%</td><td class="num">40%</td></tr>
+      <tr><td>特殊武器 → 威能弹药</td><td class="num">3%</td><td class="num">8%</td><td class="num">6%</td><td class="num">16%</td><td class="num">12%</td><td class="num">32%</td></tr>
+      <tr><td>威能武器 → 特殊弹药</td><td class="num">3%</td><td class="num">16%</td><td class="num">6%</td><td class="num">24%</td><td class="num">12%</td><td class="num">50%</td></tr>
+      <tr class="hi"><td>威能武器 → 威能弹药</td><td class="num">3%</td><td class="num">4%</td><td class="num">6%</td><td class="num">8%</td><td class="num">12%</td><td class="num">16%</td></tr>
     </tbody>
   </table>
+  </div>
   <p>另外，<strong>刀剑是特例</strong>：它没有弹药生成属性，也无法被弹药模组改变，击杀固定生成 3% 特殊弹药与 3% 威能弹药进度。</p>
   <p><strong>核对：</strong>这张表与<a href="mechanics.html#s6">第 1 页第 6 节</a>同源，两边数值一致。</p>
 </details>
